@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  fetch('http://localhost:8080/auth')
+      .then(res => res.json())
+      .then(res => console.log(res))
   return (
     <div className="App">
       <header className="App-header">

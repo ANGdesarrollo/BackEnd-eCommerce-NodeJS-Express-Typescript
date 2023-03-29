@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd client && npm install && npm run build && tsc && npx cpy client/build/** ../build/client",
+    "copy-files": "npx cpy client/build/** ./build/client",
+    "build": "cd client && npm install && npm run build && tsc",
     "dev": "nodemon --exec ts-node-dev src/server.ts",
-    "start": "node build/server/server.js",
+    "start": "node build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -25,7 +26,6 @@
     "@types/socket.io": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.56.0",
-    "cpy-cli": "^4.2.0",
     "eslint": "~8.22.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^34.0.1",

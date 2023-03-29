@@ -7,9 +7,9 @@ import path from 'path';
 export class Server {
   public app: express.Application;
   public port: number;
-  public router: Router[];
+  public router: [{ router: Router; path: string }];
 
-  constructor(port: number, router: Router[]) {
+  constructor(port: number, router: [{ router: Router; path: string }]) {
     this.app = express();
     this.port = port;
     this.router = router;
@@ -26,14 +26,15 @@ export class Server {
   }
 
   private initializeRouters(): void {
-    this.router.forEach((route: Router) => this.app.use('/', route));
+    this.router.forEach((route: any) => this.app.use(route.path, route.router));
   }
 
   public listen(): void {
     this.app.listen(this.port, (): void => {
-      console.log(`Server is listening on https://localhost:${this.port}`);
+      console.log(`Server is listening on http://localhost:${this.port}`);
     });
-    this.app.get('/panel', (_req, res) => {
+
+    this.app.get('/', (_req, res) => {
       res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
     });
   }
