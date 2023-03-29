@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "copy-files": "npx cpy client/build/** ./build/client",
     "build": "cd client && npm install && npm run build && tsc",
     "dev": "nodemon --exec ts-node-dev src/server.ts",
     "start": "node build/server.js",
