@@ -3,6 +3,7 @@ import cors from 'cors';
 import compression from 'compression';
 import { configCors } from './config/corsConfig/corsConfig';
 import path from 'path';
+import {logger} from "./config/winstonConfig/winstonConfig";
 
 export class Server {
   public app: express.Application;
@@ -31,11 +32,7 @@ export class Server {
 
   public listen(): void {
     this.app.listen(this.port, (): void => {
-      console.log(`Server is listening on http://localhost:${this.port}`);
-    });
-
-    this.app.get('/', (_req, res) => {
-      res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+      logger.info(`Server is listening on http://localhost:${this.port}`);
     });
   }
 }
