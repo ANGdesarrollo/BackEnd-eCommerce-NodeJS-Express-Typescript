@@ -21,6 +21,6 @@
     ]
   },
   "exclude": [
-    "./public"
+    "./client"
   ]
 }
