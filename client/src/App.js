@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  fetch('http://localhost:8080/auth')
+  fetch('https://backend-ecommerce-node-production.up.railway.app/auth')
       .then(res => res.json())
       .then(res => console.log(res))
   return (

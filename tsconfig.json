@@ -19,5 +19,8 @@
     "types": [
       "@types/node"
     ]
-  }
+  },
+  "exclude": [
+    "./public"
+  ]
 }

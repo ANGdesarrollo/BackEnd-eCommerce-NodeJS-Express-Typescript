@@ -1,20 +1,23 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
+import viteLogo from '../../../../../../../../vite.svg';
 import './App.css';
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function App() {
-  fetch('http://localhost:8080/auth')
+  const [count, setCount] = useState(0);
+
+  void fetch('https://backend-ecommerce-node-production.up.railway.app/auth')
     .then(async (res) => await res.json())
     .then((res) => {
       console.log(res);
     });
-  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src={reactLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
