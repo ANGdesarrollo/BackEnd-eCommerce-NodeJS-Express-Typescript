@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
-import './App.css';
+import './App.scss';
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function App() {
