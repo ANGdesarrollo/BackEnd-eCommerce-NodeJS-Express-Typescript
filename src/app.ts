@@ -19,7 +19,7 @@ export class Server {
   }
 
   private initializeMiddleware(): void {
-    this.app.use(express.static(path.resolve(__dirname, '../client/build')));
+    this.app.use(express.static(path.resolve(__dirname, '../public/dist')));
     this.app.use(cors(configCors));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
