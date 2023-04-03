@@ -11,7 +11,10 @@ export class ControllerProduct {
 
   async getProducts(_req: Request, res: Response): Promise<void> {
     try {
-      const products = await new ServiceProduct().getProducts();
+      // ESTA FORMA NO ANDA
+      const products = await this.serviceProducts.getProducts();
+      // ESTA FORMA ANDA
+      // const products = await new ServiceProduct().getProducts();
       res.status(200).json({
         status: true,
         products,

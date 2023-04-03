@@ -17,3 +17,4 @@
 [34m2023-04-02 19:54:28[39m [[31merror[39m]: Error at controller getProducts: TypeError: Cannot read properties of undefined (reading 'serviceProducts')
 [34m2023-04-02 20:11:46[39m [[31merror[39m]: Error at controller getProducts: TypeError: Cannot read properties of undefined (reading 'serviceProducts')
 [34m2023-04-03 13:29:57[39m [[31merror[39m]: Database error: MongoServerError: bad auth : authentication failed
+[34m2023-04-03 13:44:29[39m [[31merror[39m]: Error at controller getProducts: TypeError: Cannot read properties of undefined (reading 'serviceProducts')
