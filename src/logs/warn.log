@@ -1,0 +1,19 @@
+[[34m2023-04-01 14:33:30[39m] [[33merror[39m]: Error at log in user: TypeError: Cannot read properties of null (reading 'body')
+[[34m2023-04-01 14:34:36[39m] [[33merror[39m]: Error at log in user: TypeError: Cannot read properties of null (reading 'body')
+[[34m2023-04-01 14:34:53[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-01 14:36:59[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-01 14:37:36[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-01 14:45:46[39m] [[33merror[39m]: Error at log in user: TypeError: res.json is not a function
+[[34m2023-04-01 16:13:12[39m] [[33merror[39m]: Error at log in user: TypeError: Cannot read properties of null (reading 'status')
+[[34m2023-04-01 16:49:30[39m] [[33merror[39m]: Error at log in user: TypeError: Cannot read properties of null (reading 'status')
+[[34m2023-04-01 16:49:57[39m] [[33merror[39m]: Error at log in user: TypeError: Cannot read properties of undefined (reading 'status')
+[[34m2023-04-01 16:50:14[39m] [[33merror[39m]: Error at log in user: TypeError: Cannot read properties of undefined (reading 'json')
+[[34m2023-04-01 16:56:39[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-01 16:56:59[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-01 16:57:38[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-01 16:59:30[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-01 17:06:19[39m] [[33merror[39m]: Error at log in user: TypeError: res.status is not a function
+[[34m2023-04-02 19:50:20[39m] [[33merror[39m]: Error at controller getProducts: TypeError: Cannot read properties of undefined (reading 'serviceProducts')
+[[34m2023-04-02 19:54:28[39m] [[33merror[39m]: Error at controller getProducts: TypeError: Cannot read properties of undefined (reading 'serviceProducts')
+[[34m2023-04-02 20:11:46[39m] [[33merror[39m]: Error at controller getProducts: TypeError: Cannot read properties of undefined (reading 'serviceProducts')
+[[34m2023-04-03 13:29:57[39m] [[33merror[39m]: Database error: MongoServerError: bad auth : authentication failed

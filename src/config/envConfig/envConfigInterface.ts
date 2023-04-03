@@ -4,4 +4,6 @@ export interface IconfigIterface {
   SECRET_KEY: string;
   DB_CONNECTION: string;
   PERMISSION_REQUEST: string;
+  SESSION: string;
+  PERSISTENCE: string;
 }

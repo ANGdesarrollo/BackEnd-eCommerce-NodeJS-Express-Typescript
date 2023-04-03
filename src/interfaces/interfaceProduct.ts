@@ -1,16 +1,22 @@
-import { type ObjectId } from 'mongoose';
-
-export interface IProductDTO {
+export interface IProduct {
+  date: string;
   name: string;
-  thumbnail: string;
+  thumbnail: Thumbnail;
   stock: number;
-  discount: Discount;
+  discount?: Discount;
   category: string;
+  soldQty: number;
+  details: Details[];
 }
 
-export interface IProductFinal extends IProductDTO {
-  _id: ObjectId;
-  date: Date;
+interface Thumbnail {
+  main: string;
+  background: string;
+}
+
+interface Details {
+  description: string;
+  name: string;
 }
 
 interface Discount {

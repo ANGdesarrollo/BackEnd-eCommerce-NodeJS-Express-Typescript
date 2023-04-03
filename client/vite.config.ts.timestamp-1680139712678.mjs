@@ -1,4 +1,4 @@
-// vite.config.ts
+// vite.mongoConfig.ts
 import { defineConfig } from "file:///C:/Users/Alexis%20Graff/Desktop/Mis%20proyectos/Node%20JS/Final%20project%20Node%20JS/Back-End-eCommerce/public/node_modules/vite/dist/node/index.js";
 import react from "file:///C:/Users/Alexis%20Graff/Desktop/Mis%20proyectos/Node%20JS/Final%20project%20Node%20JS/Back-End-eCommerce/public/node_modules/@vitejs/plugin-react/dist/index.mjs";
 var vite_config_default = defineConfig({

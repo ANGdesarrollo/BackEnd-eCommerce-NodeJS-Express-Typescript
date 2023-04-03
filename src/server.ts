@@ -1,11 +1,7 @@
 import { Server } from './app';
-import { AuthRouter } from './modules/auth/routeAuth';
 import { env } from './config/envConfig/envConfig';
-import { dbConection } from './database/mongoDB/config';
+import { router } from './router';
 
-const server = new Server(env.PORT, [
-  { router: new AuthRouter().start(), path: '/auth' },
-]);
+const server = new Server(env.PORT, router);
 
-dbConection();
 server.listen();

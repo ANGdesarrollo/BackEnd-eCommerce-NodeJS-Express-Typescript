@@ -5,6 +5,7 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "allowJs": true,
     "outDir": "./build",
     "removeComments": true,
     "esModuleInterop": true,

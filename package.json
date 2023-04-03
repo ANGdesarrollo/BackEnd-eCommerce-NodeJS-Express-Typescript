@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.2",
+    "@types/bcrypt": "^5.0.0",
     "@types/compression": "^1.7.2",
     "@types/cookie-parser": "^1.4.3",
     "@types/cors": "^2.8.13",
@@ -22,9 +22,7 @@
     "@types/node": "^18.15.11",
     "@types/passport": "^1.0.12",
     "@types/passport-local": "^1.0.35",
-    "@types/socket.io": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.56.0",
     "eslint": "~8.22.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^34.0.1",
@@ -38,9 +36,11 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
     "colorette": "^2.0.19",
     "compression": "^1.7.4",
+    "connect-mongo": "^5.0.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dayjs": "^1.11.7",
@@ -48,10 +48,11 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "logform": "^2.5.1",
-    "mongoose": "^7.0.2",
+    "mongoose": "^6.8.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "socket.io": "^4.6.1",
+    "typegoose": "^5.9.1",
     "winston": "^3.8.2"
   }
 }

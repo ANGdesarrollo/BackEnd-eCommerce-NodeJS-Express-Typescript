@@ -1,60 +1,26 @@
-import { type Model, type FilterQuery } from 'mongoose';
+import { type Model, type Types } from 'mongoose';
 
-export abstract class ContainerMongo<T extends Document> {
-  constructor(private readonly model: Model<T>) {}
+export class ContainerMongo<T> {
+  private readonly model: Model<T>;
+
+  constructor(model: Model<T>) {
+    this.model = model;
+  }
 
   async getAll(): Promise<T[]> {
-    try {
-      const foundItems = await this.model.find().exec();
-      return foundItems;
-    } catch (error) {
-      throw new Error(`Error getting all items: ${String(error)}`);
-    }
+    return await this.model.find();
   }
 
-  async create(item: T): Promise<T> {
-    try {
-      const createdItem = await this.model.create(item);
-      return createdItem;
-    } catch (error) {
-      throw new Error(`Error creating item: ${String(error)}`);
-    }
+  async update(id: Types.ObjectId | string, update: Partial<T>): Promise<T | null> {
+    const options = { new: true } as const;
+    const document = await this.model.findByIdAndUpdate(id, update, options).lean().exec();
+    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+    return document ? ({ ...document } as T) : null;
   }
 
-  async findById(id: string): Promise<T | null> {
-    try {
-      const foundItem = await this.model.findById(id).exec();
-      return foundItem;
-    } catch (error) {
-      throw new Error(`Error finding item by id: ${String(error)}`);
-    }
-  }
-
-  async find(query: FilterQuery<T>): Promise<T[]> {
-    try {
-      const foundItems = await this.model.find(query).exec();
-      return foundItems;
-    } catch (error) {
-      throw new Error(`Error finding items: ${String(error)}`);
-    }
-  }
-
-  async update(id: string, item: T): Promise<T | null> {
-    try {
-      const updatedItem = await this.model
-        .findByIdAndUpdate(id, item, { new: true })
-        .exec();
-      return updatedItem;
-    } catch (error) {
-      throw new Error(`Error updating item: ${String(error)}`);
-    }
-  }
-
-  async delete(id: string): Promise<void> {
-    try {
-      await this.model.findByIdAndDelete(id).exec();
-    } catch (error) {
-      throw new Error(`Error deleting item: ${String(error)}`);
-    }
+  async delete(id: Types.ObjectId | string): Promise<T | null> {
+    const document = await this.model.findByIdAndDelete(id).lean().exec();
+    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+    return document ? ({ ...document } as T) : null;
   }
 }
