@@ -12,7 +12,7 @@ export class ServiceProduct {
   }
 
   instance(): any {
-    console.log('me instancie');
+    console.log('soy servicio y me instancie');
     return this;
   }
 
