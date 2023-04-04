@@ -48,7 +48,7 @@ export class Server {
   };
 
   public initializeRouters(): void {
-    this.router.forEach((route: any) => this.app.use(route.path, route.router));
+    this.router.forEach((route: IRouter) => this.app.use(route.path, route.router));
   }
 
   public listen(): void {

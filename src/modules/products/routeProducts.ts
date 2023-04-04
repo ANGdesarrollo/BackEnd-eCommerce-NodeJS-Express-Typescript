@@ -12,6 +12,7 @@ export class ProductRouter {
 
   start(): Router {
     this.router.get('/', this.controllerProduct.getProducts);
+    this.router.post('/create', this.controllerProduct.saveProduct);
     return this.router;
   }
 }

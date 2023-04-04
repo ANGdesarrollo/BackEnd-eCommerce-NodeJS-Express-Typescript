@@ -1,24 +1,12 @@
-import { ContainerMongo } from '../../containers/mongoContainer';
-import { ProductModel } from './modelProducts';
-import { type IProduct } from '../../interfaces/interfaceProduct';
 import { env } from '../../config/envConfig/envConfig';
+import { DaosMongoProduct } from './productDaos';
 
-let DaosProduct;
+let DaosProduct: DaosMongoProduct;
 
 if (env.PERSISTENCE === 'MONGO') {
-  class ProductDao extends ContainerMongo<IProduct> {
-    constructor() {
-      super(ProductModel);
-    }
-  }
-  DaosProduct = new ProductDao();
+  DaosProduct = new DaosMongoProduct();
 } else {
-  class ProductDao extends ContainerMongo<IProduct> {
-    constructor() {
-      super(ProductModel);
-    }
-  }
-  DaosProduct = new ProductDao();
+  DaosProduct = new DaosMongoProduct();
 }
 
 export default DaosProduct;

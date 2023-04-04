@@ -1,19 +1,19 @@
-// @ts-nocheck
 import bCrypt from 'bcrypt';
 import UserModel from '../modules/user/modelUser';
 import { useValidators } from '../utils/validators/useValidators';
 import { logger } from '../config/winstonConfig/winstonConfig';
 import { date } from '../utils/date/date';
 import passportLocal from 'passport-local';
+import { type IUser } from '../interfaces/interfaceUser';
 
 const LocalStrategy = passportLocal.Strategy;
 const { emailValidator } = useValidators();
-const createHash = (password): string => bCrypt.hashSync(password, bCrypt.genSaltSync(10), null);
+const createHash = (password: string): string => bCrypt.hashSync(password, bCrypt.genSaltSync(10));
 
-const isValidPassword = (user, password): boolean => bCrypt.compareSync(password, user.password);
+const isValidPassword = (user: IUser, password: string): boolean => bCrypt.compareSync(password, user.password);
 
 export const passportLocalLogin = new LocalStrategy((username, password, done) => {
-  void UserModel.findOne({ username }, (err, user) => {
+  void UserModel.findOne({ username }, (err: ErrorCallback, user: IUser) => {
     if (err) {
       done(err);
       return;
@@ -35,7 +35,7 @@ export const passportLocalRegister = new LocalStrategy(
     passReqToCallback: true,
   },
   (req, username, password, done) => {
-    void UserModel.findOne({ username }, function (err, user) {
+    void UserModel.findOne({ username }, function (err: ErrorCallback, user: IUser) {
       if (err) {
         logger.error(`Error in SignUp ${String(err)}`);
         done(err);
@@ -63,11 +63,10 @@ export const passportLocalRegister = new LocalStrategy(
         password: createHash(password),
         admin: req.body.admin,
       });
-      console.log(req.body.admin)
+      console.log(req.body.admin);
       console.log('soy new user', newUser);
 
-      // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-      void UserModel.create(newUser, (err, userWithId) => {
+      UserModel.create(newUser, (err, userWithId) => {
         if (err) {
           logger.error(`Error in Saving user ${String(err)}`);
           done(err);

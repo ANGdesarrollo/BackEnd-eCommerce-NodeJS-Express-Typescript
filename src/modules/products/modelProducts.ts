@@ -9,7 +9,7 @@ const productSchema = new Schema<IProduct>({
     background: { type: String, required: true },
   },
   stock: { type: Number, required: true },
-  discount: { type: Object, required: true },
+  discount: { type: Number },
   category: { type: String, required: true },
   soldQty: { type: Number, required: true },
   details: [
