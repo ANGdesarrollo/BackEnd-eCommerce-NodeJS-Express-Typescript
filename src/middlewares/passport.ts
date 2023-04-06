@@ -46,6 +46,7 @@ export const passportLocalRegister = new LocalStrategy(
         done(null, false);
         return;
       }
+
       if (!emailValidator(username)) {
         logger.info('Email is invalid');
         done(null, false);
@@ -63,8 +64,6 @@ export const passportLocalRegister = new LocalStrategy(
         password: createHash(password),
         admin: req.body.admin,
       });
-      console.log(req.body.admin);
-      console.log('soy new user', newUser);
 
       UserModel.create(newUser, (err, userWithId) => {
         if (err) {

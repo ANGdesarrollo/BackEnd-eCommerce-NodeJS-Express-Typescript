@@ -13,6 +13,7 @@ export class ProductRouter {
   start(): Router {
     this.router.get('/', this.controllerProduct.getProducts);
     this.router.post('/create', this.controllerProduct.saveProduct);
+    this.router.delete('/delete/:id', this.controllerProduct.deleteProduct);
     return this.router;
   }
 }

@@ -1,17 +1,18 @@
 export interface IProduct {
   date: string;
   name: string;
+  price: number;
   thumbnail: Thumbnail;
   stock: number;
-  discount?: number;
+  discount: number;
   category: string;
   soldQty: number;
   details: Details[];
 }
 
 interface Thumbnail {
-  main: string;
-  background: string;
+  imgPath: string;
+  backgroundPath: string;
 }
 
 interface Details {
