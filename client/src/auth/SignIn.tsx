@@ -5,8 +5,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import {containerBox} from "./muiStyles";
-import {onLogin} from "../store/slices/thunk";
-import {useAppDispatch, useAppSelector} from "../store/hooks/useRedux";
+import {onLogin} from "../store/slices/auth/thunk";
+import {useAppDispatch, useAppSelector} from "../hooks/useRedux";
 import {useEffect} from "react";
 
 export const SignIn = () => {

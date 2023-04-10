@@ -1,10 +1,14 @@
 import { type Model } from 'mongoose';
 import { logger } from '../config/winstonConfig/winstonConfig';
 
-export abstract class ContainerMongo<T> {
+interface MyDocument {
+  _id: string;
+}
+
+export abstract class ContainerMongo<T extends MyDocument> {
   private readonly model: Model<T>;
 
-  constructor(model: Model<T>) {
+  protected constructor(model: Model<T>) {
     this.model = model;
   }
 
@@ -22,6 +26,18 @@ export abstract class ContainerMongo<T> {
       return await this.model.create(item);
     } catch (error) {
       logger.error(`Error at saving Product: ${String(error)}`);
+      throw new Error();
+    }
+  }
+
+  async updateOne(item: T): Promise<T | null> {
+    try {
+      console.log(item);
+      const filter = { _id: item._id };
+      const update = { ...item };
+      return await this.model.findOneAndUpdate(filter, update, { new: true });
+    } catch (error) {
+      logger.error(`Error at updating Product: ${String(error)}`);
       throw new Error();
     }
   }

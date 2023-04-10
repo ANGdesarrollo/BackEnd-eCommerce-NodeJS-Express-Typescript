@@ -1,5 +1,17 @@
+export interface IProductDTO {
+  name: string;
+  price: number;
+  thumbnail: Thumbnail;
+  stock: number;
+  discount: number;
+  category: string;
+  details: string;
+}
+
 export interface IProduct {
-  date: string;
+  _id: string;
+  createdAt: string;
+  updatedAt: string;
   name: string;
   price: number;
   thumbnail: Thumbnail;
@@ -7,15 +19,10 @@ export interface IProduct {
   discount: number;
   category: string;
   soldQty: number;
-  details: Details[];
+  details: string;
 }
 
 interface Thumbnail {
   imgPath: string;
   backgroundPath: string;
-}
-
-interface Details {
-  description: string;
-  name: string;
 }

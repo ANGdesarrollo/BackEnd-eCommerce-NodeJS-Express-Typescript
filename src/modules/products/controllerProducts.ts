@@ -27,12 +27,12 @@ export class ControllerProduct {
 
   async saveProduct(req: Request, res: Response): Promise<void> {
     try {
-      const { body } = req;
-      await new ServiceProduct().saveProduct(body);
+      const { product } = req.body;
+      const productSaved = await new ServiceProduct().saveProduct(product);
       res.status(200).json({
         status: true,
         message: 'Product successfully added',
-        product: body,
+        product: productSaved,
       });
     } catch (error) {
       logger.error(`Error at controller saveProduct: ${String(error)}`);
@@ -43,11 +43,12 @@ export class ControllerProduct {
   async deleteProduct(req: Request, res: Response): Promise<void> {
     try {
       const { id } = req.params;
-      const statusDelete = await new ServiceProduct().deleteProduct(id);
-      if (statusDelete) {
+      const productToDelete = await new ServiceProduct().deleteProduct(id);
+      if (productToDelete) {
         res.status(200).json({
           status: true,
           message: 'Product successfully deleted',
+          product: productToDelete,
         });
       } else {
         res.status(200).json({
@@ -57,6 +58,28 @@ export class ControllerProduct {
       }
     } catch (error) {
       logger.error(`Error at controller deleteProduct: ${String(error)}`);
+      throw new Error();
+    }
+  }
+
+  async updateProduct(req: Request, res: Response): Promise<void> {
+    try {
+      const { product } = req.body;
+      const productToUpdate = await new ServiceProduct().updateProduct(product);
+      if (productToUpdate) {
+        res.status(201).json({
+          status: true,
+          message: 'Product successfully updated',
+          product: productToUpdate,
+        });
+      } else {
+        res.status(201).json({
+          status: false,
+          message: 'Product not found',
+        });
+      }
+    } catch (error) {
+      logger.error(`Error at controller updateProduct: ${String(error)}`);
       throw new Error();
     }
   }

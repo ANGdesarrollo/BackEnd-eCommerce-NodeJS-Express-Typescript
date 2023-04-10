@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { API_URL } from "../../config/configAPI";
+import { API_URL } from "./configAPI";
 
 Axios.defaults.withCredentials = true;
 

@@ -30,3 +30,81 @@
 [34m2023-04-05 11:17:31[39m [[31merror[39m]: Invalid format of product: ValidationError: "thumbnail.imgPath" is required
 [34m2023-04-05 11:17:31[39m [[31merror[39m]: Error at saving product: Error
 [34m2023-04-05 11:17:31[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-09 17:03:43[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" is required
+[34m2023-04-09 17:03:43[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 17:03:43[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 17:04:37[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" is required
+[34m2023-04-09 17:04:37[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 17:04:37[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 17:05:06[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" is required
+[34m2023-04-09 17:05:06[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 17:05:06[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 17:05:53[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" is required
+[34m2023-04-09 17:05:53[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 17:05:53[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 17:45:00[39m [[31merror[39m]: Error at updating Product: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Product"
+[34m2023-04-09 17:45:00[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 17:45:00[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 18:12:39[39m [[31merror[39m]: Error at updating Product: TypeError: Cannot read properties of undefined (reading '_id')
+[34m2023-04-09 18:12:39[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 18:12:39[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 18:14:20[39m [[31merror[39m]: Error at updating Product: TypeError: Cannot read properties of undefined (reading '_id')
+[34m2023-04-09 18:14:20[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 18:14:20[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 18:15:15[39m [[31merror[39m]: Error at updating Product: TypeError: Cannot read properties of undefined (reading '_id')
+[34m2023-04-09 18:15:15[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-09 18:15:15[39m [[31merror[39m]: Error at controller updateProduct: Error
+[34m2023-04-09 20:15:31[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-09 20:15:31[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-09 20:15:31[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 01:34:30[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 01:34:30[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 01:34:30[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 09:52:27[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 09:52:27[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 09:52:27[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 09:58:50[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 09:58:50[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 09:58:50[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 10:07:19[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 10:07:19[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 10:07:19[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 10:21:37[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 10:21:37[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 10:21:37[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 10:24:52[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 10:24:52[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 10:24:52[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 10:27:32[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 10:27:32[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 10:27:32[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:03:24[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 17:03:24[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:03:24[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:04:59[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 17:04:59[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:04:59[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:06:24[39m [[31merror[39m]: Invalid format of product: ValidationError: "_id" must be a string
+[34m2023-04-10 17:06:24[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:06:24[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:07:25[39m [[31merror[39m]: Invalid format of product: ValidationError: "name" is required
+[34m2023-04-10 17:07:25[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:07:25[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:08:39[39m [[31merror[39m]: Invalid format of product: ValidationError: "name" is required
+[34m2023-04-10 17:08:39[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:08:39[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:11:42[39m [[31merror[39m]: Invalid format of product: ValidationError: "name" is required
+[34m2023-04-10 17:11:42[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:11:42[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:14:18[39m [[31merror[39m]: Invalid format of product: ValidationError: "name" is required
+[34m2023-04-10 17:14:18[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:14:18[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:15:49[39m [[31merror[39m]: Invalid format of product: ValidationError: "soldQty" is required
+[34m2023-04-10 17:15:49[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:15:49[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:16:49[39m [[31merror[39m]: Invalid format of product: ValidationError: "$__" is not allowed
+[34m2023-04-10 17:16:49[39m [[31merror[39m]: Error at saving product: Error
+[34m2023-04-10 17:16:49[39m [[31merror[39m]: Error at controller saveProduct: Error
+[34m2023-04-10 17:38:58[39m [[31merror[39m]: Invalid format of product: ValidationError: "thumbnail" is required
+[34m2023-04-10 17:38:58[39m [[31merror[39m]: Error updating the product: Error
+[34m2023-04-10 17:38:58[39m [[31merror[39m]: Error at controller updateProduct: Error

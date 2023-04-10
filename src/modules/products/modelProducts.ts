@@ -2,7 +2,8 @@ import { Schema, model } from 'mongoose';
 import { type IProduct } from '../../interfaces/interfaceProduct';
 
 const productSchema = new Schema<IProduct>({
-  date: { type: String, required: true },
+  createdAt: { type: String, required: true },
+  updatedAt: { type: String, required: true },
   name: { type: String, required: true },
   price: { type: Number, required: true },
   thumbnail: {
@@ -13,12 +14,7 @@ const productSchema = new Schema<IProduct>({
   discount: { type: Number, required: true },
   category: { type: String, required: true },
   soldQty: { type: Number, required: true },
-  details: [
-    {
-      description: { type: String, required: true },
-      name: { type: String, required: true },
-    },
-  ],
+  details: { type: String, required: true },
 });
 
 export const ProductModel = model('Product', productSchema);

@@ -1,11 +1,12 @@
 import { logger } from '../../config/winstonConfig/winstonConfig';
-import { type IProduct } from '../../interfaces/interfaceProduct';
-import { idSchema, productSchema } from './joiSchemas';
+import { type IProductDTO, type IProduct } from '../../interfaces/interfaceProduct';
+import { idSchema, productCreateSchema, procutUpdateSchema } from './joiSchemas';
 
 interface Validators {
   emailValidator: (email: string) => boolean;
   idValidator: (id: string) => Promise<string>;
-  productValidator: (product: IProduct) => Promise<IProduct>;
+  productCreateValidator: (product: IProductDTO) => Promise<IProductDTO>;
+  productUpdateValidator: (product: IProduct) => Promise<IProduct>;
 }
 
 export const useValidators = (): Validators => {
@@ -25,9 +26,19 @@ export const useValidators = (): Validators => {
     }
   };
 
-  const productValidator = async (product: IProduct): Promise<IProduct> => {
+  const productCreateValidator = async (product: IProductDTO): Promise<IProductDTO> => {
     try {
-      const value = await productSchema.validateAsync(product);
+      const value = await productCreateSchema.validateAsync(product);
+      return value;
+    } catch (error) {
+      logger.error(`Invalid format of product: ${String(error)}`);
+      throw new Error();
+    }
+  };
+
+  const productUpdateValidator = async (product: IProduct): Promise<IProduct> => {
+    try {
+      const value = await procutUpdateSchema.validateAsync(product);
       return value;
     } catch (error) {
       logger.error(`Invalid format of product: ${String(error)}`);
@@ -38,6 +49,7 @@ export const useValidators = (): Validators => {
   return {
     emailValidator,
     idValidator,
-    productValidator,
+    productCreateValidator,
+    productUpdateValidator,
   };
 };

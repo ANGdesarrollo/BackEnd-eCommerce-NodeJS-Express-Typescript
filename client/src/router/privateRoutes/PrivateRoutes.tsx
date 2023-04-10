@@ -1,6 +1,6 @@
 import {Navigate, Outlet} from 'react-router-dom';
 import React from "react";
-import {useAppSelector} from "../../store/hooks/useRedux";
+import {useAppSelector} from "../../hooks/useRedux";
 
 export const PrivateRoutes = (): React.ReactElement | null => {
 

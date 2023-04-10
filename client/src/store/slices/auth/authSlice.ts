@@ -11,7 +11,6 @@ export const authSlice = createSlice({
     initialState,
     reducers: {
         onSignUp: (state:AuthState, action) => {
-            console.log('entre')
             state.statusAuth = action.payload.statusAuth
             state.username = action.payload.username
         },

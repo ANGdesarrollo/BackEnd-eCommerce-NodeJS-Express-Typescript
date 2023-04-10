@@ -1,6 +1,6 @@
 import {onSignUp} from "./authSlice";
-import {axiosApi} from '../../hooks/useAxios/axiosApi';
-import {AppDispatch} from "../store";
+import {axiosApi} from '../../../config/axiosApi';
+import {AppDispatch} from "../../store";
 
 export const onLogin = (username: string, password: string): any =>
     async (dispatch: AppDispatch) => {

@@ -1,0 +1,762 @@
+[
+  {
+    "details": [
+      {
+        "name": "SWITCH TYPE",
+        "description": "Razer Analog Optical Switch"
+      },
+      {
+        "description": "Full Size",
+        "name": "APPROXIMATE SIZES"
+      },
+      {
+        "name": "LIGHTING",
+        "description": "Razer Chroma RGB customizable backlighting with 16.8 million color options"
+      },
+      {
+        "name": "WRIST REST",
+        "description": "Yes"
+      },
+      {
+        "name": "ONBOARD MEMORY",
+        "description": "Hybrid onboard storage - up to 5 keybinding profiles"
+      },
+      {
+        "description": "Yes",
+        "name": "MEDIA KEYS"
+      },
+      {
+        "name": "PASSTHROUGH",
+        "description": "USB 3.0 Passthrough"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Wired - USB-C\nWired - USB-A 3.0 (via adapter)"
+      },
+      {
+        "description": "Razer Doubleshot PBT Keycaps",
+        "name": "KEYKAPS"
+      }
+    ],
+    "backgroundPath": ""
+  },
+  {
+    "stock": 25,
+    "price": 250,
+    "category": "Keyboard",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184779/react-js-game-on/details/keyboard_1_details_opatvs.jpg",
+    "name": "Huntsman V2 Tenkeyless Linear Optical",
+    "id": "keyboard-1",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Keyboard_1_slgpnz.webp",
+    "details": [
+      {
+        "name": "SWITCH TYPE",
+        "description": "Razer™ Clicky Optical Switch"
+      },
+      {
+        "description": "Tenkeyless",
+        "name": "APPROXIMATE SIZES"
+      },
+      {
+        "description": "Razer Chroma™ RGB customizable backlighting with 16.8 million color options",
+        "name": "LIGHTING"
+      },
+      {
+        "description": "Yes",
+        "name": "WRIST REST"
+      },
+      {
+        "description": "Hybrid onboard storage – up to 5 keybinding profiles",
+        "name": "ONBOARD MEMORY"
+      },
+      {
+        "name": "MEDIA KEYS",
+        "description": "None"
+      },
+      {
+        "name": "PASSTHROUGH",
+        "description": "None"
+      },
+      {
+        "description": "Wired - Detachable USB-C braided fiber cable",
+        "name": "CONNECTIVITY"
+      },
+      {
+        "description": "Razer Doubleshot PBT Keycaps",
+        "name": "KEYKAPS"
+      }
+    ]
+  },
+  {
+    "stock": 40,
+    "details": [
+      {
+        "description": "Razer™ Clicky Optical Switch",
+        "name": "SWITCH TYPE"
+      },
+      {
+        "description": "60%",
+        "name": "APPROXIMATE SIZES"
+      },
+      {
+        "description": "Razer Chroma™ RGB customizable backlighting with 16.8 million color options",
+        "name": "LIGHTING"
+      },
+      {
+        "name": "WRIST REST",
+        "description": "None"
+      },
+      {
+        "name": "ONBOARD MEMORY",
+        "description": "Hybrid onboard storage – up to 5 profiles"
+      },
+      {
+        "description": "None",
+        "name": "MEDIA KEYS"
+      },
+      {
+        "name": "PASSTHROUGH",
+        "description": "None"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Wired - Detachable Type-C"
+      },
+      {
+        "description": "Razer Doubleshot PBT Keycaps",
+        "name": "KEYKAPS"
+      }
+    ],
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Keyboard_2_mp0d71.webp",
+    "category": "Keyboard",
+    "id": "keyboard-2",
+    "brand": "Razer",
+    "name": "Huntsman Mini Linear Optical Switch",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184780/react-js-game-on/details/keyboard_2_details_e3o6am.jpg",
+    "price": 170
+  },
+  {
+    "brand": "Razer",
+    "stock": 37,
+    "name": "Pro Type Ultra US",
+    "details": [
+      {
+        "name": "SWITCH TYPE",
+        "description": "Razer™ Yellow Mechanical Switch"
+      },
+      {
+        "description": "Full Size",
+        "name": "APPROXIMATE SIZES"
+      },
+      {
+        "name": "LIGHTING",
+        "description": "Backlit keys (white LED)"
+      },
+      {
+        "description": "Yes",
+        "name": "WRIST REST"
+      },
+      {
+        "description": "None",
+        "name": "ONBOARD MEMORY"
+      },
+      {
+        "name": "MEDIA KEYS",
+        "description": "Yes"
+      },
+      {
+        "name": "PASSTHROUGH",
+        "description": "None"
+      },
+      {
+        "description": "Wired USB-C, wireless connection via Bluetooth® and Razer™ HyperSpeed (2.4GHz)",
+        "name": "CONNECTIVITY"
+      },
+      {
+        "name": "KEYKAPS",
+        "description": "ABS plastic - With soft touch coating"
+      }
+    ],
+    "id": "keyboard-3",
+    "price": 320,
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958400/react-js-game-on/products/Keyboard_3_ke2ati.webp",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184780/react-js-game-on/details/keyboard_3_details_n08jvg.jpg",
+    "category": "Keyboard"
+  },
+  {
+    "brand": "Razer",
+    "category": "Headset",
+    "name": "BlackShark V2 Pro Black",
+    "price": 400,
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184779/react-js-game-on/details/headset_0_details_dgsulo.jpg",
+    "details": [
+      {
+        "name": "FREQUENCY RESPONSE",
+        "description": "12 Hz – 28 kHz"
+      },
+      {
+        "description": "32 Ω (1 kHz)",
+        "name": "IMPEDANCE"
+      },
+      {
+        "name": "SENSITIVITY",
+        "description": "100 dB (1 kHz)"
+      },
+      {
+        "description": "50 mm",
+        "name": "DRIVER SIZE - DIAMETERS (MM)"
+      },
+      {
+        "name": "DRIVER TYPE",
+        "description": "Razer™ TriForce Titanium"
+      },
+      {
+        "description": "Breathable memory foam cushions",
+        "name": "EARCUPS"
+      },
+      {
+        "description": "Width: 40 mm / 1.57\"\nLength: 65 mm / 2.55\"",
+        "name": "INNER EARCUP DIAMETER"
+      },
+      {
+        "name": "EARPADS MATERIAL",
+        "description": "Ultra-soft FlowKnit memory foam"
+      },
+      {
+        "description": "Advanced passive noise cancellation",
+        "name": "NOISE CANCELLING"
+      }
+    ],
+    "stock": 5,
+    "id": "headset-0",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Headset_0_z6rllj.webp"
+  },
+  {
+    "price": 250,
+    "details": [
+      {
+        "description": "12 Hz – 28 kHz",
+        "name": "FREQUENCY RESPONSE"
+      },
+      {
+        "description": "32 Ω (1 kHz)",
+        "name": "IMPEDANCE"
+      },
+      {
+        "name": "SENSITIVITY",
+        "description": "100 dB (1 kHz)"
+      },
+      {
+        "description": "50 mm",
+        "name": "DRIVER SIZE - DIAMETERS (MM)"
+      },
+      {
+        "description": "Razer™ TriForce Titanium",
+        "name": "DRIVER TYPE"
+      },
+      {
+        "description": "Breathable memory foam cushions",
+        "name": "EARCUPS"
+      },
+      {
+        "name": "INNER EARCUP DIAMETER",
+        "description": "2.56\" x 1.57\"\n65 mm x 40 mm"
+      },
+      {
+        "description": "Ultra-soft FlowKnit memory foam",
+        "name": "EARPADS MATERIAL"
+      },
+      {
+        "name": "NOISE CANCELLING",
+        "description": "Advanced passive noise cancellation"
+      }
+    ],
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184779/react-js-game-on/details/headset_1_details_dbslit.jpg",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Headset_1_tskscp.webp",
+    "id": "headset-1",
+    "category": "Headset",
+    "stock": 5,
+    "brand": "Razer",
+    "name": "BlackShark V2 Six Siege Edition"
+  },
+  {
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184779/react-js-game-on/details/headset_2_details_pidukh.jpg",
+    "id": "headset-2",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Headset_2_zungei.webp",
+    "category": "Headset",
+    "brand": "Razer",
+    "stock": 5,
+    "name": "BlackShark V2 White Edition",
+    "details": [
+      {
+        "name": "FREQUENCY RESPONSE",
+        "description": "12 Hz – 28 kHz"
+      },
+      {
+        "name": "IMPEDANCE",
+        "description": "32 Ω (1 kHz)"
+      },
+      {
+        "description": "100 dB (1 kHz)",
+        "name": "SENSITIVITY"
+      },
+      {
+        "name": "DRIVER SIZE - DIAMETERS (MM)",
+        "description": "50 mm"
+      },
+      {
+        "description": "Razer™ TriForce Titanium",
+        "name": "DRIVER TYPE"
+      },
+      {
+        "description": "Breathable memory foam cushions",
+        "name": "EARCUPS"
+      },
+      {
+        "description": "Width: 40 mm / 1.57\"\nLength: 65 mm / 2.55\"",
+        "name": "INNER EARCUP DIAMETER"
+      },
+      {
+        "description": "Ultra-soft FlowKnit memory foam",
+        "name": "EARPADS MATERIAL"
+      },
+      {
+        "description": "Advanced passive noise cancellation",
+        "name": "NOISE CANCELLING"
+      }
+    ],
+    "price": 170
+  },
+  {
+    "brand": "Razer",
+    "id": "headset-3",
+    "category": "Headset",
+    "details": [
+      {
+        "description": "12 Hz – 28 kHz",
+        "name": "FREQUENCY RESPONSE"
+      },
+      {
+        "description": "32 Ω (1 kHz)",
+        "name": "IMPEDANCE"
+      },
+      {
+        "name": "SENSITIVITY",
+        "description": "100 dB (1 kHz)"
+      },
+      {
+        "name": "DRIVER SIZE - DIAMETERS (MM)",
+        "description": "50 mm"
+      },
+      {
+        "name": "DRIVER TYPE",
+        "description": "Razer™ TriForce Titanium"
+      },
+      {
+        "description": "Breathable memory foam cushions",
+        "name": "EARCUPS"
+      },
+      {
+        "description": "Width: 40 mm / 1.57\"\nLength: 65 mm / 2.55\"",
+        "name": "INNER EARCUP DIAMETER"
+      },
+      {
+        "name": "EARPADS MATERIAL",
+        "description": "Ultra-soft FlowKnit memory foam"
+      },
+      {
+        "description": "Advanced passive noise cancellation",
+        "name": "NOISE CANCELLING"
+      }
+    ],
+    "price": 200,
+    "name": "Razer BlackShark V2 Special Edition",
+    "stock": 5,
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Headset_3_t0qu2u.webp",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184779/react-js-game-on/details/headset_3_details_dqgbyc.jpg"
+  },
+  {
+    "stock": 5,
+    "details": [
+      {
+        "name": "FORM FACTOR",
+        "description": "Ambidextrous"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Razer™ HyperSpeed Wireless\nWired - Speedflex Cable"
+      },
+      {
+        "description": "Up to 70 Hours",
+        "name": "BATTERY LIFE"
+      },
+      {
+        "description": "Razer Chroma™ RGB",
+        "name": "RGB LIGHTING"
+      },
+      {
+        "name": "SENSOR",
+        "description": "Optical"
+      },
+      {
+        "description": "20000",
+        "name": "MAX SENSITIVITY (DPI)"
+      },
+      {
+        "name": "MAX SPEED (IPS)",
+        "description": "650"
+      },
+      {
+        "name": "MAX ACCELERATION (G)",
+        "description": "50"
+      },
+      {
+        "name": "PROGRAMMABLE BUTTONS",
+        "description": "8"
+      }
+    ],
+    "price": 400,
+    "name": "Viper Ultimate Quartz",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958400/react-js-game-on/products/Mouse_0_qbzrzj.webp",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184780/react-js-game-on/details/mouse_0_details_nwk9wf.jpg",
+    "id": "mouse-0",
+    "category": "Mouse",
+    "brand": "Razer"
+  },
+  {
+    "details": [
+      {
+        "name": "FORM FACTOR",
+        "description": "Right-handed Symmetrical"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Razer™ HyperSpeed Wireless\nWired – Speedflex Cable"
+      },
+      {
+        "name": "BATTERY LIFE",
+        "description": "Up to 80 hours"
+      },
+      {
+        "description": "None",
+        "name": "RGB LIGHTING"
+      },
+      {
+        "name": "SENSOR",
+        "description": "Focus Pro 30K Optical Sensor"
+      },
+      {
+        "name": "MAX SENSITIVITY (DPI)",
+        "description": "30000"
+      },
+      {
+        "name": "MAX SPEED (IPS)",
+        "description": "750"
+      },
+      {
+        "description": "70",
+        "name": "MAX ACCELERATION (G)"
+      },
+      {
+        "name": "PROGRAMMABLE BUTTONS",
+        "description": "5"
+      }
+    ],
+    "stock": 100,
+    "id": "mouse-1",
+    "category": "Mouse",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184780/react-js-game-on/details/mouse_1_details_rrfqnf.jpg",
+    "name": "Viper Ultimate Mercury",
+    "price": 250,
+    "brand": "Razer",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp"
+  },
+  {
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184780/react-js-game-on/details/mouse_2_details_xmcizc.jpg",
+    "id": "mouse-2",
+    "price": 170,
+    "brand": "Razer",
+    "details": [
+      {
+        "description": "Right-handed Symmetrical",
+        "name": "FORM FACTOR"
+      },
+      {
+        "description": "Razer™ HyperSpeed Wireless\nWired – Speedflex Cable",
+        "name": "CONNECTIVITY"
+      },
+      {
+        "description": "Up to 80 hours (constant motion at 1000Hz)\nUp to 24 hours (with HyperPolling Wireless Dongle, constant motion at 4000Hz)",
+        "name": "BATTERY LIFE"
+      },
+      {
+        "description": "None",
+        "name": "RGB LIGHTING"
+      },
+      {
+        "name": "SENSOR",
+        "description": "Focus Pro 30K Optical Sensor"
+      },
+      {
+        "description": "30000",
+        "name": "MAX SENSITIVITY (DPI)"
+      },
+      {
+        "name": "MAX SPEED (IPS)",
+        "description": "750"
+      },
+      {
+        "name": "MAX ACCELERATION (G)",
+        "description": "70"
+      },
+      {
+        "name": "PROGRAMMABLE BUTTONS",
+        "description": "5"
+      }
+    ],
+    "name": "Viper Ultimate Black",
+    "stock": 79,
+    "category": "Mouse",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Mouse_2_z3ex6a.webp"
+  },
+  {
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184780/react-js-game-on/details/mouse_3_details_lcxpvr.jpg",
+    "price": 200,
+    "details": [
+      {
+        "name": "FORM FACTOR",
+        "description": "Ambidextrous"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Wired - Razer™ Speedflex Cable"
+      },
+      {
+        "name": "BATTERY LIFE",
+        "description": "None"
+      },
+      {
+        "name": "RGB LIGHTING",
+        "description": "Razer Chroma™ RGB"
+      },
+      {
+        "description": "Optical",
+        "name": "SENSOR"
+      },
+      {
+        "name": "MAX SENSITIVITY (DPI)",
+        "description": "20000"
+      },
+      {
+        "name": "MAX SPEED (IPS)",
+        "description": "650"
+      },
+      {
+        "description": "50",
+        "name": "MAX ACCELERATION (G)"
+      },
+      {
+        "name": "PROGRAMMABLE BUTTONS",
+        "description": "7+1"
+      }
+    ],
+    "brand": "Razer",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Mouse_3_cul4nd.webp",
+    "stock": 34,
+    "id": "mouse-3",
+    "name": "Viper 8KHz ESL Edition",
+    "category": "Mouse"
+  },
+  {
+    "brand": "Razer",
+    "price": 1200,
+    "id": "notebook-0",
+    "name": "Blade 14-QHD 165Hz GeForce RTX 3080Ti",
+    "stock": 45,
+    "category": "Notebook",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184781/react-js-game-on/details/notebook_0_details_ejxnrv.jpg",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Notebook_0_bavj0c.webp",
+    "details": [
+      {
+        "description": "AMD Ryzen™ 9 6900HX Processor (8-Cores /16-Threads, 20MB Cache, Up to 4.9 GHz max boost) with Radeon™ 680M Graphics",
+        "name": "PROCESSOR"
+      },
+      {
+        "name": "OS",
+        "description": "Windows 11 Home"
+      },
+      {
+        "description": "14-inch QHD 165Hz, 2560 x 1440\nFreeSync™ Premium, Up to 100% DCI-P3, individually factory calibrated",
+        "name": "DISPLAY"
+      },
+      {
+        "description": "NVIDIA® GeForce RTX™ 3080 Ti (16GB GDDR6 VRAM)",
+        "name": "GRAPHICS"
+      },
+      {
+        "name": "STORAGE",
+        "description": "1TB SSD (M.2 NVMe PCIe 4.0 x4)"
+      },
+      {
+        "name": "MEMORY",
+        "description": "16 GB DDR5-4800MHz (Fixed Onboard)"
+      },
+      {
+        "description": "Per key RGB Powered by Razer Chroma™ N-Key rollover keyboard",
+        "name": "KEYBOARD"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Qualcomm® WCN6856 Wi-Fi 6E™, IEEE 802.11a/b/g/n/ac/ax, Bluetooth® 5.3"
+      },
+      {
+        "description": "Precision glass touchpad",
+        "name": "TOUCHPAD"
+      }
+    ]
+  },
+  {
+    "id": "notebook-1",
+    "name": "Razer Blade 15 - UHD 144Hz GeForce RTX 3080Ti",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184780/react-js-game-on/details/notebook_1_details_yfsu0m.jpg",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Notebook_1_fwt7xu.webp",
+    "details": [
+      {
+        "description": "1.8GHz 14-core Intel i9-12900H processor, Turbo Boost up to 5GHz, with 24MB of Caches",
+        "name": "PROCESSOR"
+      },
+      {
+        "name": "OS",
+        "description": "Windows 11 Home"
+      },
+      {
+        "name": "DISPLAY",
+        "description": "15.6\" IPS-Grade UHD, 100% DCI-P3, 4ms, individually factory calibrated"
+      },
+      {
+        "name": "GRAPHICS",
+        "description": "NVIDIA® GeForce RTX™ 3080 Ti (16GB GDDR6 VRAM)"
+      },
+      {
+        "description": "1TB SSD (M.2 NVMe PCIe 4.0 x4)",
+        "name": "STORAGE"
+      },
+      {
+        "description": "32 GB DDR5 4800MHz dual-channel memory (slotted)",
+        "name": "MEMORY"
+      },
+      {
+        "description": "Per-Key Backlighting, powered by Razer Chroma™",
+        "name": "KEYBOARD"
+      },
+      {
+        "description": "Killer® Wireless Wi-Fi 6E AX1690 (IEEE 802.11a/b/g/n/ac/ax/az), Bluetooth® 5.2",
+        "name": "CONNECTIVITY"
+      },
+      {
+        "description": "Precision glass touchpad",
+        "name": "TOUCHPAD"
+      }
+    ],
+    "brand": "Razer",
+    "category": "Notebook",
+    "price": 1250,
+    "stock": 1
+  },
+  {
+    "stock": 5,
+    "details": [
+      {
+        "description": "1.8GHz 14-core Intel i9-12900H processor, Turbo Boost up to 5GHz, with 24MB of Cache",
+        "name": "PROCESSOR"
+      },
+      {
+        "name": "OS",
+        "description": "Windows 11 Home"
+      },
+      {
+        "name": "DISPLAY",
+        "description": "17.3\" 4K 144Hz IPS-Grade Display, 100% DCI-P3, 6mm bezels, individually factory calibrated"
+      },
+      {
+        "name": "GRAPHICS",
+        "description": "NVIDIA® GeForce RTX™ 3080 Ti (16GB GDDR6 VRAM)"
+      },
+      {
+        "description": "\n1TB PCIe Gen4 NVMe upgradeable to 4TB + Open M.2 Slot (Supports 2-sided NVMe Drive), upgradeable to 4TB SSD",
+        "name": "STORAGE"
+      },
+      {
+        "description": "32 GB DDR5 4800MHz dual-channel memory (slotted)",
+        "name": "MEMORY"
+      },
+      {
+        "name": "KEYBOARD",
+        "description": "Per-Key Backlighting, powered by Razer Chroma™"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Killer® Wireless Wi-Fi 6E AX1690 (IEEE 802.11a/b/g/n/ac/ax/az), Bluetooth® 5.2"
+      },
+      {
+        "name": "TOUCHPAD",
+        "description": "Precision glass touchpad"
+      }
+    ],
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184781/react-js-game-on/details/notebook_2_details_apb7sf.jpg",
+    "brand": "Razer",
+    "price": 1170,
+    "category": "Notebook",
+    "name": "Razer Blade 17 . QHD 240Hz GeForce RTX 3070 Ti",
+    "id": "notebook-2",
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Notebook_2_d9kvm7.webp"
+  },
+  {
+    "price": 2200,
+    "category": "Notebook",
+    "brand": "Razer",
+    "stock": 5,
+    "imgPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Notebook_3_fm5ymo.webp",
+    "id": "notebook-3",
+    "backgroundPath": "https://res.cloudinary.com/dwz16rstr/image/upload/v1663184781/react-js-game-on/details/notebook_3_details_gnuyrm.jpg",
+    "details": [
+      {
+        "description": "11th Gen Intel® Core™ i7-1165G7 Quad-Core Processor",
+        "name": "PROCESSOR"
+      },
+      {
+        "name": "OS",
+        "description": "Windows 11 Home"
+      },
+      {
+        "name": "DISPLAY",
+        "description": "13.4\" FHD (1920 X 1200), 100% sRGB, slim bezels, individually factory calibrated, touch display, anti-reflective coating, Gorilla® Glass\nup to 178° wide viewing angles"
+      },
+      {
+        "name": "GRAPHICS",
+        "description": "Intel® Iris® Xe Graphics"
+      },
+      {
+        "description": "512 GB",
+        "name": "STORAGE"
+      },
+      {
+        "description": "\n16GB LPDDR4x 4267Mhz dual-channel onboard memory (Fixed)",
+        "name": "MEMORY"
+      },
+      {
+        "name": "KEYBOARD",
+        "description": "Per-Key Backlighting, powered by Razer Chroma™"
+      },
+      {
+        "name": "CONNECTIVITY",
+        "description": "Intel® Wireless-AX 201 (IEEE 802.11a/b/g/n/ac/ax)\nBluetooth® 5.1"
+      },
+      {
+        "name": "TOUCHPAD",
+        "description": "Microsoft Precision Glass-Touchpad"
+      }
+    ],
+    "name": "Book - UHD Touch 60Hz - Intel® Iris® Xe"
+  }
+]

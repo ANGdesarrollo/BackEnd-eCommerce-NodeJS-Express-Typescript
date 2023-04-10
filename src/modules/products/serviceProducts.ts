@@ -1,10 +1,10 @@
 import { logger } from '../../config/winstonConfig/winstonConfig';
-import { type IProduct } from '../../interfaces/interfaceProduct';
+import { type IProductDTO, type IProduct } from '../../interfaces/interfaceProduct';
 import DaosProduct from './productDaoFactory';
 import { type DaosMongoProduct } from './productDaos';
-import { ProductModel } from './modelProducts';
 import { useValidators } from '../../utils/validators/useValidators';
 import { date } from '../../utils/date/date';
+import { ProductModel } from './modelProducts';
 
 export class ServiceProduct {
   public daosProduct: DaosMongoProduct;
@@ -23,14 +23,14 @@ export class ServiceProduct {
     }
   }
 
-  async saveProduct(product: IProduct): Promise<IProduct> {
+  async saveProduct(product: IProductDTO): Promise<IProduct> {
     try {
-      const { productValidator } = useValidators();
-      const validatedProduct = await productValidator(product);
-      const finalProduct = { ...validatedProduct, date: date() };
-      const productToSave = new ProductModel(finalProduct);
-      await this.daosProduct.save(finalProduct);
-      return productToSave;
+      const { productCreateValidator } = useValidators();
+      const productToValidate = await productCreateValidator(product);
+      const validatedProduct = { ...productToValidate, createdAt: date(), updatedAt: date(), soldQty: 0 };
+      const finalProduct: IProduct = new ProductModel(validatedProduct);
+      finalProduct.createdAt = validatedProduct.createdAt;
+      return await this.daosProduct.save(finalProduct);
     } catch (error) {
       logger.error(`Error at saving product: ${String(error)}`);
       throw new Error();
@@ -44,6 +44,19 @@ export class ServiceProduct {
       return await this.daosProduct.deleteOne(validatedID);
     } catch (error) {
       logger.error(`Error deleting the product: ${String(error)}`);
+      throw new Error();
+    }
+  }
+
+  async updateProduct(item: IProduct): Promise<IProduct | null> {
+    try {
+      console.log(item);
+      const { productUpdateValidator } = useValidators();
+      const updateDate = { ...item, updatedAt: date() };
+      const validatedProduct = await productUpdateValidator(updateDate);
+      return await this.daosProduct.updateOne(validatedProduct);
+    } catch (error) {
+      logger.error(`Error updating the product: ${String(error)}`);
       throw new Error();
     }
   }
