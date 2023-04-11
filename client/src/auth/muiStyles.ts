@@ -4,3 +4,10 @@ export const containerBox = {
     flexDirection: "column",
     alignItems: "center",
 }
+
+export const containerCheckerAuth = {
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+}

@@ -2,10 +2,11 @@ import { IProduct } from '../../../interfaces/interfaceProduct';
 
 export interface IProductInitial {
     products: IProduct[];
+    onLoading: boolean;
 }
 
 export interface IActionProductGetAll {
-    payload: IProductInitial;
+    payload: IProduct[];
     type: string;
 }
 

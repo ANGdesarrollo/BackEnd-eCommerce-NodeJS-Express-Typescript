@@ -4,6 +4,7 @@ import {Delete, Edit} from "@mui/icons-material";
 import {CreateNewProductModal} from "./components/CreateNewProductModal";
 import {Dispatch} from "react";
 import {CreatedProduct, IProduct} from "../../interfaces/interfaceProduct";
+import {Loading} from "../../utils/Loading";
 
 interface props {
     columns: MRT_ColumnDef<IProduct>[];
@@ -14,6 +15,7 @@ interface props {
     setCreateModalOpen: Dispatch<any>;
     createModalOpen: boolean;
     handleCreateNewRow: (values: CreatedProduct) => void;
+    onLoading: boolean;
 }
 
 export const ProductsLayout = ({
@@ -24,10 +26,12 @@ export const ProductsLayout = ({
                                    handleDeleteRow,
                                    setCreateModalOpen,
                                    handleCreateNewRow,
-                                   createModalOpen
+                                   createModalOpen,
+                                   onLoading
                                }: props) => {
     return (
         <>
+            {onLoading && <Loading/>}
             <MaterialReactTable
                 displayColumnDefOptions={{
                     'mrt-row-actions': {

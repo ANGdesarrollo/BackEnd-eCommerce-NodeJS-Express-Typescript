@@ -13,8 +13,10 @@ import {useAppDispatch, useAppSelector} from "../../hooks/useRedux";
 import {createProduct, deleteProduct, getProducts, updateProduct} from "../../store/slices/products/thunk";
 import {useValidators} from "../../hooks/useValidators";
 import {ProductsLayout} from "./ProductsLayout";
+import Swal from "sweetalert2";
 
 export const ProductsContainer = () => {
+    const { onLoading } = useAppSelector(state => state.products);
     const dispatch = useAppDispatch();
     const {products} = useAppSelector(state => state);
     const [createModalOpen, setCreateModalOpen] = useState(false);
@@ -80,13 +82,25 @@ export const ProductsContainer = () => {
 
     const handleDeleteRow = useCallback(
         (row: MRT_Row<IProduct>) => {
-            if (
-                !confirm(`Are you sure you want to delete ${row.getValue('name')}?`)
-            ) {
-                return;
-            }
-            const rowToDeleteID: string = tableData[row.index]._id;
-            dispatch(deleteProduct(rowToDeleteID))
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const rowToDeleteID: string = tableData[row.index]._id;
+                    dispatch(deleteProduct(rowToDeleteID))
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    )
+                }
+            })
         },
         [tableData],
     );
@@ -126,7 +140,7 @@ export const ProductsContainer = () => {
                 accessorKey: '_id',
                 header: 'ID',
                 enableColumnOrdering: false,
-                enableEditing: false, //disable editing on this column
+                enableEditing: false,
                 enableSorting: false,
                 size: 80,
 
@@ -215,6 +229,7 @@ export const ProductsContainer = () => {
             },
             {
                 accessorKey: 'createdAt',
+                enableEditing: false,
                 header: 'Created At',
                 size: 80,
                 muiTableBodyCellEditTextFieldProps: ({cell}) => ({
@@ -223,6 +238,7 @@ export const ProductsContainer = () => {
             },
             {
                 accessorKey: 'updatedAt',
+                enableEditing: false,
                 header: 'Updated At',
                 size: 80,
                 muiTableBodyCellEditTextFieldProps: ({cell}) => ({
@@ -237,7 +253,7 @@ export const ProductsContainer = () => {
         <ProductsLayout columns={columns} tableData={tableData} handleSaveRowEdits={handleSaveRowEdits}
                         handleCancelRowEdits={handleCancelRowEdits} handleDeleteRow={handleDeleteRow}
                         setCreateModalOpen={setCreateModalOpen} createModalOpen={createModalOpen}
-                        handleCreateNewRow={handleCreateNewRow}/>
+                        handleCreateNewRow={handleCreateNewRow} onLoading={onLoading}/>
     );
 };
 

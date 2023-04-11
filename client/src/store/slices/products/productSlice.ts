@@ -3,6 +3,7 @@ import {IActionProductGetAll, IActionProduct, IProductInitial} from './interface
 
 export const initialState: IProductInitial = {
     products: [],
+    onLoading: false,
 };
 
 export const productsSlice = createSlice({
@@ -10,7 +11,7 @@ export const productsSlice = createSlice({
     initialState,
     reducers: {
         getProductsSlice: (state: IProductInitial, action: IActionProductGetAll) => {
-            state.products = action.payload.products;
+            state.products = action.payload;
         },
         updateProductSlice: (state: IProductInitial, action: IActionProduct) => {
             const index = state.products.findIndex(el => el._id === action.payload._id);
@@ -21,8 +22,11 @@ export const productsSlice = createSlice({
         },
         createProductSlice: (state: IProductInitial, action: IActionProduct) => {
             state.products = [...state.products, action.payload]
+        },
+        onLoading: (state: IProductInitial, action) => {
+            state.onLoading = action.payload;
         }
     },
 });
 
-export const { getProductsSlice, updateProductSlice, deleteProductSlice, createProductSlice } = productsSlice.actions;
+export const { getProductsSlice, updateProductSlice, deleteProductSlice, createProductSlice, onLoading } = productsSlice.actions;

@@ -6,7 +6,7 @@ export const App = () => {
     const {auth} = useAppSelector(state => state);
     return (
         <>
-            {auth.statusAuth && <Navbar/>}
+            {auth.isLogged && <Navbar/>}
             <AppRouter/>
         </>
 

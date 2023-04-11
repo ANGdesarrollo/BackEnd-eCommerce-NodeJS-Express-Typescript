@@ -4,12 +4,13 @@ import {useAppSelector} from "../../hooks/useRedux";
 
 export const PublicRoutes = (): React.ReactElement | null => {
 
-    const { auth } = useAppSelector((state) => state);
-    const { statusAuth } = auth;
+    const { isLogged, checkSessionAuth } = useAppSelector((state) => state.auth);
 
-    if(!statusAuth) {
-        return <Outlet/>
-    } else {
+    if(!checkSessionAuth) {
+        return <Navigate to="/checkerAuth"/>
+    } else if (isLogged) {
         return <Navigate to="/dashboard/products"/>
+    } else {
+        return <Outlet/>
     }
 };

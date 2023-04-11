@@ -7,16 +7,12 @@ import Container from "@mui/material/Container";
 import {containerBox} from "./muiStyles";
 import {onLogin} from "../store/slices/auth/thunk";
 import {useAppDispatch, useAppSelector} from "../hooks/useRedux";
-import {useEffect} from "react";
+import {Orbit} from "@uiball/loaders";
 
 export const SignIn = () => {
 
     const dispatch = useAppDispatch();
-    const { auth } = useAppSelector(state => state);
-
-    useEffect(() => {
-        console.log(auth)
-    }, [auth]);
+    const { loading } = useAppSelector(state => state.auth);
 
     const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
         event.preventDefault();
@@ -33,7 +29,6 @@ export const SignIn = () => {
             <Box
                 sx={containerBox}
             >
-                <div onClick={(e) => console.log(e)}></div>
                 <Typography component="h1" variant="h5">
                     Sign in
                 </Typography>
@@ -58,14 +53,14 @@ export const SignIn = () => {
                         id="password"
                         autoComplete="current-password"
                     />
-                    <Button
-                        type="submit"
-                        fullWidth
-                        variant="contained"
-                        sx={{mt: 3, mb: 2}}
-                    >
-                        Sign In
-                    </Button>
+                    {!loading ? <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            sx={{mt: 3, mb: 2}}
+                        >
+                            Sign In
+                    </Button>: <Orbit size={35} color="#231F20" />}
                     <Grid container>
                     </Grid>
                 </Box>

@@ -1,3 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
+
+  .Orbit-module_container__EECud {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .custom-swal {
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    color: #f2f2f2!important;
+    height: 5rem!important;
+  }
+
+  .swal2-icon-error {
+    color: red!important;
+  }
 }

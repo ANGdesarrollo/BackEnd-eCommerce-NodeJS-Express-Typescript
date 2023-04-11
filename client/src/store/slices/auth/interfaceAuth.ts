@@ -1,4 +1,6 @@
 export interface AuthState {
-    statusAuth: false,
-    username: string | null,
+    isLogged: false;
+    username: string | null;
+    loading: boolean;
+    checkSessionAuth: boolean;
 }
