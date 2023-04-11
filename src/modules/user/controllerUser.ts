@@ -1,5 +1,5 @@
 import { logger } from '../../config/winstonConfig/winstonConfig';
-import {type Request, type Response} from 'express';
+import { type Request, type Response } from 'express';
 
 export class ControllerUser {
   saveUser(_req: Request, res: Response): void {
@@ -42,19 +42,19 @@ export class ControllerUser {
   logoutUser(req: Request, res: Response): void {
     try {
       req.logout((err) => {
-        if(err) {
+        if (err) {
           res.json({
             status: false,
-            message: 'User logout failed'
-          })
+            message: 'User logout failed',
+          });
         } else {
           res.json({
             status: true,
-            message: "User successfully logged out"
-          })
+            message: 'User successfully logged out',
+          });
         }
-      })
-    } catch (error) { 
+      });
+    } catch (error) {
       logger.error(`Error at logoutUser: ${String(error)}`);
       throw new Error();
     }

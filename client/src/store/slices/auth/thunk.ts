@@ -20,6 +20,7 @@ export const onLogin = (username: string, password: string): any =>
     };
 
 export const authSession = (): any => async (dispatch: AppDispatch) => {
+    console.log('entre')
     axiosApi.get('/user/authSession')
         .then(({data}) => {
             dispatch(onAuthSession({

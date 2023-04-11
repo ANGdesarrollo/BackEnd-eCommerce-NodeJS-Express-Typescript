@@ -6,6 +6,12 @@ import MongoStore from 'connect-mongo';
 
 mongoose.set('strictQuery', false);
 
+interface optionsCookie {
+  maxAge: number;
+  secure?: boolean;
+  sameSite?: any;
+}
+
 export const dbConnection = (): void => {
   const options = {
     useUnifiedTopology: true,
@@ -25,6 +31,22 @@ export const dbConnection = (): void => {
     });
 };
 
+const optionsCookies = (): optionsCookie => {
+  if (env.PERSISTENCE === 'PRODUCTION') {
+    const cookie = {
+      maxAge: 60 * 10000,
+      secure: true,
+      sameSite: 'none',
+    };
+    return cookie;
+  } else {
+    const cookie = {
+      maxAge: 60 * 10000,
+    };
+    return cookie;
+  }
+};
+
 export const sessionMongo = (): any => {
   try {
     const sessionCookies = session({
@@ -35,9 +57,7 @@ export const sessionMongo = (): any => {
       resave: false,
       saveUninitialized: false,
       rolling: true,
-      cookie: {
-        maxAge: 60 * 10000,
-      },
+      cookie: optionsCookies(),
     });
     logger.log('info', 'Session MongoDB online');
     return sessionCookies;
