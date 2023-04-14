@@ -3,7 +3,7 @@ import { type DaosFileSystemChat, type DaosMongoChat } from './daosChat';
 import { ModelChat } from './modelChat';
 import DaosChat from './chatDaosFactory';
 import { date } from '../../utils/date/date';
-import { logger } from '../../../build/config/winstonConfig/winstonConfig';
+import { logger } from '../../config/winstonConfig/winstonConfig';
 import { useValidators } from '../../utils/validators/useValidators';
 
 export class ServiceChat {

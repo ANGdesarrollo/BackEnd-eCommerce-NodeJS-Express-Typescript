@@ -1,12 +1,12 @@
 import { useMemo } from 'react';
-import MaterialReactTable, {type MRT_ColumnDef, MRT_Row} from 'material-react-table';
+import MaterialReactTable, {type MRT_ColumnDef} from 'material-react-table';
 import {IChat} from "../../interfaces/interfaceChats";
 import {useSockets} from "./context/socket.context";
-import {Avatar} from "@mui/material";
 import { Login } from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
+import {Container} from "@mui/material";
 
-export const ChatContainer = () => {
+export const ChatContainer = (): JSX.Element => {
     const { allChats } = useSockets();
     const columns = useMemo<MRT_ColumnDef<IChat>[]>(
         () => [
@@ -36,5 +36,11 @@ export const ChatContainer = () => {
         [],
     );
 
-    return (allChats && <MaterialReactTable columns={columns} data={allChats} />);
+    return (
+        <Container>
+            {allChats &&
+            <MaterialReactTable columns={columns} data={allChats} />}
+        </Container>
+
+    );
 };
