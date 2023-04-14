@@ -29,6 +29,7 @@ export const ProductsLayout = ({
                                    createModalOpen,
                                    onLoading
                                }: props) => {
+
     return (
         <>
             {onLoading && <Loading/>}

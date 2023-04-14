@@ -1,12 +1,12 @@
 import { env } from '../../config/envConfig/envConfig';
-import { DaosMongoProduct } from './productDaos';
+import { DaosFileSystemProduct, DaosMongoProduct } from './productDaos';
 
-let DaosProduct: DaosMongoProduct;
+let DaosProduct: DaosMongoProduct | DaosFileSystemProduct;
 
 if (env.PERSISTENCE === 'MONGO') {
   DaosProduct = new DaosMongoProduct();
 } else {
-  DaosProduct = new DaosMongoProduct();
+  DaosProduct = new DaosFileSystemProduct();
 }
 
 export default DaosProduct;

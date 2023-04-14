@@ -1,15 +1,15 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import {containerBox} from "./muiStyles";
-import {onLogin} from "../store/slices/auth/thunk";
-import {useAppDispatch, useAppSelector} from "../hooks/useRedux";
+import {containerBox} from "../muiStyles";
+import {onLogin} from "../../store/slices/auth/thunk";
+import {useAppDispatch, useAppSelector} from "../../hooks/useRedux";
 import {Orbit} from "@uiball/loaders";
+import {Link} from "react-router-dom";
 
-export const SignIn = () => {
+export const Login = () => {
 
     const dispatch = useAppDispatch();
     const { loading } = useAppSelector(state => state.auth);
@@ -61,8 +61,9 @@ export const SignIn = () => {
                         >
                             Sign In
                     </Button>: <Orbit size={35} color="#231F20" />}
-                    <Grid container>
-                    </Grid>
+                </Box>
+                <Box sx={{display: "flex", justifyContent: "flex-start", width: "100%"}}>
+                    <Typography >Don't you have an account? Sign up <Link to="/register">here</Link></Typography>
                 </Box>
             </Box>
         </Container>

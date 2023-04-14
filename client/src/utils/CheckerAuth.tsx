@@ -1,6 +1,6 @@
 import {DotWave} from "@uiball/loaders";
 import Container from "@mui/material/Container";
-import {containerCheckerAuth} from "./muiStyles";
+import {containerCheckerAuth} from "../auth/muiStyles";
 
 export const CheckerAuth = () => {
     return (

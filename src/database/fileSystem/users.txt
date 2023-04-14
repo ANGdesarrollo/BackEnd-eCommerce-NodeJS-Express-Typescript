@@ -1,0 +1,30 @@
+[
+    {
+        "date": "04/12/2023 04:22:51 PM",
+        "username": "admin@admin.com",
+        "password": "$2b$10$Yu72CEDPt6eQku01a4eX4O9f9SYpbb0iQ0yqzNEiXMB4kK6ls0fDm",
+        "admin": true,
+        "_id": "6437050c9ac1798f69860072"
+    },
+    {
+        "date": "04/12/2023 04:48:50 PM",
+        "username": "noadmin@noadmin.com",
+        "password": "$2b$10$WxAdALE9ulHWj94MyoyAO.9GFniD5fyYeGnq4YnccdpcNOMC2u/ky",
+        "admin": false,
+        "_id": "64370b22fde1377314156f90"
+    },
+    {
+        "date": "04/12/2023 04:54:50 PM",
+        "username": "adri@adri.com",
+        "password": "$2b$10$tL8feOODAHR5YVFA9Z4svOuvU8QLcEOdHyNcZhJlqxfDuQxto1pcW",
+        "admin": false,
+        "_id": "64370c8afde1377314156f91"
+    },
+    {
+        "date": "04/13/2023 07:43:20 PM",
+        "username": "alexisgraff123@gmail.com",
+        "password": "$2b$10$cTJwo6W7o1DYbtB9rXhg6OgqXjmOx8jeIRSwA0Kp6553v25SDVE0C",
+        "admin": false,
+        "_id": "6438858856156bf59180c2fb"
+    }
+]

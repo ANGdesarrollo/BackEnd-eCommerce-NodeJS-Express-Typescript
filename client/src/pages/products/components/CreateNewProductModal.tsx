@@ -31,8 +31,8 @@ export const CreateNewProductModal = ({
 
 
     const handleSubmit = async() => {
-        const { validateCreatedProduct } = useValidators();
-        const validateProduct = await validateCreatedProduct(values);
+        const { validateEmptyFields } = useValidators();
+        const validateProduct = await validateEmptyFields(values);
         if(validateProduct) {
             onSubmit(values);
             onClose();

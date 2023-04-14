@@ -1,13 +1,13 @@
 import { logger } from '../../config/winstonConfig/winstonConfig';
 import { type IProductDTO, type IProduct } from '../../interfaces/interfaceProduct';
 import DaosProduct from './productDaoFactory';
-import { type DaosMongoProduct } from './productDaos';
+import { type DaosFileSystemProduct, type DaosMongoProduct } from './productDaos';
 import { useValidators } from '../../utils/validators/useValidators';
 import { date } from '../../utils/date/date';
 import { ProductModel } from './modelProducts';
 
 export class ServiceProduct {
-  public daosProduct: DaosMongoProduct;
+  public daosProduct: DaosMongoProduct | DaosFileSystemProduct;
 
   constructor() {
     this.daosProduct = DaosProduct;
@@ -23,21 +23,24 @@ export class ServiceProduct {
     }
   }
 
-  async saveProduct(product: IProductDTO): Promise<IProduct> {
+  async saveProduct(product: IProductDTO): Promise<IProduct | undefined> {
     try {
-      const { productCreateValidator } = useValidators();
-      const productToValidate = await productCreateValidator(product);
-      const validatedProduct = { ...productToValidate, createdAt: date(), updatedAt: date(), soldQty: 0 };
-      const finalProduct: IProduct = new ProductModel(validatedProduct);
-      finalProduct.createdAt = validatedProduct.createdAt;
-      return await this.daosProduct.save(finalProduct);
+      if (product) {
+        const { productCreateValidator } = useValidators();
+        const productToValidate = await productCreateValidator(product);
+        const validatedProduct = { ...productToValidate, createdAt: date(), updatedAt: date(), soldQty: 0 };
+        const finalProduct: IProduct = new ProductModel(validatedProduct);
+        return await this.daosProduct.save(finalProduct);
+      } else {
+        return undefined;
+      }
     } catch (error) {
       logger.error(`Error at saving product: ${String(error)}`);
       throw new Error();
     }
   }
 
-  async deleteProduct(id: string): Promise<IProduct | null> {
+  async deleteProduct(id: string): Promise<IProduct | null | undefined> {
     try {
       const { idValidator } = useValidators();
       const validatedID = await idValidator(id);

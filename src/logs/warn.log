@@ -109,3 +109,56 @@
 [[34m2023-04-10 17:38:58[39m] [[33merror[39m]: Invalid format of product: ValidationError: "thumbnail" is required
 [[34m2023-04-10 17:38:58[39m] [[33merror[39m]: Error updating the product: Error
 [[34m2023-04-10 17:38:58[39m] [[33merror[39m]: Error at controller updateProduct: Error
+[[34m2023-04-11 17:07:45[39m] [[33merror[39m]: Error at controller saveProduct: Error
+[[34m2023-04-11 17:08:17[39m] [[33merror[39m]: Error at controller saveProduct: Error: Product at controller saveProduct its undefined
+[[34m2023-04-11 19:22:13[39m] [[33merror[39m]: Error at finding document: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 19:22:47[39m] [[33merror[39m]: Error at finding document: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 19:22:47[39m] [[33merror[39m]: Error in SignUp Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 19:25:12[39m] [[33merror[39m]: Error at finding document: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 19:25:12[39m] [[33merror[39m]: Error in SignUp Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 20:17:51[39m] [[33merror[39m]: Error at finding document: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 20:17:51[39m] [[33merror[39m]: Error in SignUp Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 20:18:50[39m] [[33merror[39m]: Error at finding document: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 20:18:50[39m] [[33merror[39m]: Error in SignUp Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\test.txt'
+[[34m2023-04-11 20:22:10[39m] [[33merror[39m]: Error at finding document: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\datanase\fyleSystem\users.txt'
+[[34m2023-04-11 20:22:10[39m] [[33merror[39m]: Error in SignUp Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\datanase\fyleSystem\users.txt'
+[[34m2023-04-11 20:22:36[39m] [[33merror[39m]: Error at finding document: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\database\fyleSystem\users.txt'
+[[34m2023-04-11 20:22:36[39m] [[33merror[39m]: Error in SignUp Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\database\fyleSystem\users.txt'
+[[34m2023-04-11 20:23:22[39m] [[33merror[39m]: Error at finding document: SyntaxError: Unexpected end of JSON input
+[[34m2023-04-11 20:23:22[39m] [[33merror[39m]: Error in SignUp SyntaxError: Unexpected end of JSON input
+[[34m2023-04-11 20:27:32[39m] [[33merror[39m]: Error at finding document by ID: SyntaxError: Unexpected end of JSON input
+[[34m2023-04-11 20:28:46[39m] [[33merror[39m]: Error at finding document by ID: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\database\fileSystem\users.txt'
+[[34m2023-04-11 20:29:04[39m] [[33merror[39m]: Error at finding document by ID: SyntaxError: Unexpected end of JSON input
+[[34m2023-04-11 20:33:48[39m] [[33merror[39m]: Error at finding document by ID: Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\database\fileSystem\users.txt'
+[[34m2023-04-11 21:27:57[39m] [[33merror[39m]: Error in Saving user MongooseError: Operation `users.insertOne()` buffering timed out after 10000ms
+[[34m2023-04-11 22:06:28[39m] [[33merror[39m]: Error at finding document by ID: SyntaxError: Unexpected token } in JSON at position 308
+[[34m2023-04-11 22:14:39[39m] [[33merror[39m]: Error at getAll FS, Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\products.txt'
+[[34m2023-04-11 22:14:39[39m] [[33merror[39m]: Error at getting all products: Error
+[[34m2023-04-11 22:14:39[39m] [[33merror[39m]: Error at controller getProducts: Error
+[[34m2023-04-11 22:15:37[39m] [[33merror[39m]: Error at getAll FS, Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\products.txt'
+[[34m2023-04-11 22:15:37[39m] [[33merror[39m]: Error at getting all products: Error
+[[34m2023-04-11 22:15:37[39m] [[33merror[39m]: Error at controller getProducts: Error
+[[34m2023-04-11 22:15:59[39m] [[33merror[39m]: Error at getAll FS, Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\products.txt'
+[[34m2023-04-11 22:15:59[39m] [[33merror[39m]: Error at getting all products: Error
+[[34m2023-04-11 22:15:59[39m] [[33merror[39m]: Error at controller getProducts: Error
+[[34m2023-04-11 22:16:35[39m] [[33merror[39m]: Error at getAll FS, Error: ENOENT: no such file or directory, open 'C:\Users\Alexis Graff\Desktop\Mis proyectos\Node JS\Final project Node JS\Back-End-eCommerce\src\containers\products.txt'
+[[34m2023-04-11 22:16:35[39m] [[33merror[39m]: Error at getting all products: Error
+[[34m2023-04-11 22:16:35[39m] [[33merror[39m]: Error at controller getProducts: Error
+[[34m2023-04-13 17:08:11[39m] [[33merror[39m]: Invalid format of message: ValidationError: "created_at" is required
+[[34m2023-04-13 17:08:11[39m] [[33merror[39m]: Error at saving chat on Service: Error
+[[34m2023-04-13 17:08:11[39m] [[33merror[39m]: Error at controller Chat, saveMessage: Error
+[[34m2023-04-13 17:08:51[39m] [[33merror[39m]: Invalid format of message: ValidationError: "created_at" is required
+[[34m2023-04-13 17:08:51[39m] [[33merror[39m]: Error at saving chat on Service: Error
+[[34m2023-04-13 17:08:51[39m] [[33merror[39m]: Error at controller Chat, saveMessage: Error
+[[34m2023-04-13 17:10:02[39m] [[33merror[39m]: Invalid format of message: ValidationError: "created_at" is required
+[[34m2023-04-13 17:10:02[39m] [[33merror[39m]: Error at saving chat on Service: Error
+[[34m2023-04-13 17:10:02[39m] [[33merror[39m]: Error at controller Chat, saveMessage: Error
+[[34m2023-04-13 17:11:07[39m] [[33merror[39m]: Invalid format of message: ValidationError: "created_at" is required
+[[34m2023-04-13 17:11:07[39m] [[33merror[39m]: Error at saving chat on Service: Error
+[[34m2023-04-13 17:11:07[39m] [[33merror[39m]: Error at controller Chat, saveMessage: Error
+[[34m2023-04-13 17:15:02[39m] [[33merror[39m]: Invalid format of message: ValidationError: "username" must be a valid email
+[[34m2023-04-13 17:15:02[39m] [[33merror[39m]: Error at saving chat on Service: Error
+[[34m2023-04-13 17:15:02[39m] [[33merror[39m]: Error at controller Chat, saveMessage: Error
+[[34m2023-04-13 17:15:32[39m] [[33merror[39m]: Invalid format of message: ValidationError: "username" is required
+[[34m2023-04-13 17:15:32[39m] [[33merror[39m]: Error at saving chat on Service: Error
+[[34m2023-04-13 17:15:32[39m] [[33merror[39m]: Error at controller Chat, saveMessage: Error

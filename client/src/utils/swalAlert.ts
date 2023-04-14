@@ -5,7 +5,7 @@ interface Swal {
     message: string;
 }
 
-export const swalAlert = ({status, message}: Swal) => {
+export const swalAlert = ({status, message}: Swal): any => {
     return Swal.fire({
         position: 'top-end',
         background: '#1976d2',

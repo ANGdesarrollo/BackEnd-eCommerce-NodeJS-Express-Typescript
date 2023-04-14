@@ -1,4 +1,5 @@
 export interface IconfigIterface {
+  SECRET_ADMIN_KEY: string;
   NODE_ENV: string;
   PORT: number;
   SECRET_KEY: string;

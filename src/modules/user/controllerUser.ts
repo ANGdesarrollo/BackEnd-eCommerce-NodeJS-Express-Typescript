@@ -1,5 +1,6 @@
 import { logger } from '../../config/winstonConfig/winstonConfig';
 import { type Request, type Response } from 'express';
+import { type IUserController } from '../../interfaces/interfaceUser';
 
 export class ControllerUser {
   saveUser(_req: Request, res: Response): void {
@@ -14,11 +15,14 @@ export class ControllerUser {
     }
   }
 
-  loginUser(_req: Request, res: Response): void {
+  loginUser(req: Request, res: Response): void {
     try {
+      const user = req.user as IUserController;
       res.status(201).json({
         status: true,
         message: 'User successfully logged in',
+        username: user.username,
+        isAdmin: user.admin,
       });
     } catch (err) {
       logger.error(`Error at log in user: ${String(err)}`);
@@ -28,10 +32,13 @@ export class ControllerUser {
 
   authUser(req: Request, res: Response): void {
     try {
+      const user = req.user as IUserController;
+      console.log(user);
       res.status(200).json({
         status: true,
         message: 'User is auth',
-        username: req.user,
+        username: user.username,
+        isAdmin: user.admin,
       });
     } catch (error) {
       logger.error(`Error at authUser: ${String(error)}`);

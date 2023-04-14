@@ -14,9 +14,11 @@ import {createProduct, deleteProduct, getProducts, updateProduct} from "../../st
 import {useValidators} from "../../hooks/useValidators";
 import {ProductsLayout} from "./ProductsLayout";
 import Swal from "sweetalert2";
+import {swalAlert} from "../../utils/swalAlert";
 
 export const ProductsContainer = () => {
-    const { onLoading } = useAppSelector(state => state.products);
+    const {onLoading} = useAppSelector(state => state.products);
+    const {isAdmin} = useAppSelector(state => state.auth);
     const dispatch = useAppDispatch();
     const {products} = useAppSelector(state => state);
     const [createModalOpen, setCreateModalOpen] = useState(false);
@@ -30,13 +32,12 @@ export const ProductsContainer = () => {
     }, []);
 
     useEffect(() => {
-        setTableData(products.products)
         if (products.products) {
-            setTableData(products.products);
+            setTableData(products.products)
         }
     }, [products]);
 
-    const handleCreateNewRow = (values: CreatedProduct) => {
+    const handleCreateNewRow = (values: CreatedProduct): void => {
         const structuredData: IProductDTO = {
             name: values.name,
             price: Number(values.price),
@@ -49,7 +50,12 @@ export const ProductsContainer = () => {
             category: values.category,
             details: values.details,
         }
-        dispatch(createProduct(structuredData));
+        if (isAdmin) {
+            dispatch(createProduct(structuredData));
+        } else {
+            swalAlert({status: 'warning', message: "You don't have permisson to do this action!"})
+        }
+
     };
 
     const handleSaveRowEdits: MaterialReactTableProps<IProduct>['onEditingRowSave'] =
@@ -70,8 +76,12 @@ export const ProductsContainer = () => {
                 category: values.category,
                 details: values.details,
             }
-            if (!Object.keys(validationErrors).length) {
+
+            if (!Object.keys(validationErrors).length && isAdmin) {
                 dispatch(updateProduct(structuredData));
+                exitEditingMode();
+            } else if (!Object.keys(validationErrors).length && !isAdmin) {
+                swalAlert({status: 'warning', message: "You don't have permisson to do this action!"})
                 exitEditingMode();
             }
         };
@@ -93,12 +103,16 @@ export const ProductsContainer = () => {
             }).then((result) => {
                 if (result.isConfirmed) {
                     const rowToDeleteID: string = tableData[row.index]._id;
-                    dispatch(deleteProduct(rowToDeleteID))
-                    Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
+                    if (isAdmin) {
+                        dispatch(deleteProduct(rowToDeleteID))
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        )
+                    } else {
+                        swalAlert({status: 'warning', message: "You don't have permisson to do this action!"})
+                    }
                 }
             })
         },
@@ -218,7 +232,7 @@ export const ProductsContainer = () => {
                 accessorKey: 'details',
                 header: 'Details',
                 size: 80,
-                Cell: ({ cell }) => (
+                Cell: ({cell}) => (
                     <Tooltip title={cell.row.original.details}>
                         <span>{cell.row.original.details.slice(0, 20)}...</span>
                     </Tooltip>

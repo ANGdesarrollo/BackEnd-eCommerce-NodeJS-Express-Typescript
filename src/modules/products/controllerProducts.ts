@@ -29,11 +29,16 @@ export class ControllerProduct {
     try {
       const { product } = req.body;
       const productSaved = await new ServiceProduct().saveProduct(product);
-      res.status(200).json({
-        status: true,
-        message: 'Product successfully added',
-        product: productSaved,
-      });
+      if (productSaved) {
+        res.status(200).json({
+          status: true,
+          message: 'Product successfully added',
+          product: productSaved,
+        });
+      } else {
+        logger.error(`Error at controller saveProduct, product it's undefined | null`);
+        throw new Error();
+      }
     } catch (error) {
       logger.error(`Error at controller saveProduct: ${String(error)}`);
       throw new Error();

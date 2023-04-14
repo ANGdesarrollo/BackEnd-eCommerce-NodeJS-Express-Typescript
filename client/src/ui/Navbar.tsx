@@ -15,13 +15,14 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import {useAppDispatch, useAppSelector} from "../hooks/useRedux";
 import {logout} from "../store/slices/auth/thunk";
 import {Ring} from "@uiball/loaders";
+import {navItemsStyle, TypographyStyle} from "./muiStyles";
 
 
-const pages = ['Products', 'Users'];
+const pages = ['Products', 'Chat'];
 
 export const Navbar = () => {
     const dispatch = useAppDispatch();
-    const { loading  } = useAppSelector(state => state.auth);
+    const {loading} = useAppSelector(state => state.auth);
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
     const onLogout = () => {
@@ -45,16 +46,7 @@ export const Navbar = () => {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: {xs: 'none', md: 'flex'},
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
+                        sx={TypographyStyle}
                     >
                         REACT DASHBOARD
                     </Typography>
@@ -90,31 +82,13 @@ export const Navbar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center"><NavLink
-                                        to={`/dashboard/${page}`}>{page}</NavLink></Typography>
+                                    <Typography textAlign="center">
+                                        <NavLink style={navItemsStyle} to={`/dashboard/${page.toLowerCase()}`}>{page}</NavLink></Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
                     <AdbIcon sx={{display: {xs: 'flex', md: 'none'}, mr: 1}}/>
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: {xs: 'flex', md: 'none'},
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        REACT DASHBOARD
-                    </Typography>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         {pages.map((page) => (
                             <Button
@@ -122,7 +96,7 @@ export const Navbar = () => {
                                 onClick={handleCloseNavMenu}
                                 sx={{my: 2, color: 'white', display: 'block'}}
                             >
-                                {page}
+                                <NavLink style={navItemsStyle} to={`/dashboard/${page.toLowerCase()}`}>{page}</NavLink>
                             </Button>
                         ))}
                     </Box>
@@ -134,7 +108,7 @@ export const Navbar = () => {
                                         <ExitToAppIcon/>
                                     </IconButton>
                                 </> :
-                                <Ring size={35} />
+                                <Ring size={35}/>
                         }
                     </Box>
                 </Toolbar>

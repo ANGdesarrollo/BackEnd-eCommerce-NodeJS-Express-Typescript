@@ -9,7 +9,7 @@ export const PrivateRoutes = (): React.ReactElement => {
     if(!checkSessionAuth) {
         return <Navigate to="/checkerAuth"/>
     } else if (!isLogged) {
-        return <Navigate to="/login"/>
+        return <Navigate to="/register"/>
     } else {
         return <Outlet/>
     }

@@ -26,8 +26,12 @@ if (!process.env.SESSION) {
   throw new Error('Enviroment not properly set. SESSION not set');
 }
 
-if(!process.env.PERSISTENCE) {
+if (!process.env.PERSISTENCE) {
   throw new Error('Enviroment not properly set. PERSISTENCE not set');
+}
+
+if (!process.env.SECRET_ADMIN_KEY) {
+  throw new Error('Enviroment not properly set. SECRET_ADMIN_KEY not set');
 }
 
 export const env: IconfigIterface = {
@@ -38,4 +42,5 @@ export const env: IconfigIterface = {
   PERMISSION_REQUEST: process.env.PERMISSION_REQUEST,
   SESSION: process.env.SESSION,
   PERSISTENCE: process.env.PERSISTENCE,
+  SECRET_ADMIN_KEY: process.env.SECRET_ADMIN_KEY,
 };

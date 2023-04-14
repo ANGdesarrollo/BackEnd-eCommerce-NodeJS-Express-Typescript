@@ -1,6 +1,8 @@
 export interface AuthState {
-    isLogged: false;
+    isLogged: boolean;
+    isRegistered: boolean
     username: string | null;
     loading: boolean;
     checkSessionAuth: boolean;
+    isAdmin: boolean;
 }

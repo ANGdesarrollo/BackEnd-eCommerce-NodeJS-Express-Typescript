@@ -21,6 +21,15 @@ export abstract class ContainerMongo<T extends MyDocument> {
     }
   }
 
+  async find(data: any): Promise<T | null> {
+    try {
+      return await this.model.findOne(data);
+    } catch (error) {
+      logger.error(`Error at find, ${String(error)}`);
+      throw new Error();
+    }
+  }
+
   async save(item: T): Promise<T> {
     try {
       return await this.model.create(item);
@@ -32,9 +41,9 @@ export abstract class ContainerMongo<T extends MyDocument> {
 
   async updateOne(item: T): Promise<T | null> {
     try {
-      console.log(item);
       const filter = { _id: item._id };
       const update = { ...item };
+      console.log(update);
       return await this.model.findOneAndUpdate(filter, update, { new: true });
     } catch (error) {
       logger.error(`Error at updating Product: ${String(error)}`);
@@ -42,7 +51,33 @@ export abstract class ContainerMongo<T extends MyDocument> {
     }
   }
 
-  async deleteOne(itemID: string): Promise<T | null> {
+  async deleteOne(itemID: string): Promise<T | null | undefined> {
     return await this.model.findByIdAndDelete(itemID);
+  }
+
+  // Metodos creados para hacer andar passport sin usar directamente el modelo.
+
+  async findById(id: string | unknown, done: (err: any, user?: T | null) => void): Promise<void> {
+    try {
+      const user = await this.model.findById(id);
+      done(null, user);
+    } catch (err) {
+      logger.error(`Error at finding document by ID: ${String(err)}`);
+      done(err);
+    }
+  }
+
+  async findOne(filter: any, done: (err: any, data?: any, options?: any) => void): Promise<void> {
+    try {
+      const dataToFind = await this.model.findOne(filter);
+      if (!dataToFind) {
+        done(null, false);
+      } else {
+        done(null, dataToFind);
+      }
+    } catch (error) {
+      logger.error(`Error at finding document: ${String(error)}`);
+      done(error);
+    }
   }
 }

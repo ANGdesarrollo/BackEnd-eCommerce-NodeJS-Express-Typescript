@@ -8,7 +8,7 @@ export const CheckerRoutes = (): React.ReactElement => {
     if(checkSessionAuth && isLogged) {
         return <Navigate to="/dashboard/products"/>
     } else if (checkSessionAuth && !isLogged) {
-        return <Navigate to="/login"/>
+        return <Navigate to="/register"/>
     } else {
         return <Outlet/>
     }

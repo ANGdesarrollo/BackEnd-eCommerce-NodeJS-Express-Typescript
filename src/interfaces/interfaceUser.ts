@@ -1,6 +1,16 @@
-export interface IUser {
-  date: string;
+export interface IUserDTO {
   username: string;
   password: string;
-  admin?: boolean;
+  secretKey?: string;
+}
+
+export interface IUser extends IUserDTO {
+  _id: string;
+  date: string;
+  admin: boolean;
+}
+
+export interface IUserController {
+  username: string;
+  admin: boolean;
 }

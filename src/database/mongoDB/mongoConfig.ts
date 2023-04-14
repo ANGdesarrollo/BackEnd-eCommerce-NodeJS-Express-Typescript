@@ -22,13 +22,15 @@ export const dbConnection = (): void => {
     autoIndex: false,
   };
 
-  mongoose
-    .connect(env.DB_CONNECTION, options)
-    .then(() => logger.info('Database MongoDB online'))
-    .catch((error) => {
-      logger.error(`Database error: ${String(error)}`);
-      throw Error(`Database error: ${String(error)}`);
-    });
+  if (env.PERSISTENCE === 'MONGO') {
+    mongoose
+      .connect(env.DB_CONNECTION, options)
+      .then(() => logger.info('Database MongoDB online'))
+      .catch((error) => {
+        logger.error(`Database error: ${String(error)}`);
+        throw Error(`Database error: ${String(error)}`);
+      });
+  }
 };
 
 const optionsCookies = (): optionsCookie => {

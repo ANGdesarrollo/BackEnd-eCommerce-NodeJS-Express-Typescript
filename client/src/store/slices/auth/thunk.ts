@@ -1,7 +1,8 @@
-import {onAuthSession, onLoading, onLogOut, onSignUp} from "./authSlice";
+import {onAuthSession, onLoading, onLogOut, onRegister, onSignUp} from "./authSlice";
 import {axiosApi} from '../../../config/axiosApi';
 import {AppDispatch} from "../../store";
 import {swalAlert} from "../../../utils/swalAlert";
+import {IUser} from "../../../interfaces/interfaceUser";
 
 export const onLogin = (username: string, password: string): any =>
     async (dispatch: AppDispatch) => {
@@ -11,7 +12,7 @@ export const onLogin = (username: string, password: string): any =>
             password
         }).then(({data}) => {
             dispatch(onLoading(false))
-            dispatch(onSignUp({isLogged: data.status, username: username}));
+            dispatch(onSignUp({isLogged: data.status, username: username, isAdmin: data.isAdmin}));
         }).catch(error => {
             swalAlert({status: 'warning', message: 'Invalid user data'})
             dispatch(onLoading(false));
@@ -20,14 +21,23 @@ export const onLogin = (username: string, password: string): any =>
     };
 
 export const authSession = (): any => async (dispatch: AppDispatch) => {
-    console.log('entre')
     axiosApi.get('/user/authSession')
         .then(({data}) => {
-            dispatch(onAuthSession({
-                checkSessionAuth: true,
-                username: data.username,
-                isLogged: true
-            }))
+            if(!data.status) {
+                dispatch(onAuthSession({
+                    checkSessionAuth: true,
+                    username: null,
+                    isLogged: false
+                }))
+            } else {
+                dispatch(onAuthSession({
+                    checkSessionAuth: true,
+                    username: data.username,
+                    isLogged: true,
+                    isAdmin: data.isAdmin,
+                }))
+            }
+
         })
         .catch(() => {
             dispatch(onAuthSession({
@@ -49,5 +59,22 @@ export const logout = (): any => async (dispatch: AppDispatch) => {
             swalAlert({status: 'warning', message: 'Logout error'})
             dispatch(onLoading(false));
             dispatch(onLogOut(true));
+        })
+}
+
+export const register = (user: IUser) => async (dispatch: AppDispatch) => {
+    dispatch(onLoading(true));
+    axiosApi.post('/user/register', {
+        username: user.username,
+        password: user.password,
+        secretKey: user.secretKey,
+    })
+        .then(() => {
+            dispatch(onLoading(false));
+            dispatch(onRegister(true));
+        })
+        .catch(() => {
+            dispatch(onLoading(false));
+            swalAlert({status: 'warning', message: 'RegisterContainer data error'})
         })
 }
