@@ -1,5 +1,5 @@
 import { type Server } from 'socket.io';
-import { logger } from '../../../build/config/winstonConfig/winstonConfig';
+import { logger } from '../../config/winstonConfig/winstonConfig';
 import { ControllerChat } from './controllerChat';
 
 const Chat = new ControllerChat();
