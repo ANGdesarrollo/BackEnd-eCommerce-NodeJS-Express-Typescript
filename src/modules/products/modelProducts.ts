@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import { type IProduct } from '../../interfaces/interfaceProduct';
 
-const productSchema = new Schema<IProduct>({
+export const productSchema = new Schema<IProduct>({
   createdAt: { type: String, required: true },
   updatedAt: { type: String, required: true },
   name: { type: String, required: true },

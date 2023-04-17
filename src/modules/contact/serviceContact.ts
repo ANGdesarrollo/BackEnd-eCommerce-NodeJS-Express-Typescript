@@ -2,7 +2,7 @@ import { IEmail } from "../../interfaces/interfaceEmail";
 import { email, emailOwner } from "../../utils/nodemailer/nodemailer";
 import { useValidators } from "../../utils/validators/useValidators";
 
-export class ServiceEmail {
+export class ServiceContact {
     constructor() {}
 
     async sendEmailService(data: IEmail): Promise<void> {

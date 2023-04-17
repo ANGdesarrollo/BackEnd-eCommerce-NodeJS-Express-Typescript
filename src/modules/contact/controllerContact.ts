@@ -1,19 +1,19 @@
 import { Request, Response } from "express";
 import { logger } from "../../config/winstonConfig/winstonConfig";
-import { ServiceEmail } from "./serviceEmail";
+import { ServiceContact } from "./serviceContact";
 
-export class ControllerEmail {
+export class ControllerContact {
 
-    public serviceEmail: ServiceEmail;
+    public serviceContact: ServiceContact;
 
     constructor() {
-        this.serviceEmail = new ServiceEmail()
+        this.serviceContact = new ServiceContact()
     }
 
     async sendEmail(req: Request, res: Response) {
         try {
             const { data } = req.body;
-            await new ServiceEmail().sendEmailService(data);
+            await new ServiceContact().sendEmailService(data);
             res.json({
                 status: true,
                 message: 'Message successfully sent'
