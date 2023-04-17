@@ -161,3 +161,11 @@
 [34m2023-04-13 17:15:32[39m [[31merror[39m]: Invalid format of message: ValidationError: "username" is required
 [34m2023-04-13 17:15:32[39m [[31merror[39m]: Error at saving chat on Service: Error
 [34m2023-04-13 17:15:32[39m [[31merror[39m]: Error at controller Chat, saveMessage: Error
+[34m2023-04-17 16:07:24[39m [[31merror[39m]: Error at controller sendEmail: Error
+[34m2023-04-17 16:10:07[39m [[31merror[39m]: Error at controller sendEmail: Error
+[34m2023-04-17 16:11:14[39m [[31merror[39m]: Invalid format of client order: ValidationError: "amount" must be a string
+[34m2023-04-17 16:11:14[39m [[31merror[39m]: Error at saving order on Service: Error
+[34m2023-04-17 16:11:14[39m [[31merror[39m]: Error at controller Order, createOrder: Error
+[34m2023-04-17 16:11:44[39m [[31merror[39m]: Invalid format of client order: ValidationError: "products" must be of type object
+[34m2023-04-17 16:11:44[39m [[31merror[39m]: Error at saving order on Service: Error
+[34m2023-04-17 16:11:44[39m [[31merror[39m]: Error at controller Order, createOrder: Error

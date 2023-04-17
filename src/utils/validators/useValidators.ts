@@ -1,8 +1,16 @@
 import { logger } from '../../config/winstonConfig/winstonConfig';
 import { type IMessageDTO } from '../../interfaces/interfaceChat';
 import { IEmail } from '../../interfaces/interfaceEmail';
+import { IOrderDTO } from '../../interfaces/interfaceOrders';
 import { type IProductDTO, type IProduct } from '../../interfaces/interfaceProduct';
-import { idSchema, productCreateSchema, procutUpdateSchema, messageSchema, emailSchema } from './joiSchemas';
+import {
+  idSchema,
+  productCreateSchema,
+  productUpdateSchema,
+  messageSchema,
+  emailSchema,
+  orderSchema,
+} from './joiSchemas';
 
 interface Validators {
   emailValidator: (email: string) => boolean;
@@ -11,6 +19,7 @@ interface Validators {
   productUpdateValidator: (product: IProduct) => Promise<IProduct>;
   messageValidator: (message: IMessageDTO) => Promise<IMessageDTO>;
   nodemailerValidator: (email: IEmail) => Promise<IEmail>;
+  orderValidator: (order: IOrderDTO) => Promise<IOrderDTO>
 }
 
 export const useValidators = (): Validators => {
@@ -42,7 +51,7 @@ export const useValidators = (): Validators => {
 
   const productUpdateValidator = async (product: IProduct): Promise<IProduct> => {
     try {
-      const value = await procutUpdateSchema.validateAsync(product);
+      const value = await productUpdateSchema.validateAsync(product);
       return value;
     } catch (error) {
       logger.error(`Invalid format of product: ${String(error)}`);
@@ -65,7 +74,17 @@ export const useValidators = (): Validators => {
       const value = await emailSchema.validateAsync(message);
       return value;
     } catch (error) {
-      logger.error(`Invalid format of message: ${String(error)}`);
+      logger.error(`Invalid format of contact Message: ${String(error)}`);
+      throw new Error();
+    }
+  };
+
+  const orderValidator = async (order: IOrderDTO): Promise<IOrderDTO> => {
+    try {
+      const value = await orderSchema.validateAsync(order);
+      return value;
+    } catch (error) {
+      logger.error(`Invalid format of client order: ${String(error)}`);
       throw new Error();
     }
   };
@@ -76,6 +95,7 @@ export const useValidators = (): Validators => {
     productCreateValidator,
     productUpdateValidator,
     messageValidator,
-    nodemailerValidator
+    nodemailerValidator,
+    orderValidator,
   };
 };

@@ -1,0 +1,40 @@
+[
+    {
+        "created_at": "04/17/2023 04:42:39 PM",
+        "orders": [
+            {
+                "amount": 50,
+                "created_at": "04/17/2023 04:42:39 PM",
+                "products": [
+                    {
+                        "_id": "64348b87532747789e3fc2fc",
+                        "qty": 2
+                    }
+                ],
+                "_id": "643da12f302508f6670ab8f8"
+            },
+            {
+                "username": "alexisgraff123@gmail.com",
+                "products": [
+                    {
+                        "_id": "64348b87532747789e3fc2fc",
+                        "qty": 2
+                    },
+                    {
+                        "_id": "64348b87532747789e3fc2fc",
+                        "qty": 4
+                    },
+                    {
+                        "_id": "64348b87532747789e3fc2fc",
+                        "qty": 5
+                    }
+                ],
+                "amount": 250,
+                "created_at": "04/17/2023 04:43:00 PM",
+                "_id": "643da144302508f6670ab8fb"
+            }
+        ],
+        "username": "alexisgraff123@gmail.com",
+        "_id": "643da12f302508f6670ab8f9"
+    }
+]

@@ -14,6 +14,7 @@ export class ServiceChat {
     this.DaosModel = DaosChat;
   }
 
+
   async getChatsService(): Promise<IChat[]> {
     try {
       const allChats = await this.DaosModel.getAll();
