@@ -34,6 +34,18 @@ if (!process.env.SECRET_ADMIN_KEY) {
   throw new Error('Enviroment not properly set. SECRET_ADMIN_KEY not set');
 }
 
+if (!process.env.PASS_NODEMAILER) {
+  throw new Error('Enviroment not properly set. PASS_NODEMAILER not set');
+}
+
+if (!process.env.ACCOUNT_SID) {
+  throw new Error('Enviroment not properly set. ACCOUNT_SID not set');
+}
+
+if (!process.env.ACCOUNT_TOKEN) {
+  throw new Error('Enviroment not properly set. ACCOUNT_TOKEN not set');
+}
+
 export const env: IconfigIterface = {
   NODE_ENV: process.env.NODE_ENV,
   PORT: Number(process.env.PORT),
@@ -43,4 +55,7 @@ export const env: IconfigIterface = {
   SESSION: process.env.SESSION,
   PERSISTENCE: process.env.PERSISTENCE,
   SECRET_ADMIN_KEY: process.env.SECRET_ADMIN_KEY,
+  PASS_NODEMAILER: process.env.PASS_NODEMAILER,
+  ACCOUNT_SID: process.env.ACCOUNT_SID,
+  ACCOUNT_TOKEN: process.env.ACCOUNT_TOKEN,
 };

@@ -6,8 +6,16 @@ export interface IChat {
     edit?: any;
 }
 
-export interface IMessage {
+export interface IMessage extends IMessageDTO {
+    _id: string;
     created_at: string;
+}
+
+export interface IResponseMessage extends  IMessageDTO {
+    idRoom: string;
+}
+
+export interface IMessageDTO {
     message: string;
     username: string;
 }

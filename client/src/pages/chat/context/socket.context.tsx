@@ -2,7 +2,7 @@ import io, {Socket} from 'socket.io-client';
 import {API_URL} from '../../../config/configAPI';
 import {type ReactNode, useContext, useEffect, useState} from 'react';
 import {createContext} from 'react';
-import {IChat} from "../../../interfaces/interfaceChats";
+import {IChat, IResponseMessage} from "../../../interfaces/interfaceChats";
 
 interface Props {
     children: ReactNode;
@@ -11,6 +11,7 @@ interface Props {
 interface Context {
     socket: Socket;
     allChats?: IChat[];
+    sendMessage?: (data: IResponseMessage) => void;
 }
 
 const socket = io(API_URL, {
@@ -28,20 +29,23 @@ export const SocketsProvider = ({children}: Props) => {
         })
     }, []);
 
-    useEffect(() => {
-        console.log(allChats)
-    }, [allChats])
-
-
-
-    const sendMessage = () => {
+    const sendMessage = (data: IResponseMessage) => {
+        socket.emit('admin_message', (data) )
     };
 
-    useEffect(() => {
-        sendMessage();
-    }, []);
+    socket.on('server_chat', (chat: IChat) => {
+        if(allChats) {
+           const indexChat = allChats.findIndex(el => el._id === chat._id);
+           if(indexChat !== -1) {
+               const updatedChats = [...allChats];
+               updatedChats[indexChat] = chat;
+               setAllChats(updatedChats);
+           }
+        }
+    })
+
     return (
-        <SocketContext.Provider value={{socket, allChats}}>
+        <SocketContext.Provider value={{socket, allChats, sendMessage}}>
             {children}
         </SocketContext.Provider>
     );

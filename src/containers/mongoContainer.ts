@@ -43,7 +43,6 @@ export abstract class ContainerMongo<T extends MyDocument> {
     try {
       const filter = { _id: item._id };
       const update = { ...item };
-      console.log(update);
       return await this.model.findOneAndUpdate(filter, update, { new: true });
     } catch (error) {
       logger.error(`Error at updating Product: ${String(error)}`);

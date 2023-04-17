@@ -7,4 +7,7 @@ export interface IconfigIterface {
   PERMISSION_REQUEST: string;
   SESSION: string;
   PERSISTENCE: string;
+  PASS_NODEMAILER: string;
+  ACCOUNT_SID: string;
+  ACCOUNT_TOKEN: string;
 }

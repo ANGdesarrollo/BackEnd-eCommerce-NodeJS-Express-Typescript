@@ -1,7 +1,8 @@
 import { logger } from '../../config/winstonConfig/winstonConfig';
 import { type IMessageDTO } from '../../interfaces/interfaceChat';
+import { IEmail } from '../../interfaces/interfaceEmail';
 import { type IProductDTO, type IProduct } from '../../interfaces/interfaceProduct';
-import { idSchema, productCreateSchema, procutUpdateSchema, messageSchema } from './joiSchemas';
+import { idSchema, productCreateSchema, procutUpdateSchema, messageSchema, emailSchema } from './joiSchemas';
 
 interface Validators {
   emailValidator: (email: string) => boolean;
@@ -9,6 +10,7 @@ interface Validators {
   productCreateValidator: (product: IProductDTO) => Promise<IProductDTO>;
   productUpdateValidator: (product: IProduct) => Promise<IProduct>;
   messageValidator: (message: IMessageDTO) => Promise<IMessageDTO>;
+  nodemailerValidator: (email: IEmail) => Promise<IEmail>;
 }
 
 export const useValidators = (): Validators => {
@@ -58,11 +60,22 @@ export const useValidators = (): Validators => {
     }
   };
 
+  const nodemailerValidator = async (message: IEmail): Promise<IEmail> => {
+    try {
+      const value = await emailSchema.validateAsync(message);
+      return value;
+    } catch (error) {
+      logger.error(`Invalid format of message: ${String(error)}`);
+      throw new Error();
+    }
+  };
+
   return {
     emailValidator,
     idValidator,
     productCreateValidator,
     productUpdateValidator,
     messageValidator,
+    nodemailerValidator
   };
 };
