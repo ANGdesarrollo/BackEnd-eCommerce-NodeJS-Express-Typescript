@@ -12,6 +12,7 @@ export class OrderRouter {
 
   start(): Router {
     this.router.post('/', this.controllerOrder.createOrder);
+    this.router.get('/', this.controllerOrder.getOrders);
     return this.router;
   }
 }

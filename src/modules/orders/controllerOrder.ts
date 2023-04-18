@@ -1,31 +1,49 @@
-import { Request, Response } from "express";
-import { logger } from "../../config/winstonConfig/winstonConfig";
-import { ServiceOrder } from "./serviceOrder";
+import { Request, Response } from 'express';
+import { logger } from '../../config/winstonConfig/winstonConfig';
+import { ServiceOrder } from './serviceOrder';
 
 export class ControllerOrder {
-    public serviceOrder: ServiceOrder;
-    constructor() {
-        this.serviceOrder = new ServiceOrder();
-    }
+  public serviceOrder: ServiceOrder;
+  constructor() {
+    this.serviceOrder = new ServiceOrder();
+  }
 
-    async createOrder(req: Request, res: Response): Promise<void> {
-        try {
-            const { body } = req;
-            const orderToSave = await new ServiceOrder().saveServiceOrder(body);
-            if(orderToSave) {
-              res.json({
-                status: true,
-                order: orderToSave
-              })
-            } else {
-              res.json({
-                status: false,
-              })
-            }
-            
-          } catch (error) {
-            logger.error(`Error at controller Order, createOrder: ${String(error)}`);
-            throw new Error();
-          }
+  async getOrders(_req: Request, res: Response): Promise<void> {
+    try {
+      const allOrders = await new ServiceOrder().getOrdersService();
+      if (allOrders) {
+        res.json({
+          status: true,
+          allOrders,
+        });
+      } else {
+        res.json({
+          status: false,
+        });
+      }
+    } catch (error) {
+      logger.error(`Error at controller Order, getOrders: ${String(error)}`);
+      throw new Error();
     }
+  }
+
+  async createOrder(req: Request, res: Response): Promise<void> {
+    try {
+      const { body } = req;
+      const orderToSave = await new ServiceOrder().saveServiceOrder(body);
+      if (orderToSave) {
+        res.json({
+          status: true,
+          order: orderToSave,
+        });
+      } else {
+        res.json({
+          status: false,
+        });
+      }
+    } catch (error) {
+      logger.error(`Error at controller Order, createOrder: ${String(error)}`);
+      throw new Error();
+    }
+  }
 }

@@ -1,40 +1,42 @@
 [
     {
-        "created_at": "04/17/2023 04:42:39 PM",
-        "orders": [
+        "username": "marieltorres123@gmail.com",
+        "amount": 50,
+        "created_at": "04/17/2023 11:24:46 PM",
+        "products": [
             {
-                "amount": 50,
-                "created_at": "04/17/2023 04:42:39 PM",
-                "products": [
-                    {
-                        "_id": "64348b87532747789e3fc2fc",
-                        "qty": 2
-                    }
-                ],
-                "_id": "643da12f302508f6670ab8f8"
+                "_id": "64348b87532747789e3fc2fc",
+                "qty": 2
             },
             {
-                "username": "alexisgraff123@gmail.com",
-                "products": [
-                    {
-                        "_id": "64348b87532747789e3fc2fc",
-                        "qty": 2
-                    },
-                    {
-                        "_id": "64348b87532747789e3fc2fc",
-                        "qty": 4
-                    },
-                    {
-                        "_id": "64348b87532747789e3fc2fc",
-                        "qty": 5
-                    }
-                ],
-                "amount": 250,
-                "created_at": "04/17/2023 04:43:00 PM",
-                "_id": "643da144302508f6670ab8fb"
+                "_id": "64348d10532747789e3fc303",
+                "qty": 2
+            },
+            {
+                "_id": "64348e3f1bdaa70649585347",
+                "qty": 2
             }
         ],
-        "username": "alexisgraff123@gmail.com",
-        "_id": "643da12f302508f6670ab8f9"
+        "_id": "643dff6edb8486510eaf716f"
+    },
+    {
+        "username": "marieltorres123@gmail.com",
+        "amount": 50,
+        "created_at": "04/17/2023 11:24:56 PM",
+        "products": [
+            {
+                "_id": "64348b87532747789e3fc2fc",
+                "qty": 2
+            },
+            {
+                "_id": "64348d10532747789e3fc303",
+                "qty": 2
+            },
+            {
+                "_id": "64348e3f1bdaa70649585347",
+                "qty": 2
+            }
+        ],
+        "_id": "643dff78db8486510eaf7170"
     }
 ]

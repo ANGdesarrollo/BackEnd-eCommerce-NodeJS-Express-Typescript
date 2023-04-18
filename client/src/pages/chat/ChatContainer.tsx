@@ -28,7 +28,6 @@ export const ChatContainer = (): JSX.Element => {
                 username,
                 message: String(data.get('message')),
             };
-            console.log(dataMessage)
             if(dataMessage.idRoom && username && dataMessage.message) sendMessage && sendMessage(dataMessage);
         }
     };

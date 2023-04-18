@@ -10,6 +10,7 @@ import {useAppDispatch} from "../hooks/useRedux";
 import {CheckerRoutes} from "./checkerRoutes/CheckerRoutes";
 import {useEffect} from "react";
 import {RegisterContainer} from "../auth/register/RegisterContainer";
+import {OrdersContainer} from "../pages/orders/OrdersContainer";
 
 export const AppRouter = () => {
     const dispatch = useAppDispatch();
@@ -32,6 +33,8 @@ export const AppRouter = () => {
             <Route element={<PrivateRoutes/>}>
                 <Route path="/dashboard/products" element={<ProductsContainer/>}></Route>
                 <Route path="/dashboard/chat" element={<ChatContainer/>}></Route>
+                <Route path="/dashboard/orders" element={<OrdersContainer/>}></Route>
+                <Route path="/dashboard/orders/:idUser" element={<OrdersContainer/>}></Route>
                 <Route path="/dashboard/*" element={<Navigate to="/dashboard/products"/>}></Route>
             </Route>
         </Routes>

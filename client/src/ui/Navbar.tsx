@@ -18,7 +18,7 @@ import {Ring} from "@uiball/loaders";
 import {navItemsStyle, TypographyStyle} from "./muiStyles";
 
 
-const pages = ['Products', 'Chat'];
+const pages = ['Products', 'Chat', 'Orders'];
 
 export const Navbar = () => {
     const dispatch = useAppDispatch();
