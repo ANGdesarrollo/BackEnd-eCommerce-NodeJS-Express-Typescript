@@ -11,9 +11,10 @@ import {InputProps} from "@mui/material";
 interface Props extends InputProps{
     handleSubmit: (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => void;
     loading: boolean;
+    comparePasswords: boolean;
 }
 
-export const RegisterLayout = ({handleSubmit, loading}: Props) => {
+export const RegisterLayout = ({handleSubmit, loading, comparePasswords}: Props) => {
     return (
         <Container component="main" maxWidth="xs">
             <Box
@@ -38,17 +39,20 @@ export const RegisterLayout = ({handleSubmit, loading}: Props) => {
                         margin="normal"
                         required
                         fullWidth
+                        error={comparePasswords}
                         name="password"
                         label="Password"
                         type="password"
                         id="password"
                         autoComplete="current-password"
                     />
+                    {comparePasswords && <Typography variant="subtitle2" component="p">¡Passwords must match!</Typography>}
                     <TextField
                         margin="normal"
                         required
                         fullWidth
                         name="repeatPassword"
+                        error={comparePasswords}
                         label="Repeat Password"
                         type="password"
                         id="repeatPassword"

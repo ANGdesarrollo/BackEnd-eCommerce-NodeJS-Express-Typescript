@@ -14,6 +14,9 @@ export const ioSocket = ({ io }: { io: Server }): void => {
     socket.on('admin_message', async (data: IMessageDTO) => {
       await Chat.saveAdminMessage(data, { io });
     });
+    socket.on('user_allMessages', async (username: string) => {
+      await Chat.getUserChat(username, { io });
+    });
     socket.emit('server_allMessages', await Chat.getChats());
   });
 };

@@ -25,6 +25,18 @@ export class ServiceChat {
     }
   }
 
+  async getChatUserService(username: string, { io }: { io: Server }): Promise<void> {
+    try {
+      const userChat: IChat = await this.DaosModel.find({username});
+      if(userChat) {
+        io.emit(`${username}`, userChat);
+      }
+    } catch (error) {
+      logger.error(`Error at getting allChats on Service: ${String(error)}`);
+      throw new Error();
+    }
+  }
+
   async saveService(message: IMessageDTO, { io }: { io: Server }): Promise<void> {
     try {
       const { messageValidator } = useValidators();

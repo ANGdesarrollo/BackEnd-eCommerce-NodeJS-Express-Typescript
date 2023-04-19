@@ -1,10 +1,11 @@
 import {register} from "../../store/slices/auth/thunk";
 import {useAppDispatch, useAppSelector} from "../../hooks/useRedux";
 import {useNavigate} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {RegisterLayout} from "./RegisterLayout";
 
 export const RegisterContainer = () => {
+    const [ comparePasswords, setComparePasswords ] = useState(false);
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const { loading, isRegistered } = useAppSelector(state => state.auth);
@@ -19,7 +20,12 @@ export const RegisterContainer = () => {
             secretKey: String(data.get('secretKey')),
         };
 
-        dispatch(register(dataUser));
+        if(dataUser.password === dataUser.repeatPassword) {
+            dispatch(register(dataUser))
+        } else {
+            setComparePasswords(true);
+        }
+
     };
 
     useEffect(() => {
@@ -30,7 +36,7 @@ export const RegisterContainer = () => {
 
 
     return (
-        <RegisterLayout handleSubmit={handleSubmit} loading={loading}/>
+        <RegisterLayout handleSubmit={handleSubmit} loading={loading} comparePasswords={comparePasswords}/>
     );
 }
 

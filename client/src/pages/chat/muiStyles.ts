@@ -19,7 +19,7 @@ export const RoomChatSubContainerStyles = {
     justifyContent: 'center',
     alignItems: 'flex-start',
     height: '70%',
-    border: '2px solid #1976d2'
+    border: '2px solid #1976d2',
 }
 
 export const CloseButtonBoxStyles = {
@@ -40,6 +40,7 @@ export const ChatMessagesStyles = {
     width: '100%',
     height: '80%',
     border: '2px solid #1976d2',
+    overflowY: 'scroll',
 }
 
 export const ButtonSendStyles = {

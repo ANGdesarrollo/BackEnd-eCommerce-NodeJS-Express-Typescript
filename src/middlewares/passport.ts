@@ -39,7 +39,7 @@ export const passportLocalRegister = new LocalStrategy(
   (req, username, password, done) => {
     void DaosUser.findOne({ username }, function (err: ErrorCallback, user: IUserDTO) {
       if (err) {
-        logger.error(`Error in SignUp ${String(err)}`);
+        logger.error(`Error on SignUp ${String(err)}`);
         done(err);
         return;
       }

@@ -36,6 +36,7 @@ export const updateProduct = (product: IProduct): any => async (dispatch: AppDis
             dispatch(onLoading(false));
             const objectUpdated: IProduct = data.product;
             dispatch(updateProductSlice(objectUpdated))
+            swalAlert({ status: 'success', message: 'Product successfully updated' });
         })
         .catch(() => {
             dispatch(onLoading(false));
@@ -66,6 +67,7 @@ export const createProduct = (product: IProductDTO): any => async (dispatch: App
             dispatch(onLoading(false));
             const newProduct: IProduct = data.product;
             dispatch(createProductSlice(newProduct))
+            swalAlert({ status: 'success', message: 'Product successfully created' });
         })
         .catch(() => {
             dispatch(onLoading(false));

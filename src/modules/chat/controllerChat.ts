@@ -19,6 +19,15 @@ export class ControllerChat {
     }
   }
 
+  async getUserChat(username: string, { io }: { io: Server }): Promise<void> {
+    try {
+      await new ServiceChat().getChatUserService(username, { io });
+    } catch (error) {
+      logger.error(`Error at controller Chat, getChats: ${String(error)}`);
+      throw new Error();
+    }
+  }
+
   async saveMessage(message: IMessageDTO, { io }: { io: Server }): Promise<void> {
     try {
       await new ServiceChat().saveService(message, { io });

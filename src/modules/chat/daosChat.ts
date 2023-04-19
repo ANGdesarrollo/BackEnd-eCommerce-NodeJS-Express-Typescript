@@ -12,7 +12,14 @@ export class DaosMongoChat extends ContainerMongo<IChat> {
 
 export class DaosFileSystemChat extends ContainerFileSystem<IChat> {
   constructor() {
-    const filePath = './src/database/fileSystem/chats.txt';
+    
+    const dirPath = './build/database/fileSystem';
+    const filePath = `${dirPath}/chats.txt`;
+
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath, { recursive: true });
+    }
+
     if (!fs.existsSync(filePath)) {
       fs.writeFileSync(filePath, '[]', 'utf-8');
     }

@@ -84,6 +84,7 @@ export const register = (user: IUser) => async (dispatch: AppDispatch) => {
     .then(() => {
       dispatch(onLoading(false));
       dispatch(onRegister(true));
+        swalAlert({ status: 'success', message: 'You successfully SignUp' });
     })
     .catch(() => {
       dispatch(onLoading(false));
