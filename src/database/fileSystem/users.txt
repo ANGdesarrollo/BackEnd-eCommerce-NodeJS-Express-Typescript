@@ -33,5 +33,12 @@
         "password": "$2b$10$1wZEollC3/dY3tOCN9URqetgl6mNkoy0QMbwaXojBUsPqO5RTPXne",
         "admin": false,
         "_id": "64406abb9aa2658f817a75d1"
+    },
+    {
+        "date": "04/19/2023 11:14:43 PM",
+        "username": "testing@testing123.com",
+        "password": "$2b$10$DAObe60cS/bQMn96DA3JKej/A2NAoqmpvhDZ0twgzULuopRb9F9ZG",
+        "admin": true,
+        "_id": "6440a013ac3cfb03ff547c21"
     }
 ]

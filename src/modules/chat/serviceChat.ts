@@ -81,7 +81,7 @@ export class ServiceChat {
         chatToFind.message.push(formatedMessage);
         const saveMessage = await this.DaosModel.updateOne(chatToFind);
         if (saveMessage) {
-          io.sockets.emit('server_chat', saveMessage);
+          io.sockets.emit(`${message.idRoom}`, saveMessage);
         } else {
           logger.error(`Message at saveAdminServiceChat is undefined | null`);
           throw new Error();
