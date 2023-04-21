@@ -101,7 +101,7 @@ export const API_URL = API;
 #### 📅 DAYJS to handle dates.
 #### 💾 You can choose between using MongoDB Atlas or a local Filesystem for data persistence.
 
-###⚛️ Frontend:
+### ⚛️ Frontend:
 
 #### 🔥 React with Typescript
 #### 🌍 Redux for managing global state
