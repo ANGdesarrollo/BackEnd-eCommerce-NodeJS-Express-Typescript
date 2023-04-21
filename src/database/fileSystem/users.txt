@@ -12,5 +12,19 @@
         "password": "$2b$10$92aaWW5RdFLs38BieKfxPOJmETHctT.ts/Gkcl7MfAdcF.aGEHmKi",
         "admin": true,
         "_id": "6441c5faca215dd049ae36b1"
+    },
+    {
+        "date": "04/21/2023 08:35:57 PM",
+        "username": "testing123@gmail.com",
+        "password": "$2b$10$6xHhhGH6vC2Q8xKWC5/N/OccUeRPm8jaM3jIIxbs5qSuFckAreYoe",
+        "admin": false,
+        "_id": "64431dddeb50a65886a5bd29"
+    },
+    {
+        "date": "04/21/2023 08:38:27 PM",
+        "username": "testing1234@gmail.com",
+        "password": "$2b$10$ozLkG0oU.5nXqUCanl9EvOCHqFu8lYMtas8k7S5y0R0sNgEO2vERu",
+        "admin": false,
+        "_id": "64431e7395f8d976070f7a41"
     }
 ]

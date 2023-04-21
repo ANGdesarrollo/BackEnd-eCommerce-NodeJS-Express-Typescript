@@ -55,6 +55,7 @@ export class ServiceChat {
         const formatedChatModel: IChat = new ModelChat(formatedChat);
         const chat: IChat = await this.DaosModel.save(formatedChatModel);
         io.sockets.emit('server_chat', chat);
+        io.sockets.emit(`${chat.username}`, chat);
       } else {
         findChat.message.push(formatedMessage);
         const saveMessage = await this.DaosModel.updateOne(findChat);
