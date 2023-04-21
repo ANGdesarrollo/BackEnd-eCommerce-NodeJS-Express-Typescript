@@ -39,9 +39,9 @@ export const OrdersContainer = (): JSX.Element => {
                         return {
                             ...el,
                             thumbnail: product.thumbnail.imgPath,
-                            price: product.price,
+                            price: product.discount !== 0 ? product.price - (product.price * (product.discount / 100)) : product.price,
                             name: product.name,
-                            totalPrice: `US$${product.price * el.qty}`,
+                            totalPrice: product.discount !== 0 ? `US$${(product.price - (product.price * (product.discount / 100))) * el.qty}` : `US$${product.price * el.qty}`,
                         };
                     }
                     return el;
@@ -56,8 +56,9 @@ export const OrdersContainer = (): JSX.Element => {
             {accessorKey: '_id', header: 'ID', size: 80},
             {accessorKey: 'username', header: 'Username'},
             {accessorKey: 'created_at', header: 'Created at',},
-            {accessorKey: 'amount', header: 'Amount' },
-            {accesorKey: 'access', header: 'Access', size: 80,
+            {accessorKey: 'amount', header: 'Amount with Tax'},
+            {
+                accesorKey: 'access', header: 'Access', size: 80,
                 Cell: (row) => (
                     <IconButton onClick={() => {
                         navigate(`/dashboard/orders/${row.row.original._id}`);
@@ -71,14 +72,17 @@ export const OrdersContainer = (): JSX.Element => {
     const columnsProduct = useMemo<MRT_ColumnDef<IOrderDetail>[]>(
         () => [
             {accessorKey: '_id', header: 'ID', size: 80},
-            {accessorKey: 'thumbnail', header: 'Thumbnail',
+            {
+                accessorKey: 'thumbnail', header: 'Thumbnail',
                 Cell: ({row}) => (
                     <Avatar src={row.original.thumbnail}/>
-                )},
+                )
+            },
             {accessorKey: 'qty', header: 'Qty',},
             {accessorKey: 'price', header: 'Price',},
             {accessorKey: 'totalPrice', header: 'Total'},
-            {accesorKey: 'back', header: 'Back', size: 80,
+            {
+                accesorKey: 'back', header: 'Back', size: 80,
                 Cell: () => (
                     <IconButton onClick={() => {
                         navigate('/dashboard/orders');
@@ -88,9 +92,6 @@ export const OrdersContainer = (): JSX.Element => {
         ],
         [],
     );
-
-
-
 
 
     return (
