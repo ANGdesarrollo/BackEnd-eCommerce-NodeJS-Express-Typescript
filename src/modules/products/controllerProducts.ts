@@ -9,26 +9,23 @@ export class ControllerProduct {
     this.serviceProducts = new ServiceProduct();
   }
 
-  async getProducts(_req: Request, res: Response): Promise<void> {
+  getProducts = async (_req: Request, res: Response): Promise<void> => {
     try {
-      // ESTA FORMA NO ANDA
-      // const products = await this.serviceProducts.getProducts();
-      // ESTA FORMA ANDA
-      const products = await new ServiceProduct().getProducts();
+      const products = await this.serviceProducts.getProducts();
       res.status(200).json({
         status: true,
         products,
       });
     } catch (error) {
-      logger.error(`Error at controller getProducts: ${(error)}`);
+      logger.error(`Error at controller getProducts: ${error}`);
       throw new Error();
     }
-  }
+  };
 
-  async saveProduct(req: Request, res: Response): Promise<void> {
+  saveProduct = async (req: Request, res: Response): Promise<void> => {
     try {
       const { product } = req.body;
-      const productSaved = await new ServiceProduct().saveProduct(product);
+      const productSaved = await this.serviceProducts.saveProduct(product);
       if (productSaved) {
         res.status(200).json({
           status: true,
@@ -40,12 +37,12 @@ export class ControllerProduct {
         throw new Error();
       }
     } catch (error) {
-      logger.error(`Error at controller saveProduct: ${(error)}`);
+      logger.error(`Error at controller saveProduct: ${error}`);
       throw new Error();
     }
-  }
+  };
 
-  async deleteProduct(req: Request, res: Response): Promise<void> {
+  deleteProduct = async (req: Request, res: Response): Promise<void> => {
     try {
       const { id } = req.params;
       const productToDelete = await new ServiceProduct().deleteProduct(id);
@@ -62,12 +59,12 @@ export class ControllerProduct {
         });
       }
     } catch (error) {
-      logger.error(`Error at controller deleteProduct: ${(error)}`);
+      logger.error(`Error at controller deleteProduct: ${error}`);
       throw new Error();
     }
-  }
+  };
 
-  async updateProduct(req: Request, res: Response): Promise<void> {
+  updateProduct = async (req: Request, res: Response): Promise<void> => {
     try {
       const { product } = req.body;
       const productToUpdate = await new ServiceProduct().updateProduct(product);
@@ -84,8 +81,8 @@ export class ControllerProduct {
         });
       }
     } catch (error) {
-      logger.error(`Error at controller updateProduct: ${(error)}`);
+      logger.error(`Error at controller updateProduct: ${error}`);
       throw new Error();
     }
-  }
+  };
 }

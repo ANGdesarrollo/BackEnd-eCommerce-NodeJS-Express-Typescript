@@ -9,17 +9,17 @@ export class ControllerContact {
     this.serviceContact = new ServiceContact();
   }
 
-  async sendEmail(req: Request, res: Response): Promise<void> {
+  sendEmail = async (req: Request, res: Response): Promise<void> => {
     try {
       const { data } = req.body;
-      await new ServiceContact().sendEmailService(data);
-      res.json({
+      await this.serviceContact.sendEmailService(data);
+      res.status(201).json({
         status: true,
         message: 'Message successfully sent',
       });
     } catch (error) {
-      logger.error(`Error at controller sendEmail: ${(error)}`);
+      logger.error(`Error at controller sendEmail: ${error}`);
       throw new Error();
     }
-  }
+  };
 }

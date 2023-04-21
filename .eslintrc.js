@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   env: {
     browser: true,
     es2021: true,
@@ -15,11 +15,5 @@ export default {
   rules: {
     'object-curly-spacing': ['error', 'always'],
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    "@typescript-eslint/no-misused-promises": [
-      "error",
-      {
-        "checksVoidReturn": false
-      }
-    ]
   },
 };

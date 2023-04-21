@@ -33,7 +33,6 @@ export class ControllerUser {
   authUser(req: Request, res: Response): void {
     try {
       const user = req.user as IUserController;
-      console.log(user);
       res.status(200).json({
         status: true,
         message: 'User is auth',

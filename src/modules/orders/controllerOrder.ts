@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { type Request, type Response } from 'express';
 import { logger } from '../../config/winstonConfig/winstonConfig';
 import { ServiceOrder } from './serviceOrder';
 
@@ -8,43 +8,31 @@ export class ControllerOrder {
     this.serviceOrder = new ServiceOrder();
   }
 
-  async getOrders(_req: Request, res: Response): Promise<void> {
+  getOrders = async (_req: Request, res: Response): Promise<void> => {
     try {
-      const allOrders = await new ServiceOrder().getOrdersService();
-      if (allOrders) {
-        res.json({
-          status: true,
-          allOrders,
-        });
-      } else {
-        res.json({
-          status: false,
-        });
-      }
+      const allOrders = await this.serviceOrder.getOrdersService();
+      res.status(200).json({
+        status: true,
+        allOrders,
+      });
     } catch (error) {
-      logger.error(`Error at controller Order, getOrders: ${(error)}`);
+      logger.error(`Error at controller Order, getOrders: ${error}`);
       throw new Error();
     }
-  }
+  };
 
-  async createOrder(req: Request, res: Response): Promise<void> {
+  createOrder = async (req: Request, res: Response): Promise<void> => {
     try {
       const { body } = req;
-      const orderToSave = await new ServiceOrder().saveServiceOrder(body);
-      if (orderToSave) {
-        await new ServiceOrder().updateStockAndSoldQty(body.cart);
-        res.json({
-          status: true,
-          order: orderToSave,
-        });
-      } else {
-        res.json({
-          status: false,
-        });
-      }
+      const orderToSave = await this.serviceOrder.saveServiceOrder(body);
+      await new ServiceOrder().updateStockAndSoldQty(body.cart);
+      res.status(201).json({
+        status: true,
+        order: orderToSave,
+      });
     } catch (error) {
-      logger.error(`Error at controller Order, createOrder: ${(error)}`);
+      logger.error(`Error at controller Order, createOrder: ${error}`);
       throw new Error();
     }
-  }
+  };
 }

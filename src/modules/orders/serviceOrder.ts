@@ -6,6 +6,8 @@ import { type DaosFileSystemOrder, type DaosMongoOrder } from './daosOrder';
 import DaosModel from './daosOrderFactory';
 import { type IOrderDTO, type IOrder, IProductCart } from '../../interfaces/interfaceOrders';
 import { IProduct } from '../../interfaces/interfaceProduct';
+//@ts-nocheck
+
 import { DaosMongoProduct, DaosFileSystemProduct } from '../products/productDaos';
 import DaosProduct from '../products/productDaoFactory';
 import { emailBody } from './bodyNodemailer';
@@ -14,6 +16,7 @@ import { email } from '../../utils/nodemailer/nodemailer';
 export class ServiceOrder {
   public DaosModel: DaosMongoOrder | DaosFileSystemOrder;
   public DaosProductModel: DaosMongoProduct | DaosFileSystemProduct;
+  public getOrders: any;
   constructor() {
     this.DaosModel = DaosModel;
     this.DaosProductModel = DaosProduct;
@@ -22,7 +25,13 @@ export class ServiceOrder {
   async getOrdersService(): Promise<IOrder[]> {
     try {
       const allOrders = await this.DaosModel.getAll();
-      return allOrders;
+      if(allOrders) {
+        return allOrders;
+      } else {
+        logger.error('There was an error getting the Orders')
+        throw new Error();
+      }
+      
     } catch (error) {
       logger.error(`Error at getting all orders on Service: ${(error)}`);
       throw new Error();

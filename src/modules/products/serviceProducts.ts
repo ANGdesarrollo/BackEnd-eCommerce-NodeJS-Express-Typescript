@@ -53,7 +53,6 @@ export class ServiceProduct {
 
   async updateProduct(item: IProduct): Promise<IProduct | null> {
     try {
-      console.log(item);
       const { productUpdateValidator } = useValidators();
       const updateDate = { ...item, updatedAt: date() };
       const validatedProduct = await productUpdateValidator(updateDate);
