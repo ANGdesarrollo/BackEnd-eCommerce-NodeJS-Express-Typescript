@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import { type IconfigIterface } from './envConfigInterface';
-dotenv.config({path: './src/.env'});
+dotenv.config();
 
 if (!process.env.NODE_ENV) {
   throw new Error('Enviroment not properly set. NODE_ENV not set');
