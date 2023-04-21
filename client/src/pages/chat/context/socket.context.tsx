@@ -33,6 +33,7 @@ export const SocketsProvider = ({children}: Props) => {
         socket.emit('admin_message', (data) )
     };
 
+
     socket.on('server_chat', (chat: IChat) => {
         if(allChats) {
            const indexChat = allChats.findIndex(el => el._id === chat._id);

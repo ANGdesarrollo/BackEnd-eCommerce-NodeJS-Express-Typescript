@@ -62,6 +62,7 @@ export class ServiceChat {
           logger.error(`Message at saveServiceChat is undefined | null`);
           throw new Error();
         } else {
+          io.sockets.emit(`${saveMessage._id}`, saveMessage);
           io.sockets.emit('server_chat', saveMessage);
         }
       }
@@ -82,6 +83,7 @@ export class ServiceChat {
         const saveMessage = await this.DaosModel.updateOne(chatToFind);
         if (saveMessage) {
           io.sockets.emit(`${message.idRoom}`, saveMessage);
+          io.sockets.emit('server_chat', saveMessage);
         } else {
           logger.error(`Message at saveAdminServiceChat is undefined | null`);
           throw new Error();
