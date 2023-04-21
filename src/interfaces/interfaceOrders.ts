@@ -9,7 +9,7 @@ export interface IOrderDTO {
   amount: number;
 }
 
-interface IProductCart {
+export interface IProductCart {
   _id: string;
   price: number;
   qty: number;

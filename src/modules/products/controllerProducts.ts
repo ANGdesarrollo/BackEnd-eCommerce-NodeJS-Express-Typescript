@@ -20,7 +20,7 @@ export class ControllerProduct {
         products,
       });
     } catch (error) {
-      logger.error(`Error at controller getProducts: ${String(error)}`);
+      logger.error(`Error at controller getProducts: ${(error)}`);
       throw new Error();
     }
   }
@@ -40,7 +40,7 @@ export class ControllerProduct {
         throw new Error();
       }
     } catch (error) {
-      logger.error(`Error at controller saveProduct: ${String(error)}`);
+      logger.error(`Error at controller saveProduct: ${(error)}`);
       throw new Error();
     }
   }
@@ -62,7 +62,7 @@ export class ControllerProduct {
         });
       }
     } catch (error) {
-      logger.error(`Error at controller deleteProduct: ${String(error)}`);
+      logger.error(`Error at controller deleteProduct: ${(error)}`);
       throw new Error();
     }
   }
@@ -84,7 +84,7 @@ export class ControllerProduct {
         });
       }
     } catch (error) {
-      logger.error(`Error at controller updateProduct: ${String(error)}`);
+      logger.error(`Error at controller updateProduct: ${(error)}`);
       throw new Error();
     }
   }

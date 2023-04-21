@@ -181,3 +181,6 @@
 [34m2023-04-20 19:55:06[39m [[31merror[39m]: Invalid format of client order: ValidationError: "cart[0].price" is not allowed
 [34m2023-04-20 19:55:06[39m [[31merror[39m]: Error at saving order on Service: Error
 [34m2023-04-20 19:55:06[39m [[31merror[39m]: Error at controller Order, createOrder: Error
+[34m2023-04-21 11:49:40[39m [[31merror[39m]: Invalid format of client order: ValidationError: "test" is not allowed
+[34m2023-04-21 11:49:40[39m [[31merror[39m]: Error at saving order on Service: Error
+[34m2023-04-21 11:49:40[39m [[31merror[39m]: Error at controller Order, createOrder: Error

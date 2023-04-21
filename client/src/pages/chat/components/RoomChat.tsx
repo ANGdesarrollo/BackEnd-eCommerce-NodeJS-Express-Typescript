@@ -13,15 +13,18 @@ import {
 } from "../muiStyles";
 import {Messages} from "./Messages";
 import TextField from "@mui/material/TextField";
+import { useRef } from 'react';
 
 interface Props {
     informationRoom: IChat | undefined;
     handleRoom: () => void;
-    handleSubmit: (e: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => void;
+    handleSubmit: (e: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }, textFieldRef: React.RefObject<HTMLInputElement>) => void;
+    messageValue: string;
+    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const RoomChat = ({informationRoom, handleRoom, handleSubmit}: Props) => {
-
+export const RoomChat = ({informationRoom, handleRoom, handleSubmit, messageValue, handleChange}: Props) => {
+    const textFieldRef = useRef<HTMLInputElement>(null);
     return (
         <Box sx={RoomChatContainerStyles}>
             <Container sx={RoomChatSubContainerStyles}>
@@ -35,10 +38,13 @@ export const RoomChat = ({informationRoom, handleRoom, handleSubmit}: Props) => 
                         return (<Messages key={_id} date={created_at} username={username} message={message}/>)
                     })}
                 </Box>
-                <Box component="form" onSubmit={handleSubmit} sx={ChatSendMessagesStyles}>
+                <Box component="form" onSubmit={(e) => handleSubmit(e, textFieldRef)} sx={ChatSendMessagesStyles}>
                     <TextField
+                        ref={textFieldRef}
                         name="message"
                         id="message"
+                        value={messageValue}
+                        onChange={handleChange}
                         required
                         label="Enter your message"
                         sx={{height: '100%'}}

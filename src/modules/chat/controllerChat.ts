@@ -14,7 +14,7 @@ export class ControllerChat {
       const allChats = await new ServiceChat().getChatsService();
       return allChats;
     } catch (error) {
-      logger.error(`Error at controller Chat, getChats: ${String(error)}`);
+      logger.error(`Error at controller Chat, getChats: ${(error)}`);
       throw new Error();
     }
   }
@@ -23,7 +23,7 @@ export class ControllerChat {
     try {
       await new ServiceChat().getChatUserService(username, { io });
     } catch (error) {
-      logger.error(`Error at controller Chat, getChats: ${String(error)}`);
+      logger.error(`Error at controller Chat, getChats: ${(error)}`);
       throw new Error();
     }
   }
@@ -32,7 +32,7 @@ export class ControllerChat {
     try {
       await new ServiceChat().saveService(message, { io });
     } catch (error) {
-      logger.error(`Error at controller Chat, saveMessage: ${String(error)}`);
+      logger.error(`Error at controller Chat, saveMessage: ${(error)}`);
       throw new Error();
     }
   }
@@ -41,7 +41,7 @@ export class ControllerChat {
     try {
       await new ServiceChat().saveAdminService(message, { io });
     } catch (error) {
-      logger.error(`Error at controller Chat, saveAdminMessage: ${String(error)}`);
+      logger.error(`Error at controller Chat, saveAdminMessage: ${(error)}`);
       throw new Error();
     }
   }

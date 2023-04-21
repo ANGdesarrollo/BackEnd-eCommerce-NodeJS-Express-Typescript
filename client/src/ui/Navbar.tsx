@@ -15,7 +15,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import {useAppDispatch, useAppSelector} from "../hooks/useRedux";
 import {logout} from "../store/slices/auth/thunk";
 import {Ring} from "@uiball/loaders";
-import {navItemsStyle, TypographyStyle} from "./muiStyles";
+import {navItemsMobileStyle, navItemsStyle, TypographyStyle} from "./muiStyles";
 
 
 const pages = ['Products', 'Chat', 'Orders'];
@@ -83,7 +83,7 @@ export const Navbar = () => {
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">
-                                        <NavLink style={navItemsStyle} to={`/dashboard/${page.toLowerCase()}`}>{page}</NavLink></Typography>
+                                        <NavLink style={navItemsMobileStyle} to={`/dashboard/${page.toLowerCase()}`}>{page}</NavLink></Typography>
                                 </MenuItem>
                             ))}
                         </Menu>

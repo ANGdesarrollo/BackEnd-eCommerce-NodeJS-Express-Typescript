@@ -41,7 +41,7 @@ export class ControllerUser {
         isAdmin: user.admin,
       });
     } catch (error) {
-      logger.error(`Error at authUser: ${String(error)}`);
+      logger.error(`Error at authUser: ${(error)}`);
       throw new Error();
     }
   }
@@ -62,7 +62,7 @@ export class ControllerUser {
         }
       });
     } catch (error) {
-      logger.error(`Error at logoutUser: ${String(error)}`);
+      logger.error(`Error at logoutUser: ${(error)}`);
       throw new Error();
     }
   }

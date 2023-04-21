@@ -34,7 +34,7 @@ export const useValidators = (): Validators => {
       const value = await idSchema.validateAsync(id);
       return value;
     } catch (error) {
-      logger.error(`Invalid ObjectID: ${String(error)}`);
+      logger.error(`Invalid ObjectID: ${(error)}`);
       throw new Error();
     }
   };
@@ -44,7 +44,7 @@ export const useValidators = (): Validators => {
       const value = await productCreateSchema.validateAsync(product);
       return value;
     } catch (error) {
-      logger.error(`Invalid format of product: ${String(error)}`);
+      logger.error(`Invalid format of product: ${(error)}`);
       throw new Error();
     }
   };
@@ -54,7 +54,7 @@ export const useValidators = (): Validators => {
       const value = await productUpdateSchema.validateAsync(product);
       return value;
     } catch (error) {
-      logger.error(`Invalid format of product: ${String(error)}`);
+      logger.error(`Invalid format of product: ${(error)}`);
       throw new Error();
     }
   };
@@ -64,7 +64,7 @@ export const useValidators = (): Validators => {
       const value = await messageSchema.validateAsync(message);
       return value;
     } catch (error) {
-      logger.error(`Invalid format of message: ${String(error)}`);
+      logger.error(`Invalid format of message: ${(error)}`);
       throw new Error();
     }
   };
@@ -74,7 +74,7 @@ export const useValidators = (): Validators => {
       const value = await emailSchema.validateAsync(message);
       return value;
     } catch (error) {
-      logger.error(`Invalid format of contact Message: ${String(error)}`);
+      logger.error(`Invalid format of contact Message: ${(error)}`);
       throw new Error();
     }
   };
@@ -84,7 +84,7 @@ export const useValidators = (): Validators => {
       const value = await orderSchema.validateAsync(order);
       return value;
     } catch (error) {
-      logger.error(`Invalid format of client order: ${String(error)}`);
+      logger.error(`Invalid format of client order: ${(error)}`);
       throw new Error();
     }
   };

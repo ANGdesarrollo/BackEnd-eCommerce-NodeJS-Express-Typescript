@@ -12,3 +12,8 @@ export const navItemsStyle = {
     textDecoration: 'none',
     color: 'white',
 }
+
+export const navItemsMobileStyle = {
+    textDecoration: 'none',
+    color: 'black'
+}

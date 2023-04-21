@@ -18,7 +18,7 @@ export class ServiceProduct {
       const products = await this.daosProduct.getAll();
       return products;
     } catch (error) {
-      logger.error(`Error at getting all products: ${String(error)}`);
+      logger.error(`Error at getting all products: ${(error)}`);
       throw new Error();
     }
   }
@@ -35,7 +35,7 @@ export class ServiceProduct {
         return undefined;
       }
     } catch (error) {
-      logger.error(`Error at saving product: ${String(error)}`);
+      logger.error(`Error at saving product: ${(error)}`);
       throw new Error();
     }
   }
@@ -46,7 +46,7 @@ export class ServiceProduct {
       const validatedID = await idValidator(id);
       return await this.daosProduct.deleteOne(validatedID);
     } catch (error) {
-      logger.error(`Error deleting the product: ${String(error)}`);
+      logger.error(`Error deleting the product: ${(error)}`);
       throw new Error();
     }
   }
@@ -59,7 +59,7 @@ export class ServiceProduct {
       const validatedProduct = await productUpdateValidator(updateDate);
       return await this.daosProduct.updateOne(validatedProduct);
     } catch (error) {
-      logger.error(`Error updating the product: ${String(error)}`);
+      logger.error(`Error updating the product: ${(error)}`);
       throw new Error();
     }
   }

@@ -10,6 +10,7 @@ import {useAppSelector} from "../../hooks/useRedux";
 
 export const ChatContainer = (): JSX.Element => {
     const { sendMessage } = useSockets();
+    const [ messageValue, setMessageValue ] = useState('');
     const { username } = useAppSelector(status => status.auth);
     const [ openCloseRoom, setOpenCloseRoom ] = useState<boolean>(false);
     const [ informationRoom, setInformationRoom ] = useState<IChat>()
@@ -19,17 +20,24 @@ export const ChatContainer = (): JSX.Element => {
         setOpenCloseRoom(!openCloseRoom)
     }
 
-    const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }): void => {
+    const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined }): void => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        if(username && informationRoom) {
+        if(username && informationRoom && messageValue.trim() !== '') {
             const dataMessage: IResponseMessage = {
                 idRoom: informationRoom._id,
                 username,
-                message: String(data.get('message')),
+                message: messageValue,
             };
-            if(dataMessage.idRoom && username && dataMessage.message) sendMessage && sendMessage(dataMessage);
+            if(dataMessage.idRoom && username && dataMessage.message) {
+                sendMessage && sendMessage(dataMessage)
+                setMessageValue('');
+
+            }
         }
+    };
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setMessageValue(event.target.value);
     };
 
     useEffect(() => {
@@ -76,7 +84,7 @@ export const ChatContainer = (): JSX.Element => {
         <Container>
             {allChats &&
             <MaterialReactTable columns={columns} data={allChats} />}
-            {openCloseRoom && <RoomChat informationRoom={informationRoom} handleRoom={handleRoom} handleSubmit={handleSubmit}/>}
+            {openCloseRoom && <RoomChat informationRoom={informationRoom} handleRoom={handleRoom} handleSubmit={handleSubmit} messageValue={messageValue} handleChange={handleChange}/>}
         </Container>
 
     );

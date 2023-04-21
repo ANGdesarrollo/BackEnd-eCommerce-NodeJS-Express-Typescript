@@ -25,12 +25,13 @@
         "updatedAt": "04/10/2023 07:26:24 PM",
         "name": "Huntsman V2 Tenkeyless",
         "price": 250,
-        "stock": 250,
+        "stock": 248,
         "discount": 5,
         "category": "Keyboard",
         "soldQty": 0,
         "details": "The keyboard features Razer Clicky optical switches, a tenkeyless design, and customizable Razer Chroma RGB backlighting with up to 16.8 million color options. It also has a hybrid onboard memory for up to 5 keybinding profiles and comes with Razer Doubleshot PBT keycaps. Additionally, it has wired USB-C connectivity with a braided cable and no media or passthrough keys.",
-        "__v": 0
+        "__v": 0,
+        "qtySold": 2
     },
     {
         "thumbnail": {
@@ -127,12 +128,13 @@
         "updatedAt": "04/10/2023 10:59:39 PM",
         "name": "Razer BlackShark V2",
         "price": 200,
-        "stock": 340,
+        "stock": 337,
         "discount": 6,
         "category": "Headset",
         "soldQty": 0,
         "details": "Experience immersive and high-quality audio with our latest headphones! With a wide frequency response of 12 Hz - 28 kHz, enjoy crisp and detailed sound. These headphones feature Razer™ TriForce Titanium technology and 50 mm drivers for exceptional audio quality. The ultra-soft FlowKnit memory foam earpads provide unparalleled comfort during long gaming or music sessions, while advanced passive noise cancellation minimizes distractions for total audio immersion.",
-        "__v": 0
+        "__v": 0,
+        "qtySold": 3
     },
     {
         "thumbnail": {

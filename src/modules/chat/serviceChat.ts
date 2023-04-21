@@ -20,7 +20,7 @@ export class ServiceChat {
       const allChats = await this.DaosModel.getAll();
       return allChats;
     } catch (error) {
-      logger.error(`Error at getting allChats on Service: ${String(error)}`);
+      logger.error(`Error at getting allChats on Service: ${(error)}`);
       throw new Error();
     }
   }
@@ -32,7 +32,7 @@ export class ServiceChat {
         io.emit(`${username}`, userChat);
       }
     } catch (error) {
-      logger.error(`Error at getting allChats on Service: ${String(error)}`);
+      logger.error(`Error at getting allChats on Service: ${(error)}`);
       throw new Error();
     }
   }
@@ -67,7 +67,7 @@ export class ServiceChat {
         }
       }
     } catch (error) {
-      logger.error(`Error at saving chat on Service: ${String(error)}`);
+      logger.error(`Error at saving chat on Service: ${(error)}`);
       throw new Error();
     }
   }
@@ -90,7 +90,7 @@ export class ServiceChat {
         }
       }
     } catch (error) {
-      logger.error(`Error at saving Admin response chat on Service: ${String(error)}`);
+      logger.error(`Error at saving Admin response chat on Service: ${(error)}`);
       throw new Error();
     }
   }

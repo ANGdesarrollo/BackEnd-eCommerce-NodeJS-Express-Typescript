@@ -1,6 +1,7 @@
 import winston from 'winston';
 import dayjs from 'dayjs';
 import { blue, green, yellow, red } from 'colorette';
+import { env } from '../envConfig/envConfig';
 
 interface LogObject {
   message: string;
@@ -24,6 +25,7 @@ export const logger = winston.createLogger({
           return `${timestamp} [${green(level.toUpperCase())}]: ${message}`;
         }),
       ),
+      silent: env.NODE_ENV === 'PRODUCTION'
     }),
     new winston.transports.File({
       level: 'warn',

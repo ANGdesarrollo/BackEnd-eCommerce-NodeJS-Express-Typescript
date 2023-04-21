@@ -27,8 +27,8 @@ export const dbConnection = (): void => {
       .connect(env.DB_CONNECTION, options)
       .then(() => logger.info('Database MongoDB online'))
       .catch((error) => {
-        logger.error(`Database error: ${String(error)}`);
-        throw Error(`Database error: ${String(error)}`);
+        logger.error(`Database error: ${(error)}`);
+        throw Error(`Database error: ${(error)}`);
       });
   }
 };
@@ -36,14 +36,14 @@ export const dbConnection = (): void => {
 const optionsCookies = (): optionsCookie => {
   if (env.PERSISTENCE === 'PRODUCTION') {
     const cookie = {
-      maxAge: 60 * 10000,
+      maxAge: 86400000,
       secure: true,
       sameSite: 'none',
     };
     return cookie;
   } else {
     const cookie = {
-      maxAge: 60 * 10000,
+      maxAge: 86400000,
     };
     return cookie;
   }

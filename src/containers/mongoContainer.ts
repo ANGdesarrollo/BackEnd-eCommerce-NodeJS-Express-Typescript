@@ -16,7 +16,7 @@ export abstract class ContainerMongo<T extends MyDocument> {
     try {
       return await this.model.find();
     } catch (error) {
-      logger.error(`Error at getAll DB, ${String(error)}`);
+      logger.error(`Error at getAll DB, ${(error)}`);
       throw new Error();
     }
   }
@@ -25,7 +25,7 @@ export abstract class ContainerMongo<T extends MyDocument> {
     try {
       return await this.model.findOne(data);
     } catch (error) {
-      logger.error(`Error at find, ${String(error)}`);
+      logger.error(`Error at find, ${(error)}`);
       throw new Error();
     }
   }
@@ -34,7 +34,7 @@ export abstract class ContainerMongo<T extends MyDocument> {
     try {
       return await this.model.create(item);
     } catch (error) {
-      logger.error(`Error at saving Product: ${String(error)}`);
+      logger.error(`Error at saving Product: ${(error)}`);
       throw new Error();
     }
   }
@@ -45,7 +45,7 @@ export abstract class ContainerMongo<T extends MyDocument> {
       const update = { ...item };
       return await this.model.findOneAndUpdate(filter, update, { new: true });
     } catch (error) {
-      logger.error(`Error at updating Product: ${String(error)}`);
+      logger.error(`Error at updating Product: ${(error)}`);
       throw new Error();
     }
   }
@@ -61,7 +61,7 @@ export abstract class ContainerMongo<T extends MyDocument> {
       const user = await this.model.findById(id);
       done(null, user);
     } catch (err) {
-      logger.error(`Error at finding document by ID: ${String(err)}`);
+      logger.error(`Error at finding document by ID: ${(err)}`);
       done(err);
     }
   }
@@ -75,7 +75,7 @@ export abstract class ContainerMongo<T extends MyDocument> {
         done(null, dataToFind);
       }
     } catch (error) {
-      logger.error(`Error at finding document: ${String(error)}`);
+      logger.error(`Error at finding document: ${(error)}`);
       done(error);
     }
   }

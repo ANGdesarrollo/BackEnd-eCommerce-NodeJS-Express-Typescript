@@ -22,7 +22,7 @@ export class ControllerOrder {
         });
       }
     } catch (error) {
-      logger.error(`Error at controller Order, getOrders: ${String(error)}`);
+      logger.error(`Error at controller Order, getOrders: ${(error)}`);
       throw new Error();
     }
   }
@@ -32,6 +32,7 @@ export class ControllerOrder {
       const { body } = req;
       const orderToSave = await new ServiceOrder().saveServiceOrder(body);
       if (orderToSave) {
+        await new ServiceOrder().updateStockAndSoldQty(body.cart);
         res.json({
           status: true,
           order: orderToSave,
@@ -42,7 +43,7 @@ export class ControllerOrder {
         });
       }
     } catch (error) {
-      logger.error(`Error at controller Order, createOrder: ${String(error)}`);
+      logger.error(`Error at controller Order, createOrder: ${(error)}`);
       throw new Error();
     }
   }
