@@ -75,11 +75,18 @@ export const API_URL = API;
 ####  🌐 Check out the live of the eCommerce demo at: https://an-gdesarrollo-front-end-e-commerce-react-js-redux-80z4hq1rf.vercel.app
 ####  🌐 Check out the live of the backend panel demo at: https://backend-ecommerce-node-production.up.railway.app
 
-###  💡 Key Features:
+##  💡 Key Features:
 
-#### 🛍️ CRUD of products.
-#### 💬 Private user support via chat with Socket IO.
-#### 📝 Allows viewing all user purchase orders.
+#### 🛍️ CRUD of products: Provides full CRUD functionality for managing products. This includes the ability to create, read, update, and delete products, as well as search and filter products based on various criteria.
+#### 💬 Private user support via chat with Socket IO: The backend includes a real-time chat system using Socket IO, allowing customers to receive live support from your team.
+#### 📝 View user purchase orders: The backend allows administrators to view all purchase orders made by users, including details such as order date and products purchased.
+#### 📧 Send purchase confirmation email: After a user completes a purchase, the backend sends a confirmation email to the user's registered email address.
+#### 🛡️ Secure password storage with bcrypt: The backend uses bcrypt to hash and store passwords securely.
+#### 📜 Error and warning logs with Winston: The backend uses Winston to log errors and warnings, providing valuable insight into issues that may occur during operation. Additionally, the backend disables logger.info when in production mode to avoid filling up log files unnecessarily.
+#### 📅 Date handling with DayJS: The backend uses DayJS to handle dates, making it easy to format and manipulate dates and times as needed.
+#### 🔐 Data validation with JOI: The backend uses JOI to validate API data, helping to ensure that only valid data is accepted and processed.
+#### 💾 Flexible data persistence with MongoDB Atlas or a local filesystem: The backend allows you to choose between using MongoDB Atlas or a local filesystem for data persistence. This flexibility makes it easy to switch between storage options as needed.
+#### 🧱 Layered architecture with DAOs: The backend is designed using a layered architecture, with DAOs (data access objects) handling database interactions. This architecture provides a clear separation of concerns and makes it easier to maintain and scale the application.
 
 ## 🚀 Technologies
 
@@ -92,6 +99,7 @@ export const API_URL = API;
 #### 🛡️ JOI to validate the API data
 #### 💬 SOCKET IO to handle live customer support chat
 #### 📅 DAYJS to handle dates.
+#### 💾 You can choose between using MongoDB Atlas or a local Filesystem for data persistence.
 
 ###⚛️ Frontend:
 
