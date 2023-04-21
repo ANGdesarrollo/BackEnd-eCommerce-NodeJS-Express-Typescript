@@ -1,58 +1,50 @@
 [
     {
         "username": "alexisgraff123@gmail.com",
-        "amount": 711.48,
-        "created_at": "04/21/2023 11:34:35 AM",
+        "amount": 3932.5,
+        "created_at": "04/21/2023 02:01:26 PM",
         "cart": [
             {
-                "_id": "643494dbc17556d3223d7141",
+                "_id": "643495a0c17556d3223d7147",
                 "qty": 3
             },
             {
-                "_id": "6434953cc17556d3223d7144",
-                "qty": 4
-            }
-        ],
-        "_id": "64429efbf6794f0bdb7b0468"
-    },
-    {
-        "username": "alexisgraff123@gmail.com",
-        "amount": 205.7,
-        "created_at": "04/21/2023 11:35:41 AM",
-        "cart": [
-            {
-                "_id": "64349632c17556d3223d714a",
+                "_id": "643497aec17556d3223d7153",
                 "qty": 2
             }
         ],
-        "_id": "64429f3df6794f0bdb7b0469"
+        "_id": "6442c166e25e6ba61d8c3cba"
     },
     {
         "username": "alexisgraff123@gmail.com",
-        "amount": 589.27,
-        "created_at": "04/21/2023 11:36:39 AM",
+        "amount": 1346.73,
+        "created_at": "04/21/2023 02:03:06 PM",
         "cart": [
+            {
+                "_id": "64348b87532747789e3fc2fc",
+                "qty": 3
+            },
             {
                 "_id": "64348d10532747789e3fc303",
                 "qty": 2
-            },
-            {
-                "_id": "643495a0c17556d3223d7147",
-                "qty": 2
             }
         ],
-        "_id": "64429f77b3de2b2af1ef8d5e"
+        "_id": "6442c1cae25e6ba61d8c3cbb"
     },
     {
         "username": "alexisgraff123@gmail.com",
-        "amount": 227.48,
-        "created_at": "04/21/2023 12:03:54 PM",
+        "amount": 4011.15,
+        "created_at": "04/21/2023 02:09:10 PM",
         "cart": [
             {
-                "_id": "643494dbc17556d3223d7141",
-                "qty": 3
+                "_id": "64348b87532747789e3fc2fc",
+                "qty": 10
+            },
+            {
+                "_id": "64348d10532747789e3fc303",
+                "qty": 5
             }
         ],
-        "_id": "6442a5dac94d50ad85d5944f"
+        "_id": "6442c336fd675b8fb012cf06"
     }
 ]

@@ -46,19 +46,24 @@ export class ServiceOrder {
   }
 
   async updateStockAndSoldQty(product: IProductCart[]): Promise<void> {
-    console.log('entre')
-    product.map(async (el) => {
-      const searchProduct: IProduct = await this.DaosProductModel.find({ _id: el._id });
-      if (searchProduct) {
+    try {
+      for (const el of product) {
+        const searchProduct: IProduct = await this.DaosProductModel.find({ _id: el._id });
+        if (!searchProduct) {
+          logger.error(`Product ${el._id} not found`);
+          continue;
+        }
         const stock = searchProduct.stock - el.qty;
-        const qtySold = searchProduct.soldQty + el.qty;
-        const updatedProduct = { ...searchProduct, stock, qtySold };
-        const updateInDB = await this.DaosProductModel.updateOne(updatedProduct);
-        if(!updateInDB) {
-          logger.error("There was a problem updating the stock and qty information")
-          throw new Error()
+        const soldQty = searchProduct.soldQty + el.qty;
+        const updateResult = await this.DaosProductModel.updateOne({...searchProduct, stock,  soldQty});
+        if (!updateResult) {
+          logger.error(`Product ${el._id} could not be updated`);
         }
       }
-    });
+    } catch (err) {
+      logger.error(`Error updating stock and sold qty: ${err}`);
+      throw new Error('Could not update stock and sold qty');
+    }
   }
+  
 }
