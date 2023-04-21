@@ -72,7 +72,7 @@ export const API_URL = API;
 
 #### 🚀 This project is a Node JS CRUD with Express and Typescript, with a Front-End panel in React and Typescript, which focuses on managing an ecommerce front-end.
 
-####  🌐 Check out the live of the eCommerce demo at: https://an-gdesarrollo-front-end-e-commerce-react-js-redux-80z4hq1rf.vercel.app
+####  🌐 Check out the live of the eCommerce demo at: https://an-gdesarrollo-front-end-e-commerce-react-js-redux-typescript.vercel.app/
 ####  🌐 Check out the live of the backend panel demo at: https://backend-ecommerce-node-production.up.railway.app
 
 ##  💡 Key Features:
