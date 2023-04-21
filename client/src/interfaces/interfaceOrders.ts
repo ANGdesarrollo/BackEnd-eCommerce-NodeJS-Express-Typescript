@@ -5,7 +5,7 @@ export interface IOrder extends IOrderDTO {
 
 export interface IOrderDTO {
     username: string;
-    products: IOrderDetail[];
+    cart: IOrderDetail[];
     amount: number;
 }
 

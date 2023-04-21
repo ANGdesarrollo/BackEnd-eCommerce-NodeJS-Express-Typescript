@@ -33,7 +33,7 @@ export const OrdersContainer = (): JSX.Element => {
         if (idUser) {
             const newData = dataRow.find((el) => el._id === idUser);
             if (newData && allProducts) {
-                const dataUpdated = newData.products.map((el) => {
+                const dataUpdated = newData.cart.map((el) => {
                     const product = allProducts.find((p) => p._id === el._id);
                     if (product) {
                         return {
@@ -56,6 +56,7 @@ export const OrdersContainer = (): JSX.Element => {
             {accessorKey: '_id', header: 'ID', size: 80},
             {accessorKey: 'username', header: 'Username'},
             {accessorKey: 'created_at', header: 'Created at',},
+            {accessorKey: 'amount', header: 'Amount' },
             {accesorKey: 'access', header: 'Access', size: 80,
                 Cell: (row) => (
                     <IconButton onClick={() => {

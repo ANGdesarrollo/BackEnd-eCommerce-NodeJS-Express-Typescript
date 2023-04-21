@@ -24,6 +24,7 @@ export class ServiceOrder {
 
   async saveServiceOrder(order: IOrderDTO): Promise<IOrder | undefined> {
     try {
+      console.log(order);
       const { orderValidator } = useValidators();
       const validateOrder = await orderValidator(order);
       const formateUserModel: IOrder = new ModelOrder({ ...validateOrder, created_at: date() });

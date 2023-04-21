@@ -1,42 +1,26 @@
 [
     {
-        "username": "marieltorres123@gmail.com",
-        "amount": 50,
-        "created_at": "04/17/2023 11:24:46 PM",
-        "products": [
+        "username": "alexisgraff123@gmail.com",
+        "amount": 2563.99,
+        "created_at": "04/20/2023 07:56:12 PM",
+        "cart": [
             {
-                "_id": "64348b87532747789e3fc2fc",
-                "qty": 2
+                "_id": "64349387c17556d3223d713b",
+                "qty": 1
+            },
+            {
+                "_id": "6434953cc17556d3223d7144",
+                "qty": 10
+            },
+            {
+                "_id": "643497aec17556d3223d7153",
+                "qty": 4
             },
             {
                 "_id": "64348d10532747789e3fc303",
-                "qty": 2
-            },
-            {
-                "_id": "64348e3f1bdaa70649585347",
-                "qty": 2
+                "qty": 3
             }
         ],
-        "_id": "643dff6edb8486510eaf716f"
-    },
-    {
-        "username": "marieltorres123@gmail.com",
-        "amount": 50,
-        "created_at": "04/17/2023 11:24:56 PM",
-        "products": [
-            {
-                "_id": "64348b87532747789e3fc2fc",
-                "qty": 2
-            },
-            {
-                "_id": "64348d10532747789e3fc303",
-                "qty": 2
-            },
-            {
-                "_id": "64348e3f1bdaa70649585347",
-                "qty": 2
-            }
-        ],
-        "_id": "643dff78db8486510eaf7170"
+        "_id": "6441c30c943be8f5c7714ff3"
     }
 ]

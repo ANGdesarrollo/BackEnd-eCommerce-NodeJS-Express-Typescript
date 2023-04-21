@@ -1,5 +1,3 @@
-import { type IProduct } from './interfaceProduct';
-
 export interface IOrder extends IOrderDTO {
   _id: string;
   created_at: string;
@@ -7,6 +5,12 @@ export interface IOrder extends IOrderDTO {
 
 export interface IOrderDTO {
   username: string;
-  products: IProduct[];
+  cart: IProductCart[];
   amount: number;
+}
+
+interface IProductCart {
+  _id: string;
+  price: number;
+  qty: number;
 }

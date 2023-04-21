@@ -1,44 +1,16 @@
 [
     {
-        "date": "04/12/2023 04:22:51 PM",
-        "username": "admin@admin.com",
-        "password": "$2b$10$Yu72CEDPt6eQku01a4eX4O9f9SYpbb0iQ0yqzNEiXMB4kK6ls0fDm",
-        "admin": true,
-        "_id": "6437050c9ac1798f69860072"
-    },
-    {
-        "date": "04/12/2023 04:48:50 PM",
-        "username": "noadmin@noadmin.com",
-        "password": "$2b$10$WxAdALE9ulHWj94MyoyAO.9GFniD5fyYeGnq4YnccdpcNOMC2u/ky",
-        "admin": false,
-        "_id": "64370b22fde1377314156f90"
-    },
-    {
-        "date": "04/12/2023 04:54:50 PM",
-        "username": "adri@adri.com",
-        "password": "$2b$10$tL8feOODAHR5YVFA9Z4svOuvU8QLcEOdHyNcZhJlqxfDuQxto1pcW",
-        "admin": false,
-        "_id": "64370c8afde1377314156f91"
-    },
-    {
-        "date": "04/13/2023 07:43:20 PM",
+        "date": "04/20/2023 07:49:06 PM",
         "username": "alexisgraff123@gmail.com",
-        "password": "$2b$10$cTJwo6W7o1DYbtB9rXhg6OgqXjmOx8jeIRSwA0Kp6553v25SDVE0C",
+        "password": "$2b$10$8m4zP7NNbQETjjzBfcuz8.h8rIyHmGeh3My0BisMBBF9y2QbC/GsG",
         "admin": false,
-        "_id": "6438858856156bf59180c2fb"
+        "_id": "6441c162ec0bf933bb79832d"
     },
     {
-        "date": "04/19/2023 07:27:07 PM",
-        "username": "alexis@divino.com",
-        "password": "$2b$10$1wZEollC3/dY3tOCN9URqetgl6mNkoy0QMbwaXojBUsPqO5RTPXne",
-        "admin": false,
-        "_id": "64406abb9aa2658f817a75d1"
-    },
-    {
-        "date": "04/19/2023 11:14:43 PM",
-        "username": "testing@testing123.com",
-        "password": "$2b$10$DAObe60cS/bQMn96DA3JKej/A2NAoqmpvhDZ0twgzULuopRb9F9ZG",
+        "date": "04/20/2023 08:08:42 PM",
+        "username": "admin@admin.com",
+        "password": "$2b$10$92aaWW5RdFLs38BieKfxPOJmETHctT.ts/Gkcl7MfAdcF.aGEHmKi",
         "admin": true,
-        "_id": "6440a013ac3cfb03ff547c21"
+        "_id": "6441c5faca215dd049ae36b1"
     }
 ]

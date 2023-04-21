@@ -172,3 +172,12 @@
 [34m2023-04-17 20:02:39[39m [[31merror[39m]: Invalid format of client order: ValidationError: "amount" is required
 [34m2023-04-17 20:02:39[39m [[31merror[39m]: Error at saving order on Service: Error
 [34m2023-04-17 20:02:39[39m [[31merror[39m]: Error at controller Order, createOrder: Error
+[34m2023-04-20 19:51:26[39m [[31merror[39m]: Invalid format of client order: ValidationError: "products" is not allowed
+[34m2023-04-20 19:51:26[39m [[31merror[39m]: Error at saving order on Service: Error
+[34m2023-04-20 19:51:26[39m [[31merror[39m]: Error at controller Order, createOrder: Error
+[34m2023-04-20 19:53:55[39m [[31merror[39m]: Invalid format of client order: ValidationError: "cart[0].price" is not allowed
+[34m2023-04-20 19:53:55[39m [[31merror[39m]: Error at saving order on Service: Error
+[34m2023-04-20 19:53:55[39m [[31merror[39m]: Error at controller Order, createOrder: Error
+[34m2023-04-20 19:55:06[39m [[31merror[39m]: Invalid format of client order: ValidationError: "cart[0].price" is not allowed
+[34m2023-04-20 19:55:06[39m [[31merror[39m]: Error at saving order on Service: Error
+[34m2023-04-20 19:55:06[39m [[31merror[39m]: Error at controller Order, createOrder: Error

@@ -5,7 +5,7 @@ const IOrderSchema = new Schema<IOrder>({
   username: { type: String, required: true },
   amount: { type: Number, required: true },
   created_at: { type: String, required: true },
-  products: [
+  cart: [
     {
       _id: { type: Types.ObjectId, required: true },
       qty: { type: Number, required: true },

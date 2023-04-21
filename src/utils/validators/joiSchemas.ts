@@ -52,10 +52,11 @@ export const emailSchema = Joi.object<IEmail>({
 export const orderSchema = Joi.object<IOrderDTO>({
   username: Joi.string().required(),
   amount: Joi.number().required(),
-  products: Joi.array().items(
+  cart: Joi.array().items(
     Joi.object({
       _id: Joi.string().length(24).required(),
-      qty: Joi.number().required()
+      qty: Joi.number().required(),
+      price: Joi.number().required(),
     })
   ),
 })
