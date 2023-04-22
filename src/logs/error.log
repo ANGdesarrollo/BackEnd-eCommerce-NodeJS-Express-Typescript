@@ -190,3 +190,18 @@
 [34m2023-04-21 17:07:25[39m [[31merror[39m]: Error at controller Order, getOrders: TypeError: Cannot read properties of undefined (reading 'serviceOrder')
 [34m2023-04-21 17:12:03[39m [[31merror[39m]: Error at controller Order, getOrders: TypeError: Cannot read properties of undefined (reading 'serviceOrder')
 [34m2023-04-21 17:14:56[39m [[31merror[39m]: Error at controller Order, getOrders: TypeError: Cannot read properties of undefined (reading 'serviceOrder')
+[34m2023-04-21 21:06:00[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected end of JSON input
+[34m2023-04-21 21:06:00[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-04-21 21:06:00[39m [[31merror[39m]: Error at controller getProducts:
+[34m2023-04-21 21:06:26[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected end of JSON input
+[34m2023-04-21 21:06:26[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-04-21 21:06:26[39m [[31merror[39m]: Error at controller getProducts: Error
+[34m2023-04-21 21:16:47[39m [[31merror[39m]: Product 643494dbc17556d3223d7141 could not be updated
+[34m2023-04-21 21:16:47[39m [[31merror[39m]: Product 643495a0c17556d3223d7147 could not be updated
+[34m2023-04-21 21:19:09[39m [[31merror[39m]: Product 643494dbc17556d3223d7141 could not be updated
+[34m2023-04-21 21:21:17[39m [[31merror[39m]: Product 643494dbc17556d3223d7141 could not be updated
+[34m2023-04-21 21:21:17[39m [[31merror[39m]: Error updating stock and sold qty: Error
+[34m2023-04-21 21:21:17[39m [[31merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty
+[34m2023-04-21 21:22:05[39m [[31merror[39m]: Product 643494dbc17556d3223d7141 could not be updated
+[34m2023-04-21 21:22:05[39m [[31merror[39m]: Error updating stock and sold qty: Error
+[34m2023-04-21 21:22:05[39m [[31merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty

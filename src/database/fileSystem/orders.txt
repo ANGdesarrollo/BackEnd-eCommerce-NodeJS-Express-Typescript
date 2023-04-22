@@ -46,5 +46,33 @@
             }
         ],
         "_id": "6442c336fd675b8fb012cf06"
+    },
+    {
+        "username": "admin@admin.com",
+        "amount": 445.28,
+        "created_at": "04/21/2023 09:12:28 PM",
+        "cart": [
+            {
+                "_id": "643496b3c17556d3223d714d",
+                "qty": 2
+            }
+        ],
+        "_id": "6443266cbd9b639142e9d596"
+    },
+    {
+        "username": "alexisgraff123@gmail.com",
+        "amount": 3448.5,
+        "created_at": "04/21/2023 09:13:58 PM",
+        "cart": [
+            {
+                "_id": "643495a0c17556d3223d7147",
+                "qty": 5
+            },
+            {
+                "_id": "6434953cc17556d3223d7144",
+                "qty": 4
+            }
+        ],
+        "_id": "644326c6bd9b639142e9d597"
     }
 ]

@@ -22,21 +22,20 @@ export class ServiceOrder {
     this.DaosProductModel = DaosProduct;
   }
 
-  async getOrdersService(): Promise<IOrder[]> {
+  getOrdersService = async (): Promise<IOrder[]> => {
     try {
       const allOrders = await this.DaosModel.getAll();
-      if(allOrders) {
+      if (allOrders) {
         return allOrders;
       } else {
-        logger.error('There was an error getting the Orders')
+        logger.error('There was an error getting the Orders');
         throw new Error();
       }
-      
     } catch (error) {
-      logger.error(`Error at getting all orders on Service: ${(error)}`);
+      logger.error(`Error at getting all orders on Service: ${error}`);
       throw new Error();
     }
-  }
+  };
 
   async saveServiceOrder(order: IOrderDTO): Promise<IOrder | undefined> {
     try {
@@ -44,35 +43,37 @@ export class ServiceOrder {
       const validateOrder = await orderValidator(order);
       const formateUserModel: IOrder = new ModelOrder({ ...validateOrder, created_at: date() });
       const save = await this.DaosModel.save(formateUserModel);
-      if(save) {
-        await email(emailBody(order.username), 'Order', order.username, '' );
+      if (save) {
+        await email(emailBody(order.username), 'Order', order.username, '');
       }
       return save;
     } catch (error) {
-      logger.error(`Error at saving order on Service: ${(error)}`);
+      logger.error(`Error at saving order on Service: ${error}`);
       throw new Error();
     }
   }
 
-  async updateStockAndSoldQty(product: IProductCart[]): Promise<void> {
+  updateStockAndSoldQty = async (product: IProductCart[]): Promise<void> => {
     try {
       for (const el of product) {
-        const searchProduct: IProduct = await this.DaosProductModel.find({ _id: el._id });
+        const searchProduct = await this.DaosProductModel.find({ _id: el._id });
+        const productFound: IProduct = searchProduct._doc;
         if (!searchProduct) {
           logger.error(`Product ${el._id} not found`);
           continue;
         }
-        const stock = searchProduct.stock - el.qty;
-        const soldQty = searchProduct.soldQty + el.qty;
-        const updateResult = await this.DaosProductModel.updateOne({...searchProduct, stock,  soldQty});
+        const stock = productFound.stock - el.qty;
+        const soldQty = productFound.soldQty + el.qty;
+
+        const updateResult = await this.DaosProductModel.updateOne({ ...productFound, stock, soldQty });
         if (!updateResult) {
           logger.error(`Product ${el._id} could not be updated`);
+          throw new Error();
         }
       }
     } catch (err) {
       logger.error(`Error updating stock and sold qty: ${err}`);
       throw new Error('Could not update stock and sold qty');
     }
-  }
-  
+  };
 }

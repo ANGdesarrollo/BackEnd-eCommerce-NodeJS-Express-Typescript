@@ -42,6 +42,7 @@ export abstract class ContainerMongo<T extends MyDocument> {
   async updateOne(item: T): Promise<T | null> {
     try {
       const filter = { _id: item._id };
+      console.log(filter)
       const update = { ...item };
       return await this.model.findOneAndUpdate(filter, update, { new: true });
     } catch (error) {
