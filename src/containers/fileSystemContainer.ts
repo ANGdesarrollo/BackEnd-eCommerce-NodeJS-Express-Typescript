@@ -17,7 +17,7 @@ export abstract class ContainerFileSystem<T extends MyDocument> {
       const data = await fs.readFile(this.filePath, 'utf-8');
       return JSON.parse(data);
     } catch (error) {
-      logger.error(`Error at getAll FS, ${(error)}`);
+      logger.error(`Error at getAll FS, ${error}`);
       throw new Error();
     }
   }
@@ -55,7 +55,7 @@ export abstract class ContainerFileSystem<T extends MyDocument> {
       await fs.writeFile(this.filePath, JSON.stringify(items, null, 4));
       return item;
     } catch (error) {
-      logger.error(`Error at updating Product: ${(error)}`);
+      logger.error(`Error at updating Product: ${error}`);
       throw new Error();
     }
   }
@@ -72,7 +72,7 @@ export abstract class ContainerFileSystem<T extends MyDocument> {
       await fs.writeFile(this.filePath, JSON.stringify(items, null, 4));
       return deletedItem;
     } catch (error) {
-      logger.error(`Error at deleting Product: ${(error)}`);
+      logger.error(`Error at deleting Product: ${error}`);
       throw new Error();
     }
   }
@@ -91,7 +91,7 @@ export abstract class ContainerFileSystem<T extends MyDocument> {
       }
       done(null, user);
     } catch (err) {
-      logger.error(`Error at finding document by ID: ${(err)}`);
+      logger.error(`Error at finding document by ID: ${err}`);
       done(err);
     }
   }
@@ -109,7 +109,7 @@ export abstract class ContainerFileSystem<T extends MyDocument> {
         done(null, user);
       }
     } catch (error) {
-      logger.error(`Error at finding document: ${(error)}`);
+      logger.error(`Error at finding document: ${error}`);
       done(error);
     }
   }

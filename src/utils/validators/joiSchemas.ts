@@ -1,8 +1,8 @@
 import Joi from 'joi';
 import { type IMessageDTO } from '../../interfaces/interfaceChat';
 import { type IProductDTO, type IProduct } from '../../interfaces/interfaceProduct';
-import { IEmail } from '../../interfaces/interfaceEmail';
-import { IOrderDTO } from '../../interfaces/interfaceOrders';
+import { type IEmail } from '../../interfaces/interfaceEmail';
+import { type IOrderDTO } from '../../interfaces/interfaceOrders';
 
 export const idSchema = Joi.string().length(24).required();
 
@@ -47,16 +47,16 @@ export const emailSchema = Joi.object<IEmail>({
   email: Joi.string().email().required(),
   phone: Joi.number().required(),
   message: Joi.string().required(),
-})
+});
 
 export const orderSchema = Joi.object<IOrderDTO>({
   username: Joi.string().required(),
-  amount: Joi.number().required(),
+  amount: Joi.number().min(1).required(),
   cart: Joi.array().items(
     Joi.object({
       _id: Joi.string().length(24).required(),
       qty: Joi.number().required(),
-      price: Joi.number().required(),
-    })
+      price: Joi.number().min(1).required(),
+    }),
   ),
-})
+});

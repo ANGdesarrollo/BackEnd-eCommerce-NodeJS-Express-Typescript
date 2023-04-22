@@ -205,3 +205,6 @@
 [34m2023-04-21 21:22:05[39m [[31merror[39m]: Product 643494dbc17556d3223d7141 could not be updated
 [34m2023-04-21 21:22:05[39m [[31merror[39m]: Error updating stock and sold qty: Error
 [34m2023-04-21 21:22:05[39m [[31merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty
+[34m2023-04-22 20:46:02[39m [[31merror[39m]: Invalid format of client order: ValidationError: "amount" must be greater than or equal to 1
+[34m2023-04-22 20:46:02[39m [[31merror[39m]: Error at saving order on Service: Error
+[34m2023-04-22 20:46:02[39m [[31merror[39m]: Error at controller Order, createOrder: Error
