@@ -41,7 +41,11 @@ export class ServiceOrder {
     try {
       const { orderValidator } = useValidators();
       const validateOrder = await orderValidator(order);
-      const formateUserModel: IOrder = new ModelOrder({ ...validateOrder, created_at: date() });
+      const formateUserModel: IOrder = new ModelOrder({
+        ...validateOrder,
+        created_at: date(),
+        amount: validateOrder.amount.toFixed(2),
+      });
       const save = await this.DaosModel.save(formateUserModel);
       if (save) {
         await email(emailBody(order.username), 'Order', order.username, '');
