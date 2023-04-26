@@ -9,7 +9,8 @@
     "start": "node build/server.js",
     "test": "mocha --require ts-node/register src/test/test.ts",
     "test-user": "mocha --require ts-node/register src/modules/user/testUser.ts",
-    "test-products": "mocha --require ts-node/register src/modules/products/testProducts.ts"
+    "test-product": "mocha --require ts-node/register src/modules/products/testProducts.ts",
+    "test-order": "mocha --require ts-node/register src/modules/orders/testOrder.ts"
   },
   "keywords": [],
   "author": "",

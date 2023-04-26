@@ -4,22 +4,23 @@ import { date } from '../../utils/date/date';
 import { useValidators } from '../../utils/validators/useValidators';
 import { type DaosFileSystemOrder, type DaosMongoOrder } from './daosOrder';
 import DaosModel from './daosOrderFactory';
-import { type IOrderDTO, type IOrder, IProductCart } from '../../interfaces/interfaceOrders';
-import { IProduct } from '../../interfaces/interfaceProduct';
-//@ts-nocheck
-
-import { DaosMongoProduct, DaosFileSystemProduct } from '../products/productDaos';
+import { type IOrderDTO, type IOrder, type IProductCart } from '../../interfaces/interfaceOrders';
+import { type IProduct } from '../../interfaces/interfaceProduct';
+import { env } from '../../config/envConfig/envConfig';
+import { type DaosMongoProduct, type DaosFileSystemProduct } from '../products/productDaos';
 import DaosProduct from '../products/productDaoFactory';
 import { emailBody } from './bodyNodemailer';
 import { email } from '../../utils/nodemailer/nodemailer';
+import { type IconfigIterface } from '../../config/envConfig/envConfigInterface';
 
 export class ServiceOrder {
   public DaosModel: DaosMongoOrder | DaosFileSystemOrder;
   public DaosProductModel: DaosMongoProduct | DaosFileSystemProduct;
-  public getOrders: any;
+  public env: IconfigIterface;
   constructor() {
     this.DaosModel = DaosModel;
     this.DaosProductModel = DaosProduct;
+    this.env = env;
   }
 
   getOrdersService = async (): Promise<IOrder[]> => {
@@ -61,7 +62,7 @@ export class ServiceOrder {
     try {
       for (const el of product) {
         const searchProduct = await this.DaosProductModel.find({ _id: el._id });
-        const productFound: IProduct = searchProduct._doc;
+        const productFound: IProduct = this.env.PERSISTENCE === 'MONGO' ? searchProduct._doc : searchProduct;
         if (!searchProduct) {
           logger.error(`Product ${el._id} not found`);
           continue;

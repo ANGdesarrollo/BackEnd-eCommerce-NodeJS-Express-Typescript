@@ -1,78 +1,62 @@
 [
     {
         "username": "alexisgraff123@gmail.com",
-        "amount": 3932.5,
-        "created_at": "04/21/2023 02:01:26 PM",
+        "amount": 842.16,
+        "created_at": "04/26/2023 04:52:51 PM",
         "cart": [
             {
-                "_id": "643495a0c17556d3223d7147",
+                "_id": "64349387c17556d3223d713b",
                 "qty": 3
-            },
-            {
-                "_id": "643497aec17556d3223d7153",
-                "qty": 2
             }
         ],
-        "_id": "6442c166e25e6ba61d8c3cba"
+        "_id": "6449811311ef2ac97d0463e8"
     },
     {
         "username": "alexisgraff123@gmail.com",
-        "amount": 1346.73,
-        "created_at": "04/21/2023 02:03:06 PM",
+        "amount": 842.16,
+        "created_at": "04/26/2023 04:54:56 PM",
         "cart": [
             {
-                "_id": "64348b87532747789e3fc2fc",
+                "_id": "64349387c17556d3223d713b",
                 "qty": 3
-            },
-            {
-                "_id": "64348d10532747789e3fc303",
-                "qty": 2
             }
         ],
-        "_id": "6442c1cae25e6ba61d8c3cbb"
+        "_id": "64498190c95258bfe369521f"
     },
     {
         "username": "alexisgraff123@gmail.com",
-        "amount": 4011.15,
-        "created_at": "04/21/2023 02:09:10 PM",
+        "amount": 929.28,
+        "created_at": "04/26/2023 05:11:24 PM",
         "cart": [
             {
-                "_id": "64348b87532747789e3fc2fc",
-                "qty": 10
-            },
-            {
-                "_id": "64348d10532747789e3fc303",
-                "qty": 5
-            }
-        ],
-        "_id": "6442c336fd675b8fb012cf06"
-    },
-    {
-        "username": "admin@admin.com",
-        "amount": 445.28,
-        "created_at": "04/21/2023 09:12:28 PM",
-        "cart": [
-            {
-                "_id": "643496b3c17556d3223d714d",
+                "_id": "643492e6c17556d3223d7138",
                 "qty": 2
             }
         ],
-        "_id": "6443266cbd9b639142e9d596"
+        "_id": "6449856c5c06e3f13dbe18d0"
     },
     {
         "username": "alexisgraff123@gmail.com",
-        "amount": 3448.5,
-        "created_at": "04/21/2023 09:13:58 PM",
+        "amount": 929.28,
+        "created_at": "04/26/2023 05:12:53 PM",
         "cart": [
             {
-                "_id": "643495a0c17556d3223d7147",
-                "qty": 5
-            },
-            {
-                "_id": "6434953cc17556d3223d7144",
-                "qty": 4
+                "_id": "643492e6c17556d3223d7138",
+                "qty": 2
             }
         ],
-        "_id": "644326c6bd9b639142e9d597"
+        "_id": "644985c5f4f6c9fd86b89729"
+    },
+    {
+        "username": "alexisgraff123@gmail.com",
+        "amount": 929.28,
+        "created_at": "04/26/2023 05:25:30 PM",
+        "cart": [
+            {
+                "_id": "643492e6c17556d3223d7138",
+                "qty": 2
+            }
+        ],
+        "_id": "644988bae757825b1aa8fd8c"
     }
 ]

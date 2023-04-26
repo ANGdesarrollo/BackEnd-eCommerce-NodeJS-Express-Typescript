@@ -212,3 +212,11 @@
 [[34m2023-04-26 16:11:52[39m] [[33merror[39m]: Invalid format of product: ValidationError: "_id" is required
 [[34m2023-04-26 16:11:52[39m] [[33merror[39m]: Error updating the product: Error
 [[34m2023-04-26 16:11:52[39m] [[33merror[39m]: Error at controller updateProduct: Error
+[[34m2023-04-26 16:52:54[39m] [[33merror[39m]: Error updating stock and sold qty: TypeError: Cannot read properties of undefined (reading 'stock')
+[[34m2023-04-26 16:52:54[39m] [[33merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty
+[[34m2023-04-26 16:54:59[39m] [[33merror[39m]: Error updating stock and sold qty: TypeError: Cannot read properties of undefined (reading 'stock')
+[[34m2023-04-26 16:54:59[39m] [[33merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty
+[[34m2023-04-26 17:11:27[39m] [[33merror[39m]: Error updating stock and sold qty: TypeError: Cannot read properties of undefined (reading 'stock')
+[[34m2023-04-26 17:11:27[39m] [[33merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty
+[[34m2023-04-26 17:12:55[39m] [[33merror[39m]: Error updating stock and sold qty: TypeError: Cannot read properties of undefined (reading 'stock')
+[[34m2023-04-26 17:12:55[39m] [[33merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty

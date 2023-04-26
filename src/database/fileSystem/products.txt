@@ -77,10 +77,10 @@
         "updatedAt": "04/10/2023 10:51:18 PM",
         "name": "BlackShark V2 Pro Black",
         "price": 400,
-        "stock": 250,
+        "stock": 248,
         "discount": 4,
         "category": "Headset",
-        "soldQty": 0,
+        "soldQty": 2,
         "details": "This is a headset with Razer™ TriForce Titanium drivers, providing a frequency response of 12 Hz to 28 kHz and an impedance of 32 Ω (1 kHz). The earcups are made of breathable memory foam cushions with an inner diameter of 40mm / 1.57\" and a length of 65mm / 2.55\". The earpads are made of ultra-soft FlowKnit memory foam, and the headset has advanced passive noise cancellation. The sensitivity of this headset is 100 dB (1 kHz), and the driver size is 50mm.",
         "__v": 0
     },

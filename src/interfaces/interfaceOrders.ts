@@ -11,6 +11,5 @@ export interface IOrderDTO {
 
 export interface IProductCart {
   _id: string;
-  price: number;
   qty: number;
 }
