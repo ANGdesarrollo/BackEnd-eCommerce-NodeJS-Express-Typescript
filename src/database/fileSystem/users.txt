@@ -26,40 +26,5 @@
         "password": "$2b$10$ozLkG0oU.5nXqUCanl9EvOCHqFu8lYMtas8k7S5y0R0sNgEO2vERu",
         "admin": false,
         "_id": "64431e7395f8d976070f7a41"
-    },
-    {
-        "date": "04/26/2023 12:32:41 PM",
-        "username": "Kameron.Beatty@hotmail.com",
-        "password": "$2b$10$/PEbC.OaVJCuyQtbO5ImPeljVQ/NeVgqdezPL7RuuMP9Lmr06Grf6",
-        "admin": false,
-        "_id": "64494419307ca735ef709c19"
-    },
-    {
-        "date": "04/26/2023 12:36:28 PM",
-        "username": "Mariela.Kozey@hotmail.com",
-        "password": "$2b$10$1C4dLTjws9WU25g5CneQXOD8yMjzd4rKNpoWgTY4Df7frviom4Qy.",
-        "admin": false,
-        "_id": "644944fc76f3a12e95841ac0"
-    },
-    {
-        "date": "04/26/2023 12:36:54 PM",
-        "username": "Rogelio.Spencer@yahoo.com",
-        "password": "$2b$10$s/ncJgaJMV5jeLGu9Yi02utRm38D6n3G3tA6UIp.Iwuxzac3.WeNS",
-        "admin": false,
-        "_id": "64494516325fe266669ddc38"
-    },
-    {
-        "date": "04/26/2023 12:38:11 PM",
-        "username": "Berneice.Blick@hotmail.com",
-        "password": "$2b$10$0zOHUBks9DJDoSk71yU7oOEEEJa20zInYEr7XzdvHWwddZ9Q1UsDC",
-        "admin": false,
-        "_id": "64494563fdd96dd22fc975c2"
-    },
-    {
-        "date": "04/26/2023 12:42:37 PM",
-        "username": "Edyth_Koss4@yahoo.com",
-        "password": "$2b$10$iZnfDTLbqxBdjyGS/nx.6Ovt2OQeFlJywwkA9jaw45LeZT3Llepe.",
-        "admin": false,
-        "_id": "6449466dea93084e455b8486"
     }
 ]

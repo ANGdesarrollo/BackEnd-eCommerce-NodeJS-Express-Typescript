@@ -15,38 +15,36 @@ export class ServiceProduct {
 
   async getProducts(): Promise<IProduct[]> {
     try {
-      const products = await this.daosProduct.getAll();
-      return products;
+      return await this.daosProduct.getAll();
     } catch (error) {
-      logger.error(`Error at getting all products: ${(error)}`);
+      logger.error(`Error at getting all products: ${error}`);
       throw new Error();
     }
   }
 
-  async saveProduct(product: IProductDTO): Promise<IProduct | undefined> {
+  async saveProduct(product: IProductDTO): Promise<IProduct> {
     try {
-      if (product) {
-        const { productCreateValidator } = useValidators();
-        const productToValidate = await productCreateValidator(product);
-        const validatedProduct = { ...productToValidate, createdAt: date(), updatedAt: date(), soldQty: 0 };
-        const finalProduct: IProduct = new ProductModel(validatedProduct);
-        return await this.daosProduct.save(finalProduct);
-      } else {
-        return undefined;
-      }
+      const { productCreateValidator } = useValidators();
+      const productToValidate = await productCreateValidator(product);
+      const validatedProduct = { ...productToValidate, createdAt: date(), updatedAt: date(), soldQty: 0 };
+      const finalProduct: IProduct = new ProductModel(validatedProduct);
+      return await this.daosProduct.save(finalProduct);
     } catch (error) {
-      logger.error(`Error at saving product: ${(error)}`);
+      logger.error(`Error at saving product: ${error}`);
       throw new Error();
     }
   }
 
   async deleteProduct(id: string): Promise<IProduct | null | undefined> {
     try {
+      console.log('ENTRE AL PRODUCTI Y SE VIENE EL CONSOLE.LOG DE LO Q BORRA')
       const { idValidator } = useValidators();
       const validatedID = await idValidator(id);
-      return await this.daosProduct.deleteOne(validatedID);
+      const product = await this.daosProduct.deleteOne(validatedID);
+      console.log(product);
+      return product;
     } catch (error) {
-      logger.error(`Error deleting the product: ${(error)}`);
+      logger.error(`Error deleting the product: ${error}`);
       throw new Error();
     }
   }
@@ -58,7 +56,7 @@ export class ServiceProduct {
       const validatedProduct = await productUpdateValidator(updateDate);
       return await this.daosProduct.updateOne(validatedProduct);
     } catch (error) {
-      logger.error(`Error updating the product: ${(error)}`);
+      logger.error(`Error updating the product: ${error}`);
       throw new Error();
     }
   }

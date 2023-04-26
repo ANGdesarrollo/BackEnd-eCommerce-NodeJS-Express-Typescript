@@ -26,16 +26,11 @@ export class ControllerProduct {
     try {
       const { product } = req.body;
       const productSaved = await this.serviceProducts.saveProduct(product);
-      if (productSaved) {
-        res.status(200).json({
-          status: true,
-          message: 'Product successfully added',
-          product: productSaved,
-        });
-      } else {
-        logger.error(`Error at controller saveProduct, product it's undefined | null`);
-        throw new Error();
-      }
+      res.status(201).json({
+        status: true,
+        message: 'Product successfully added',
+        product: productSaved,
+      });
     } catch (error) {
       logger.error(`Error at controller saveProduct: ${error}`);
       throw new Error();
@@ -44,6 +39,7 @@ export class ControllerProduct {
 
   deleteProduct = async (req: Request, res: Response): Promise<void> => {
     try {
+      console.log('ENTRE AL CONTROLADOR')
       const { id } = req.params;
       const productToDelete = await new ServiceProduct().deleteProduct(id);
       if (productToDelete) {
