@@ -26,5 +26,12 @@
         "password": "$2b$10$ozLkG0oU.5nXqUCanl9EvOCHqFu8lYMtas8k7S5y0R0sNgEO2vERu",
         "admin": false,
         "_id": "64431e7395f8d976070f7a41"
+    },
+    {
+        "date": "04/26/2023 05:42:46 PM",
+        "username": "Berniece_Johnson@yahoo.com",
+        "password": "$2b$10$rkISFbAbqvZakycBhxW7kudRkzu/xxo1eKHys.QozUMpLF8gR2o2u",
+        "admin": false,
+        "_id": "64498cc71a1c089a2d7aaacc"
     }
 ]
