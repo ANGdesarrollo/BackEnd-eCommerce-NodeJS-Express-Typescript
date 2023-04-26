@@ -33,7 +33,7 @@ export class ServiceOrder {
         throw new Error();
       }
     } catch (error) {
-      logger.error(`Error at getting all orders on Service: ${error}`);
+      logger.error(`Error at getting all orders on Service: ${String(error)}`);
       throw new Error();
     }
   };
@@ -53,7 +53,7 @@ export class ServiceOrder {
       }
       return save;
     } catch (error) {
-      logger.error(`Error at saving order on Service: ${error}`);
+      logger.error(`Error at saving order on Service: ${String(error)}`);
       throw new Error();
     }
   }
@@ -77,7 +77,7 @@ export class ServiceOrder {
         }
       }
     } catch (err) {
-      logger.error(`Error updating stock and sold qty: ${err}`);
+      logger.error(`Error updating stock and sold qty: ${String(err)}`);
       throw new Error('Could not update stock and sold qty');
     }
   };
