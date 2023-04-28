@@ -18,7 +18,7 @@ export class ControllerContact {
         message: 'Message successfully sent',
       });
     } catch (error) {
-      logger.error(`Error at controller sendEmail: ${error}`);
+      logger.error(`Error at controller sendEmail: ${String(error)}`);
       throw new Error();
     }
   };

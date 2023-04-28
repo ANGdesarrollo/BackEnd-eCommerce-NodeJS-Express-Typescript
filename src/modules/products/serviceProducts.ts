@@ -17,7 +17,7 @@ export class ServiceProduct {
     try {
       return await this.daosProduct.getAll();
     } catch (error) {
-      logger.error(`Error at getting all products: ${error}`);
+      logger.error(`Error at getting all products: ${String(error)}`);
       throw new Error();
     }
   }
@@ -30,7 +30,7 @@ export class ServiceProduct {
       const finalProduct: IProduct = new ProductModel(validatedProduct);
       return await this.daosProduct.save(finalProduct);
     } catch (error) {
-      logger.error(`Error at saving product: ${error}`);
+      logger.error(`Error at saving product: ${String(error)}`);
       throw new Error();
     }
   }
@@ -44,7 +44,7 @@ export class ServiceProduct {
       console.log(product);
       return product;
     } catch (error) {
-      logger.error(`Error deleting the product: ${error}`);
+      logger.error(`Error deleting the product: ${String(error)}`);
       throw new Error();
     }
   }
@@ -56,7 +56,7 @@ export class ServiceProduct {
       const validatedProduct = await productUpdateValidator(updateDate);
       return await this.daosProduct.updateOne(validatedProduct);
     } catch (error) {
-      logger.error(`Error updating the product: ${error}`);
+      logger.error(`Error updating the product: ${String(error)}`);
       throw new Error();
     }
   }

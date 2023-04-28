@@ -16,7 +16,7 @@ export class ControllerOrder {
         allOrders,
       });
     } catch (error) {
-      logger.error(`Error at controller Order, getOrders: ${error}`);
+      logger.error(`Error at controller Order, getOrders: ${String(error)}`);
       throw new Error();
     }
   };
@@ -32,7 +32,7 @@ export class ControllerOrder {
         order: orderToSave,
       });
     } catch (error) {
-      logger.error(`Error at controller Order, createOrder: ${error}`);
+      logger.error(`Error at controller Order, createOrder: ${String(error)}`);
       throw new Error();
     }
   };
