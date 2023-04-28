@@ -37,12 +37,9 @@ export class ServiceProduct {
 
   async deleteProduct(id: string): Promise<IProduct | null | undefined> {
     try {
-      console.log('ENTRE AL PRODUCTI Y SE VIENE EL CONSOLE.LOG DE LO Q BORRA')
       const { idValidator } = useValidators();
       const validatedID = await idValidator(id);
-      const product = await this.daosProduct.deleteOne(validatedID);
-      console.log(product);
-      return product;
+      return await this.daosProduct.deleteOne(validatedID);
     } catch (error) {
       logger.error(`Error deleting the product: ${String(error)}`);
       throw new Error();

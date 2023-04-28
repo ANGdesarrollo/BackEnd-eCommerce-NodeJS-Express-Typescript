@@ -39,7 +39,6 @@ export class ControllerProduct {
 
   deleteProduct = async (req: Request, res: Response): Promise<void> => {
     try {
-      console.log('ENTRE AL CONTROLADOR')
       const { id } = req.params;
       const productToDelete = await new ServiceProduct().deleteProduct(id);
       if (productToDelete) {

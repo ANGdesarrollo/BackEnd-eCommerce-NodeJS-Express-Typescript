@@ -24,7 +24,6 @@ export class ControllerOrder {
   createOrder = async (req: Request, res: Response): Promise<void> => {
     try {
       const { body } = req;
-      console.log(body);
       const orderToSave = await this.serviceOrder.saveServiceOrder(body);
       await new ServiceOrder().updateStockAndSoldQty(body.cart);
       res.status(201).json({
