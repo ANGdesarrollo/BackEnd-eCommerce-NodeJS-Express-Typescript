@@ -91,6 +91,7 @@ export const API_URL = API;
 #### 🔐 Data validation with JOI: The backend uses JOI to validate API data, helping to ensure that only valid data is accepted and processed.
 #### 💾 Flexible data persistence with MongoDB Atlas or a local filesystem: The backend allows you to choose between using MongoDB Atlas or a local filesystem for data persistence. This flexibility makes it easy to switch between storage options as needed.
 #### 🧱 Layered architecture with DAOs: The backend is designed using a layered architecture, with DAOs (data access objects) handling database interactions. This architecture provides a clear separation of concerns and makes it easier to maintain and scale the application.
+#### 💻 Tested with Mocha, Supertest, and Chai. 
 
 ## 🚀 Technologies
 
