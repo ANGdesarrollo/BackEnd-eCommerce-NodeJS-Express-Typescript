@@ -34,6 +34,7 @@ export const productUpdateSchema = Joi.object<IProduct>({
   discount: Joi.number().required(),
   category: Joi.string().required(),
   details: Joi.string().required(),
+  __v: Joi.optional(),
 });
 
 export const messageSchema = Joi.object<IMessageDTO>({

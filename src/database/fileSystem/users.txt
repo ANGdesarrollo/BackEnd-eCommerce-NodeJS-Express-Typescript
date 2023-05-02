@@ -33,5 +33,12 @@
         "password": "$2b$10$rkISFbAbqvZakycBhxW7kudRkzu/xxo1eKHys.QozUMpLF8gR2o2u",
         "admin": false,
         "_id": "64498cc71a1c089a2d7aaacc"
+    },
+    {
+        "date": "05/02/2023 11:48:42 AM",
+        "username": "Alda.Goldner86@yahoo.com",
+        "password": "$2b$10$CJ9UVyna9N8rKycxSOusHuy92kAmUHbpDJD/OjHb0nphBLetbM4/W",
+        "admin": false,
+        "_id": "645122ca4552d9627a638f30"
     }
 ]

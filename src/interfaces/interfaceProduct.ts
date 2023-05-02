@@ -20,6 +20,7 @@ export interface IProduct {
   category: string;
   soldQty: number;
   details: string;
+  __v?: number;
 }
 
 interface Thumbnail {
