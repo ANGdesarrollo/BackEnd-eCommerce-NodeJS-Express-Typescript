@@ -25,7 +25,7 @@ export class ControllerOrder {
     try {
       const { body } = req;
       const orderToSave = await this.serviceOrder.saveServiceOrder(body);
-      await new ServiceOrder().updateStockAndSoldQty(body.cart);
+      await this.serviceOrder.updateStockAndSoldQty(body.cart);
       res.status(201).json({
         status: true,
         order: orderToSave,

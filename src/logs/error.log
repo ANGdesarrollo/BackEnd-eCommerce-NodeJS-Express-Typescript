@@ -219,3 +219,25 @@
 [34m2023-04-26 17:11:27[39m [[31merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty
 [34m2023-04-26 17:12:55[39m [[31merror[39m]: Error updating stock and sold qty: TypeError: Cannot read properties of undefined (reading 'stock')
 [34m2023-04-26 17:12:55[39m [[31merror[39m]: Error at controller Order, createOrder: Error: Could not update stock and sold qty
+[34m2023-05-01 19:19:42[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token ﻿ in JSON at position 0
+[34m2023-05-01 19:19:42[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-05-01 19:19:42[39m [[31merror[39m]: Error at controller getProducts: Error
+[34m2023-05-01 19:20:39[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token ﻿ in JSON at position 0
+[34m2023-05-01 19:20:39[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-05-01 19:20:39[39m [[31merror[39m]: Error at controller getProducts: Error
+[34m2023-05-01 19:22:57[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token ﻿ in JSON at position 0
+[34m2023-05-01 19:22:57[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-05-01 19:22:57[39m [[31merror[39m]: Error at controller getProducts: Error
+[34m2023-05-01 19:24:21[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token ﻿ in JSON at position 0
+[34m2023-05-01 19:25:00[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token ﻿ in JSON at position 0
+[34m2023-05-01 19:25:00[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-05-01 19:25:00[39m [[31merror[39m]: Error at controller getProducts: Error
+[34m2023-05-01 19:27:18[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token ﻿ in JSON at position 0
+[34m2023-05-01 19:27:18[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-05-01 19:27:18[39m [[31merror[39m]: Error at controller getProducts: Error
+[34m2023-05-02 11:18:52[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token n in JSON at position 21358
+[34m2023-05-02 11:18:52[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-05-02 11:18:52[39m [[31merror[39m]: Error at controller getProducts: Error
+[34m2023-05-02 11:20:01[39m [[31merror[39m]: Error at getAll FS, SyntaxError: Unexpected token n in JSON at position 21375
+[34m2023-05-02 11:20:01[39m [[31merror[39m]: Error at getting all products: Error
+[34m2023-05-02 11:20:01[39m [[31merror[39m]: Error at controller getProducts: Error
